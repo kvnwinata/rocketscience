@@ -1,0 +1,8 @@
+- CSS files can be added to app/assets/stylesheets. Any css file in the folder will be included automatically.
+
+- Same thing with javascript. All .js files in the app/assets/javascript will be run for EVERY page.
+
+- Put images in assets/images. An example on how to access the images is in index.html.erb.
+
+- html files are located in the app/views folder. They are organized based on the controller. .erb means ruby code can be embeded inside the html.
+

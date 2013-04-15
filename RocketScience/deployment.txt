@@ -1,0 +1,10 @@
+locally:
+- run'rails s'
+- then check: localhost:3000
+- you can leave this running and make changes. Refreshing the page will then apply the changes.
+- Beware of caching. This doesn't happen very often but if you notice weird things it might be the cache.
+
+on heroku:
+- commit all changes
+- push to heroku by: 'git push heroku master'
+- check: rocketscienceink.herokuapp.com

@@ -12,6 +12,15 @@ group :production do
   gem 'pg'
 end
 
+# Annotate
+gem 'annotate', '2.5.0', group: :development
+
+# Dynamic form
+#gem 'dynamic_form'
+
+# Pass variables from controllers to js
+gem 'gon'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +37,7 @@ end
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

@@ -1,3 +1,225 @@
+/*
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*/ 
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+    
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12 pt;
+	color: #FFFFFF;
+	background-color: #111107;
+    background-size: 100% 100%;
+    min-height: 600px;
+    background: url('login/loginBackground1.jpg') no-repeat scroll;
+	}
+   
+
+    
+    
+/*  H1 for main big texts  */   
+h1 {
+	font-family: sans-serif;
+	font-size: 45pt;
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;
+	text-align: center;
+}	 
+
+
+/*  H2 for titles like login  */ 
+h2{	
+    font-family: sans-serif;
+	font-size: 18pt;
+	color: #FFFFFF;
+    font-variant:small-caps;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
+}
+h3 {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: normal;
+	color: #09C;
+	text-align: left;
+}
+
+table, th, td
+{
+border: 0px solid white;
+align: center;
+}
+
+td
+{
+padding:10px;
+}
+
+.loginCaption{
+    font-family: sans-serif;
+	font-size: 16pt;
+	color: #dddddd;
+	font-style: normal;
+	font-weight: lighter;
+	line-height: normal;
+	text-align: left;
+}
+
+.loginSubs{
+    font-family: sans-serif;
+	font-size: 7pt;
+	color: #ffffff;
+	font-style: normal;
+	font-weight: lighter;
+	line-height: normal;
+	text-align: right;
+}
+
+
+.row1 {
+	background-color:#f0f0f0;
+}
+
+.row2 {
+	background-color:#e0e0e0;
+}
+
+
+.text {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	color: #000;
+	text-align: justify;
+	word-spacing: normal;
+}
+.pictures {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #333;
+	text-align: justify;
+}
+.Date {
+	font-size: 12px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #FFF;
+	font-family: Tahoma, Geneva, sans-serif;
+	background-color: #b6e91c;
+	text-align: right;
+}
+
+.menubar {
+
+-moz-border-radius: 7px;
+-webkit-border-radius: 7px;
+border-radius: 7px;
+
+-moz-box-shadow: 0px 0px 8px #b7b7b7;
+-webkit-box-shadow: 0px 0px 8px #b7b7b7;
+box-shadow: 0px 0px 8px #b7b7b7;
+
+
+}
+
+
+
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #2875DE;
+	}
+
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #CC0000;
+	}
+a:hover, a:active {
+	text-decoration: underline;
+	color: #639BE7;
+	text-align: center;
+	}
+.credits {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 8pt;
+	color: #c0c0c0;
+	text-align: center;
+}
+
+hr {
+	color:#B7B7B7;
+	background-color:#B7B7B7;
+	height:1px;	
+	}
+
+
+/* CSS for Menubar */
+#sddm
+{	margin: 0;
+	padding: 0;
+	z-index: 30;
+	}
+
+#sddm li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	z-index:1;
+	font: bold 12px arial	}
+
+#sddm li a
+{	display: block;
+	margin: 0 2px 0 0;
+	padding: 4px 10px;
+	width: 75px;
+	background: #BAED1F;
+	color: #FFF;
+	text-align: center;
+	z-index:1;
+	text-decoration: none}
+
+#sddm li a:hover
+{	background: #49A3FF}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	z-index:1;
+	border: 1px solid #ff9900}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background: #EAEBD8;
+		color: #2875DE;
+		z-index:1;
+		font: 11px arial}
+
+	#sddm div a:hover
+	{	background: #49A3FF;
+	z-index:1;
+		color: #FFF}
+
+	
+
+

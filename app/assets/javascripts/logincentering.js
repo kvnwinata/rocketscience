@@ -19,7 +19,7 @@
         }
         return windowHeight;
     }
-    function setContent() {
+    function setMiddle() {
         if (document.getElementById) {
             var windowHeight = getWindowHeight();
             if (windowHeight > 0) {
@@ -35,10 +35,33 @@
             }
         }
     }
+    
+    function setBottom() {
+        if (document.getElementById) {
+            var windowHeight = getWindowHeight();
+            var windowWidth = getWindowWidth();
+            if (windowHeight > 0) {
+                var contentElement = document.getElementById('bottom');
+                var contentHeight = contentElement.offsetHeight;
+                var contentWidth = contentElement.offsetWidth;
+                if (windowHeight - contentHeight > 0) {
+                    contentElement.style.position = 'absolute';
+                    contentElement.style.top = ((windowHeight) - (contentHeight)) + 'px';
+                }
+                else {
+                    contentElement.style.position = 'static';
+                }
+            }
+        }
+    }
+    
+    
     window.onload = function() {
-        setContent();
+        setMiddle();
+        setBottom();
     }
     window.onresize = function() {
-        setContent();
-}
+        setMiddle();
+        setBottom();
+    }
 

@@ -1,0 +1,2 @@
+rails generate model Image name:string description:text path:string category:string
+rake db:migrate

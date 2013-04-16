@@ -1,0 +1,913 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"before",
+				"before_row"
+			],
+			[
+				"boa",
+				"board"
+			],
+			[
+				"af",
+				"after_col"
+			],
+			[
+				"befo",
+				"before_row"
+			],
+			[
+				"new_",
+				"new_checker"
+			],
+			[
+				"color",
+				"color"
+			],
+			[
+				"new",
+				"new_checker"
+			],
+			[
+				"is",
+				"isKing"
+			],
+			[
+				"be",
+				"before_col"
+			],
+			[
+				"bef",
+				"before_row"
+			],
+			[
+				"after",
+				"after_col"
+			],
+			[
+				"afte",
+				"after_row"
+			],
+			[
+				"to",
+				"to_col"
+			],
+			[
+				"from_",
+				"from_col"
+			],
+			[
+				"hi",
+				"history"
+			],
+			[
+				"his",
+				"history"
+			],
+			[
+				"in",
+				"history_index"
+			],
+			[
+				"update",
+				"updateButtons"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"chec",
+				"checker"
+			],
+			[
+				"whose",
+				"whoseTurn"
+			],
+			[
+				"move",
+				"moveTo"
+			],
+			[
+				"board",
+				"board_size"
+			],
+			[
+				"BO",
+				"DEFAULT_BOARD_SIZE"
+			],
+			[
+				"BOARD_",
+				"board_size"
+			],
+			[
+				"stop",
+				"stop_dragging"
+			],
+			[
+				"toggle",
+				"toggleTurn"
+			],
+			[
+				"y1",
+				"y1"
+			],
+			[
+				"check",
+				"checker_object"
+			],
+			[
+				"black",
+				"black_piece"
+			],
+			[
+				"red",
+				"red_king"
+			],
+			[
+				"checker",
+				"checker_object"
+			],
+			[
+				"src",
+				"src"
+			],
+			[
+				"row",
+				"row"
+			],
+			[
+				"arrow",
+				"arrow_context"
+			],
+			[
+				"piece",
+				"piece_context"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"bo",
+				"board"
+			],
+			[
+				"whos",
+				"whoseTurn"
+			],
+			[
+				"togg",
+				"toggleTurn"
+			],
+			[
+				"fi",
+				"fillStyle"
+			],
+			[
+				"conte",
+				"context"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"i",
+				"id"
+			],
+			[
+				"blac",
+				"black_king"
+			],
+			[
+				"fill",
+				"fillStyle"
+			],
+			[
+				"block",
+				"block_size"
+			],
+			[
+				"board_size",
+				"board_size"
+			],
+			[
+				"key",
+				"keyvalues"
+			],
+			[
+				"num",
+				"num_doReduce"
+			],
+			[
+				"num_",
+				"num_doReduce"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"corre",
+				"correct_answer"
+			],
+			[
+				"curr",
+				"current_question"
+			],
+			[
+				"cor",
+				"correct_answer"
+			],
+			[
+				"rand",
+				"randomnumber"
+			],
+			[
+				"dic",
+				"dictionary_size"
+			],
+			[
+				"c",
+				"current_dict"
+			],
+			[
+				"lang",
+				"lang_to"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"fon",
+				"font-style"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"line",
+				"lineWidth"
+			],
+			[
+				"text",
+				"textarea-output"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"curre",
+				"current_attendance"
+			],
+			[
+				"cur",
+				"current_user"
+			],
+			[
+				"cu",
+				"_current_user"
+			],
+			[
+				"asser",
+				"assert_difference"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"meeting",
+				"meetings_path"
+			],
+			[
+				"groups",
+				"groups_path"
+			],
+			[
+				"current",
+				"current_status"
+			],
+			[
+				"atten",
+				"attendances"
+			],
+			[
+				"ass",
+				"assert_difference"
+			],
+			[
+				"bg",
+				"background-color"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"accept",
+				"accept_to_join_meeting"
+			],
+			[
+				"is_e",
+				"is_attendee"
+			],
+			[
+				"get",
+				"get_attendees"
+			],
+			[
+				"id",
+				"id"
+			],
+			[
+				"w",
+				"well-small"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"width",
+				"max-width"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"up",
+				"updated_at"
+			],
+			[
+				"create",
+				"created_at"
+			],
+			[
+				"host",
+				"host_type"
+			],
+			[
+				"end",
+				"end_time"
+			],
+			[
+				"subj",
+				"subject_affiliations"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"home",
+				"home_path"
+			],
+			[
+				"redirec",
+				"redirect_to"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"pending",
+				"pending_membership"
+			],
+			[
+				"make",
+				"make_member"
+			],
+			[
+				"reqest",
+				"requested_to_join"
+			],
+			[
+				"group",
+				"group_id"
+			],
+			[
+				"redi",
+				"redirect_to"
+			],
+			[
+				"find",
+				"find_by_group_id"
+			],
+			[
+				"me",
+				"memberships"
+			],
+			[
+				"membership",
+				"membership"
+			],
+			[
+				"post",
+				"posts"
+			],
+			[
+				"content",
+				"content"
+			],
+			[
+				"sor",
+				"sort_by"
+			],
+			[
+				"current_user",
+				"current_user"
+			],
+			[
+				"n",
+				"n-1"
+			],
+			[
+				"set",
+				"setTimeout"
+			],
+			[
+				"success",
+				"success_fn"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 183,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"PA",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/KW/Desktop/final project/KAPTCHA/app/controllers/meetings_controller.rb",
+		"/Users/KW/Documents/git/rocketscience/Gemfile",
+		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/application.js",
+		"/Users/KW/Documents/git/rocketscience/db/seeds.rb",
+		"/Users/KW/Documents/git/rocketscience/.gitignore",
+		"/Users/KW/Documents/git/rocketscience/RocketScience/deployment.txt",
+		"/Users/KW/Documents/git/rocketscience/app/views/home/index.html.erb",
+		"/Users/KW/Documents/git/rocketscience/RocketScience/Info.txt",
+		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/home.css.scss",
+		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/application.css",
+		"/Users/KW/Documents/git/rocketscience/config/routes.rb",
+		"/Users/KW/Documents/git/cara/Gemfile",
+		"/Users/KW/Documents/git/rocketscience/.git/config",
+		"/Users/KW/Desktop/RS1/source/apps/6831/bubbleCursor/bin/data/parameters.txt",
+		"/Users/KW/Desktop/RS1/README.txt",
+		"/Users/KW/Desktop/README.txt",
+		"/Users/KW/Documents/Xcode/Kevin's/apps/6831/bubbleCursor/bin/data/parameters.txt",
+		"/Users/KW/Desktop/parameters.txt",
+		"/Users/KW/Desktop/6.033/HO/HO8/HO8",
+		"/Users/KW/Desktop/6.033/HO/HO8/cmd.txt",
+		"/Users/KW/Desktop/OUT",
+		"/Users/KW/Desktop/Outline",
+		"/Users/KW/Desktop/Outline:",
+		"/Users/KW/Desktop/ps3-1/index.html",
+		"/Users/KW/Desktop/ps3/index.html",
+		"/Users/KW/Desktop/ps2-checkerboard-output/index.html",
+		"/Users/KW/Desktop/ps3/board.js",
+		"/Users/KW/Desktop/6.831/ps3/board.js",
+		"/Users/KW/Desktop/6.831/ps3/boardEvent.js",
+		"/Users/KW/Desktop/6.831/ps3/checker.js",
+		"/Users/KW/Desktop/6.831/ps3/rules.js",
+		"/Users/KW/Desktop/ps2/mainLayout.css",
+		"/Users/KW/Desktop/ps2/checker.js",
+		"/Users/KW/Desktop/ps2/rules.js",
+		"/Users/KW/Desktop/ps2/boardEvent.js",
+		"/Users/KW/Desktop/ps2/board.js",
+		"/Users/KW/Desktop/ps2/index.html",
+		"/Users/KW/Desktop/Peach Boy and Timun Mas: A Comparative Analysis",
+		"/Users/KW/Desktop/HO4/mapreduce.py",
+		"/Users/KW/Desktop/6.831/ps1-translate_game/contents/translate_game.html",
+		"/Users/KW/Desktop/6.831/ps1-translate_game/contents/translate_game.js",
+		"/Users/KW/Desktop/6.831/ps1-translate_game/ps1.sublime-project",
+		"/Users/KW/Desktop/6.831/ps1-translate_game/contents/translate_game.css",
+		"/Users/KW/Desktop/6.831/ps1-translate_game/contents/dicts.json",
+		"/Users/KW/Documents/git/cara/cara.sublime-project",
+		"/Users/KW/Documents/git/cara/config/routes.rb",
+		"/Users/KW/Documents/git/cara/app/views/layouts/_header.html.erb",
+		"/Users/KW/Documents/git/cara/app/views/layouts/application.html.erb",
+		"/Users/KW/Documents/git/cara/app/assets/stylesheets/home.css",
+		"/Users/KW/Documents/git/cara/app/assets/stylesheets/bootstrap.css",
+		"/Users/KW/Documents/git/cara/app/views/layouts/_footer.html.erb",
+		"/Users/KW/Documents/git/cara/app/assets/javascripts/application.js",
+		"/Users/KW/Documents/git/cara/app/assets/stylesheets/application.css",
+		"/Users/KW/Documents/git/cara/app/views/home/index.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/groups_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/attendances_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/groups_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/meetings_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/meetings_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/memberships_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/users_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/attendance.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/users_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/memberships_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/attendances_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/posts_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/subjects_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/dashboards_controller_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/user.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/test/functional/user_mailer_test.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/group.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/meeting.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/reply.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/dashboard.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/application_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/application.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/search.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/search.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/javascripts/application.js",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/dashboard.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/home.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/home.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/groups/find_people.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/groups/show.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/config/routes.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/find_people.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/posts_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/groups/_form.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/groups/index.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/groups/edit.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/groups/new.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/new.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/edit.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/index.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/show.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/_form.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/profile.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/_subjects_form.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/subjects/_form.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/subject_affiliation.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/subjects_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/subjects/new.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/meeting.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/group.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/attendances.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/_datetimejs.html.erb",
+		"/Users/KW/Desktop/minerva.sublime-project",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/layouts/application.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/new.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/profile.css",
+		"/Users/KW/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/layouts/_header.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/layouts/_footer.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/signin_form.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/static_pages/welcome.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/custom.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/javascripts/rails.js",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/attendances.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/meetings.css",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/dashboards.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/groups.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/users.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/membership.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/meetings.css.scss",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/static_pages_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/dashboards_controller.rb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/static_pages/email_verification.html.erb",
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/post.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"removed",
+			"remove",
+			"board.moveTo",
+			"checker_object",
+			"add",
+			"toggleTurn",
+			"visibility",
+			"promote(",
+			"promote",
+			"makeMove",
+			"board",
+			"arrow_layer",
+			"move",
+			"dispatchBoardEvent",
+			"dispatchBoard",
+			"promote",
+			"canvas",
+			"makeRandomMove",
+			"toggleTurn",
+			"removeAt",
+			"remove",
+			"add",
+			"Your code here",
+			"add",
+			"content",
+			"size",
+			"board",
+			"keyvalue",
+			"split",
+			"pool",
+			"serif",
+			"grey",
+			"font_width",
+			"font_size",
+			"beginPath",
+			"befgin",
+			"lineWidth",
+			"context",
+			"canvas",
+			"groups_path",
+			"meeting",
+			"attend",
+			"Attendance",
+			"attendances",
+			"attendee",
+			"attend",
+			"current_status",
+			"user_id",
+			"user-id",
+			"lenght",
+			"self",
+			"result += \"",
+			"redirect_to",
+			"is_admin",
+			"is_member",
+			"is_admin",
+			"current_user",
+			"is_attendee",
+			"is_member",
+			"is_admin",
+			"post",
+			"dashboard",
+			"is_member",
+			"overflow",
+			"getHtmlPostForHome",
+			"footer",
+			"ul",
+			"000",
+			"jquery_ujs",
+			"jquery",
+			"timepicker",
+			"margin",
+			"group_invitations",
+			"current_user_membership",
+			"is_admin",
+			"add_group_subject_path",
+			"new_group_meeting_path",
+			"meeting",
+			"edit",
+			"group",
+			"meeting",
+			"group",
+			"meeting",
+			"group",
+			"reply",
+			"post_block",
+			"post",
+			"post_in",
+			"margin-left",
+			"member",
+			"group",
+			"membership",
+			"join",
+			"current_user",
+			", to:",
+			"join",
+			"group",
+			"membership",
+			"is_logged_in",
+			"n_upvote",
+			"get_number_of_upvote"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 27.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"group",
+				"views/groups/show.html.erb"
+			],
+			[
+				"meeting",
+				"views/meetings/show.html.erb"
+			],
+			[
+				"",
+				"/Users/KW/Desktop/minerva operations.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 159.0,
+	"status_bar_visible": true
+}

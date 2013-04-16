@@ -4,7 +4,7 @@ Rocketscience::Application.routes.draw do
 
   match 'home' => 'home#index'
   match 'login' => 'users#login'
-
+  match 'analyze' => 'analysis#analyze'
 
 
 end

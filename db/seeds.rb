@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Table name: images
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  description :string(255)
+#  path        :string(255)
+#  category    :string(255)
+
+Image.create(
+	:id => 1,
+	:name => "image1",
+	:description => "image1",
+	:path => "image1",
+	:category => "category")

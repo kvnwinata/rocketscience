@@ -16,7 +16,7 @@ end
 gem 'annotate', '2.5.0', group: :development
 
 # Dynamic form
-#gem 'dynamic_form'
+gem 'dynamic_form'
 
 # Pass variables from controllers to js
 gem 'gon'

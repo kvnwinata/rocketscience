@@ -498,6 +498,22 @@
 				"buffer_size": 183,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "app/controllers/analysis_controller.rb",
+			"settings":
+			{
+				"buffer_size": 110,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/analysis/analyze.html.erb",
+			"settings":
+			{
+				"buffer_size": 188,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -540,6 +556,7 @@
 	},
 	"file_history":
 	[
+		"/Users/KW/Documents/git/rocketscience/app/views/users/login.html.erb",
 		"/Users/KW/Desktop/final project/KAPTCHA/app/controllers/meetings_controller.rb",
 		"/Users/KW/Documents/git/rocketscience/Gemfile",
 		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/application.js",
@@ -666,8 +683,7 @@
 		"/Users/KW/Documents/6170/final project/KAPTCHA/app/assets/stylesheets/meetings.css.scss",
 		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/static_pages_controller.rb",
 		"/Users/KW/Documents/6170/final project/KAPTCHA/app/controllers/dashboards_controller.rb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/static_pages/email_verification.html.erb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/models/post.rb"
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/static_pages/email_verification.html.erb"
 	],
 	"find":
 	{
@@ -804,7 +820,6 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{
@@ -819,13 +834,65 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								96,
+								96
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/analysis_controller.rb",
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61,
+								61
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/analysis/analyze.html.erb",
+					"settings":
+					{
+						"buffer_size": 188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

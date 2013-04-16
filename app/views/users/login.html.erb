@@ -3,26 +3,47 @@
 
 <div id="centered" align="center"> 
 
-<table width = "1040px" border="0" style="border-collapse: collapse" cellpadding="0" cellspacing="0" height="423" >
-    <tr><td colspan="2">
-        <h1>Your first step into the tattoo world.</h1>
-    </td></tr>
-    
-    <tr><td width = 60%></td><td width = 40%>
-        <%= image_tag("shared/logo_white.png", {:class=>"put classes here", :id=>'3'}) %> 
-        
-        <h2>signup</h2>
-        
-        <h2>browse</h2>
-        <p class = "loginCaption">dont want to signup? browse as guest.</p>
-        <p class = "loginSubs">your preferences will not be saved.</p>
-        
-    </td></tr>
-</table>
+    <table width = "1040px" border="0" style="border-collapse: collapse" cellpadding="0" cellspacing="0" height="423" >
+        <tr><td colspan="2">
+            <h1>Your first step into the tattoo world.</h1>
+        </td></tr>
+
+        <tr><td width = 60%></td><td width = 40%>
+            <%= image_tag("shared/logo_white.png", {:class=>"put classes here", :id=>'3'}) %> 
+
+            <h2>signup</h2>
+            <div class="signup-form">
+
+              <%= form_for(@new_user) do |f| %>
+              <!---<div class='error_message'><%= f.error_messages %></div>-->
+              <div class='signup-fields'>
+
+                  <%= f.label :email, "Email*" %>
+                  <%= f.text_field :email %>
+                  <br>
+                  <%= f.label :password, "Password*" %>
+                  <%= f.password_field :password %>
+                  <br>
+                  <%= f.label :password_confirmation, "Retype password*" %>
+                  <%= f.password_field :password_confirmation %>
+                  <br>
+                  <%= f.submit "SIGNUP"%>
+              </div>
+              <% end %>
+          </div>
+
+
+
+          <h2>browse</h2>
+          <p class = "loginCaption">dont want to signup? browse as guest.</p>
+          <p class = "loginSubs">your preferences will not be saved.</p>
+
+      </td></tr>
+  </table>
 </div>
 
 <div id="bottom" align="center" class="credits"> 
-credits
+    credits
 
 </div>
 

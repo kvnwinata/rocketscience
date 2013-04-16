@@ -36,6 +36,8 @@
         }
     }
     
+    
+    // This code doesn't seem to be working well... 
     function setBottom() {
         if (document.getElementById) {
             var windowHeight = getWindowHeight();
@@ -45,7 +47,7 @@
                 var contentHeight = contentElement.offsetHeight;
                 var contentWidth = contentElement.offsetWidth;
                 if (windowHeight - contentHeight > 0) {
-                    contentElement.style.position = 'relative';
+                    contentElement.style.position = 'absolute';
                     contentElement.style.top = ((2*windowHeight) - (contentHeight)) + 'px';
                     contentElement.style.left = ((windowWidth/2) - (contentWidth/2)) + 'px';
                 }

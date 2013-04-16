@@ -16,6 +16,7 @@
 
               <%= form_for(@new_user) do |f| %>
               <!---<div class='error_message'><%= f.error_messages %></div>-->
+              
               <div class='signup-fields'>
 
                   <%= f.label :email, "Email*" %>
@@ -35,7 +36,14 @@
 
 
           <h2>browse</h2>
-          <p class = "loginCaption">dont want to signup? browse as guest.</p>
+          <span class = "loginCaption">dont want to signup? browse as guest.</span>
+          <%= form_for(@new_user) do |f| %>
+              <!---<div class='error_message'><%= f.error_messages %></div>-->
+              <div class='signup-fields'>
+                  <%= f.submit "BROWSE"%>
+              </div>
+              <% end %>
+          
           <p class = "loginSubs">your preferences will not be saved.</p>
 
       </td></tr>

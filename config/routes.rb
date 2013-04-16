@@ -8,4 +8,6 @@ Rocketscience::Application.routes.draw do
 
   match 'users' => 'home#index'
 
+  match 'example' => 'home#example'
+
 end

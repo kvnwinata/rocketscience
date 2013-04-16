@@ -33,7 +33,6 @@ h1 {
 }	 
 
 
-/*  H2 for titles like login  */ 
 h2{	
     font-family: sans-serif;
 	font-size: 18pt;
@@ -53,16 +52,17 @@ h3 {
 	text-align: left;
 }
 
-table, th, td
-{
-border: 0px solid white;
-align: center;
+.subheading{	
+    font-family: sans-serif;
+	font-size: 18pt;
+	color: #FFFFFF;
+    font-variant:small-caps;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	text-align: left;
 }
 
-td
-{
-padding:10px;
-}
 
 .loginCaption{
     font-family: sans-serif;
@@ -102,21 +102,7 @@ padding:10px;
 	text-align: justify;
 	word-spacing: normal;
 }
-.pictures {
-	font-family: Tahoma, Geneva, sans-serif;
-	font-size: 12px;
-	color: #333;
-	text-align: justify;
-}
-.Date {
-	font-size: 12px;
-	font-weight: bold;
-	font-variant: normal;
-	color: #FFF;
-	font-family: Tahoma, Geneva, sans-serif;
-	background-color: #b6e91c;
-	text-align: right;
-}
+
 
 .menubar {
 
@@ -134,24 +120,23 @@ box-shadow: 0px 0px 8px #b7b7b7;
 
 
 a:link { 
-	font-weight: bold; 
+	font-weight: normal; 
 	text-decoration: none; 
-	color: #2875DE;
+	color: #55a390;
 	}
 
 a:visited { 
-	font-weight: bold; 
+	font-weight: normal; 
 	text-decoration: none; 
-	color: #CC0000;
+	color: #55a390;
 	}
 a:hover, a:active {
 	text-decoration: underline;
-	color: #639BE7;
-	text-align: center;
+	color: #ffffff;
 	}
     
 .credits {
-    width: 200px;
+    width: 99%;
     height: 20px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 8pt;
@@ -159,7 +144,8 @@ a:hover, a:active {
 	text-align: center;
     margin-left: auto ;
     margin-right: auto ;
-    z-index: 1;
+    z-index: 5;
+
 }
 
 .loginLogo{
@@ -171,6 +157,57 @@ hr {
 	background-color:#B7B7B7;
 	height:1px;	
 	}
+
+    
+    
+/* CSS For Forms */
+
+input.button {
+align: right;
+width:100px;
+position:absolute;
+right:20px;
+bottom:20px;
+background:#09C;
+color:#fff;
+font-family: Tahoma, Geneva, sans-serif;
+height:30px;
+-webkit-border-radius: 15px;
+-moz-border-radius: 15px;
+border-radius: 15px;
+border: 1p solid #999;
+}
+
+input.button:hover {
+background:#fff;
+color:#09C;
+}
+
+
+
+input    {
+width:250px;
+display:block;
+border: 0px;
+height: 25px;
+background: #000;
+padding: 1px 1px 1px 7px;
+-webkit-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+zoom: 1;
+filter: alpha(opacity=50);
+opacity: 0.4;
+
+    font-family: sans-serif;
+	font-size: 14pt;
+	color: #fff;
+	font-style: normal;
+	line-height: normal;
+	text-align: left;
+
+}
+
 
 
 /* CSS for Menubar */

@@ -27,7 +27,7 @@
                 var contentHeight = contentElement.offsetHeight;
                 if (windowHeight - contentHeight > 0) {
                     contentElement.style.position = 'relative';
-                    contentElement.style.top = ((windowHeight / 2) - (contentHeight / 2)) + 'px';
+                    contentElement.style.top = ((windowHeight / 2) - (contentHeight / 2) - 20) + 'px';
                 }
                 else {
                     contentElement.style.position = 'static';
@@ -37,18 +37,18 @@
     }
     
     
-    // This code doesn't seem to be working well... 
+
     function setBottom() {
         if (document.getElementById) {
             var windowHeight = getWindowHeight();
-            var windowWidth = getWindowWidth();
+            var windowWidth = document.documentElement.clientWidth;
             if (windowHeight > 0) {
-                var contentElement = document.getElementById('bottomed');
+                var contentElement = document.getElementById('bottoms');
                 var contentHeight = contentElement.offsetHeight;
                 var contentWidth = contentElement.offsetWidth;
                 if (windowHeight - contentHeight > 0) {
                     contentElement.style.position = 'absolute';
-                    contentElement.style.top = ((2*windowHeight) - (contentHeight)) + 'px';
+                    contentElement.style.top = ((windowHeight) - (contentHeight) ) + 'px';
                     contentElement.style.left = ((windowWidth/2) - (contentWidth/2)) + 'px';
                 }
                 else {
@@ -57,8 +57,6 @@
             }
         }
     }
-    
-    
     window.onload = function() {
         setMiddle();
         setBottom();

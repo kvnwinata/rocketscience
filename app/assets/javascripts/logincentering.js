@@ -41,12 +41,13 @@
             var windowHeight = getWindowHeight();
             var windowWidth = getWindowWidth();
             if (windowHeight > 0) {
-                var contentElement = document.getElementById('bottom');
+                var contentElement = document.getElementById('bottomed');
                 var contentHeight = contentElement.offsetHeight;
                 var contentWidth = contentElement.offsetWidth;
                 if (windowHeight - contentHeight > 0) {
-                    contentElement.style.position = 'absolute';
-                    contentElement.style.top = ((windowHeight) - (contentHeight)) + 'px';
+                    contentElement.style.position = 'relative';
+                    contentElement.style.top = ((2*windowHeight) - (contentHeight)) + 'px';
+                    contentElement.style.left = ((windowWidth/2) - (contentWidth/2)) + 'px';
                 }
                 else {
                     contentElement.style.position = 'static';

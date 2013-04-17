@@ -27,6 +27,6 @@ Rocketscience::Application.routes.draw do
 
   # random example pages and main
   match 'home' 			=> 'home#index'   # the main page/home: redirect to login when not signed in or not 'as guest'
-  match 'example' 		=> 'home#example' # an example for testing/debugging only
+  match 'example' 	=> 'home#example' # an example for testing/debugging only
 
 end

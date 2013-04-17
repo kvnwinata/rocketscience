@@ -1,9 +1,14 @@
 <h1> This is example page </h1>
 
-<h2>Test image:</h2>
 
-<%= image_tag("example/1asian1.jpeg", {:class=>"put classes here", :id=>'3'}) %> 
+<h2>Getting image with id = 1</h2>
+We have images with ids from 1-75
 
+<% @image = Image.find(1) %>
+<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+
+<h2>Getting all images</h2>
 <% Image.all.each do |image| %>
-	<%= image_tag(image.path + image.name) %>
+	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
 <% end %>
+

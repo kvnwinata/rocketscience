@@ -1,9 +1,29 @@
 <h1> This is search page </h1>
 
 <% Artist.all.each do |artist| %>
-	<div class="artist-tab" id="<%= artist.id %>">
-		<h2><%= artist.name %></h2>
-	</div>
+
+<div class="artist-tab" id="<%= artist.id %>">
+	
+	<h2><%= artist.name %></h2>
+	<h2><%= artist.address1 %></h2>
+	<h2><%= artist.email %></h2>
+
+	6 images by this artist, remove the lines if need less:
+	<% @images = [] %>
+	<% @images.push(Image.find(artist.id*6)) %>
+	<% @images.push(Image.find(artist.id*6+1))%>
+	<% @images.push(Image.find(artist.id*6+2))%>
+	<% @images.push(Image.find(artist.id*6+3))%>
+	<% @images.push(Image.find(artist.id*6+4))%>
+	<% @images.push(Image.find(artist.id*6+5))%>
+
+	<% @images.each do |image| %>
+	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
+	<% end %>
+
+</div>
+
+
 
 <% end %>
 

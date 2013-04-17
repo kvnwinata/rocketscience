@@ -1,5 +1,7 @@
 <h1> This is info page for artist </h1>
 
+Artist's info
+
 <%= @artist.name %>
 <%= @artist.address1 %>
 <%= @artist.address2 %>
@@ -8,6 +10,14 @@
 <%= @artist.phone %>
 <%= @artist.email %>
 <%= image_tag(@artist.profile_picture) %>
+
+Put like button here
+
+Artist's images
+<% @images.each do |image| %>
+	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
+<% end %>
+
 
 
 

@@ -8,3 +8,51 @@ To pull, send ajax request to /analyze
 
 <%= image_tag("example/1asian1.jpeg", {:class=>"put classes here", :id=>'3'}) %> 
 
+
+<h1>Analysis</h1>
+
+<h3>Based on your selection of images, we think you like:</h3>
+
+<h3>Nature-Inspired Tattoos</h3>
+
+<p>Popular among all ages, nature inspired tattoos aim to reflect this passion towards the natural. Nature, in the broadest sense, is equivalent to the natural world, physical world, or material world. "Nature" refers to the phenomena of the physical world, and also to life in general. It ranges in scale from the subatomic to the cosmic. The word nature is derived from the Latin word natura, or "essential qualities, innate disposition", and in ancient times, literally meant "birth". Natura was a Latin translation of the Greek word physis (φύσις), which originally related to the intrinsic characteristics that plants, animals, and other features of the world develop of their own accord. The concept of nature as a whole, the physical universe, is one of several expansions of the original notion; it began with certain core applications of the word φύσις by pre-Socratic philosophers, and has steadily gained currency ever since. This usage was confirmed during the advent of modern scientific method in the last several centuries.  </p>
+
+</h3> More Nature-Inspired Tattoos <h3>
+
+<% @image = Image.find(61) %>
+<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<% @image = Image.find(62) %>
+<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<% @image = Image.find(63) %>
+<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<% @image = Image.find(64) %>
+<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<% @image = Image.find(65) %>
+<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+
+Maybe we should allow interaction with these images as well?
+
+</h3> Artists we think you'll like: <h3>
+
+<% Artist.all[0,2].each do |artist| %>
+
+<div class="artist-suggestion" id="<%= artist.id %>">
+	
+	<h2><%= artist.name %></h2>
+	<h2><%= artist.address1 %></h2>
+	<h2><%= artist.email %></h2>
+
+	2 images by this artist:
+	<% @images = [] %>
+	<% @images.push(Image.find(artist.id*6)) %>
+	<% @images.push(Image.find(artist.id*6+1))%>
+
+	<% @images.each do |image| %>
+	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
+	<% end %>
+
+	Add like button!
+</div>
+
+<% end %>
+

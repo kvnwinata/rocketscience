@@ -27,7 +27,7 @@
                 var contentHeight = contentElement.offsetHeight;
                 if (windowHeight - contentHeight > 0) {
                     contentElement.style.position = 'relative';
-                    contentElement.style.top = ((windowHeight / 2) - (contentHeight / 2) - 20) + 'px';
+                    contentElement.style.top = ((windowHeight / 2) - (contentHeight / 2)) + 'px';
                 }
                 else {
                     contentElement.style.position = 'static';

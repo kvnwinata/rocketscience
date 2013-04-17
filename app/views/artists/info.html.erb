@@ -1,6 +1,14 @@
-<h1> This is info page </h1>
+<h1> This is info page for artist </h1>
 
-<h2>Test image:</h2>
+<%= @artist.name %>
+<%= @artist.address1 %>
+<%= @artist.address2 %>
+<%= @artist.city %>
+<%= @artist.state %>
+<%= @artist.phone %>
+<%= @artist.email %>
+<%= image_tag(@artist.profile_picture) %>
 
-<%= image_tag("example/1asian1.jpeg", {:class=>"put classes here", :id=>'3'}) %> 
+
+
 

@@ -20,9 +20,10 @@ Rocketscience::Application.routes.draw do
 
   # artists
   match 'artists/search' 		      => 'artists#search' # the artist search page
-  match 'artists/info' 	  => 'artists#info'   # the artist info when an artist's tab is clicked: ajax
-  match 'artists/like' 	  => 'artists#like'   # liking an artist, update db
-  match 'artists/unlike'  => 'artists#unlike' # disliking an artist, update db
+  match 'artists/info' 	          => 'artists#info'   # the artist info when an artist's tab is clicked: ajax
+  match 'artists/info/:artist_id' => 'artists#info'
+  match 'artists/like' 	          => 'artists#like'   # liking an artist, update db
+  match 'artists/unlike'          => 'artists#unlike' # disliking an artist, update db
 
   # random example pages and main
   match 'home' 			=> 'home#index'   # the main page/home: redirect to login when not signed in or not 'as guest'

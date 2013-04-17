@@ -9,8 +9,7 @@ end
 # for the piazza-like interface when a
 # tab for an artist is clicked
 def info
-	#@artist = Artist.find(params[:artists_id])
-
+	@artist = Artist.find(params[:artist_id])
 	render :layout => false
 end
 

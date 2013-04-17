@@ -44,23 +44,36 @@
 -                  <%= f.password_field :password_confirmation %>
 -                  <br>
 -                  <%= f.submit "SIGNUP"%>-->
+ 
 
-                <%= f.text_field :email, value: "username" %>
-                <br>
-                <%= f.password_field :password, value: "password" %>
-                <br>
+
+
+
+                <%= f.label :email, "Username", class: "inputLabel" %>
+                <%= f.text_field :email, value: "username", class: "inputLabel" %>
+                
+                <%= f.label :password, "Password" ,class: "inputLabel"  %>
+                <%= f.password_field :password, value: "password"%>
+                
+                <%= f.label :password_confirmation, "Retype Password" , class: "inputLabel" %>
                 <%= f.password_field :password_confirmation, value: "password confirmation" %>
-                <br>
-                <%= f.submit "SIGNUP", class: "put classes here"%>
-              </div>
+               <br>
+                <%= f.submit "SIGNUP", class: "button"%>
+                </div>
 
+              
+              
+              
+              
               <!--- ggy's copy
               <div class='input'>
-
+                <%= f.label :email, "Username" %>
                 <input type="text" name="email" value="username">
                 <br />
+                <%= f.label :password, "Password" %>
                 <input type="text" name="password" value="password">
                 <br />
+                <%= f.label :password_confirmation, "Retype Password" %>
                 <input type="text" name="password confrm" value="re-type password">
                 <br />
                 Kevin, how do we change the css for f.button? 
@@ -69,6 +82,11 @@
                 <div align = right><%= f.button "SIGNUP", class: "put classes here"%></div>
 
               </div>-->
+              
+              
+              
+              
+              
               <% end %>
             </div>
 
@@ -87,7 +105,8 @@
            <!---<div class='error_message'><%= f.error_messages %></div>-->
            <div class='signup-fields'>
             <br>
-            <div align = right><%= f.button "BROWSE"%>
+            <div align = left>
+            <%= f.submit "BROWSE", class: "button"%>
             </div>
             <% end %>
 

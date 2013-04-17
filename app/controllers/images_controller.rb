@@ -1,7 +1,16 @@
-class UsersController < ApplicationController
+class ImagesController < ApplicationController
 
-def login
+def analyze
+	@userid = 5
+	render :layout => false
+end
 
+def like
+	render :nothing => true
+end
+
+def unlike
+	render :nothing => true
 end
 
 end

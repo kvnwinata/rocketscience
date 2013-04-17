@@ -21,7 +21,6 @@ gem 'dynamic_form'
 # Pass variables from controllers to js
 gem 'gon'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

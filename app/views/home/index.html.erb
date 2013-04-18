@@ -47,13 +47,12 @@
     <br>
     <table width="100%"><tr><td width = "*">
     <div class = "artwork-container">
-    <!-- *% wide -->
-    <%= image_tag("example/1asian1.jpeg", {:class=>"put classes here", :id=>'3'}) %> 
-    
+    <!-- *% wide -->    
     
     <!-- CODE FOR IMAGES HERE -->
-    
-    
+    <% Image.all.each do |image| %>
+    <%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
+    <% end %>
     
     
     
@@ -86,7 +85,7 @@
      </center>
     <br /><br />
     
-    <%= image_tag("shared/bin.png", {:class=>"dustbin", :id=>'3'}) %>
+    <%= image_tag("shared/bin.png", {:class=>"dustbin", :id=>'dustbin'}) %>
     
     
     

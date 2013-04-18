@@ -13,3 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+    window.onload = function() {
+    	resizeMediumImages();
+        setMiddle();
+        setBottom();
+
+        $("#dustbin").attr("ondrop","drop(event)");
+		$("#dustbin").attr("ondragover","allowDrop(event)");
+
+		// run when new elements added to inkbox
+		$(".inInkBox").attr("draggable","true");
+		$(".inInkBox").attr("ondragstart","drag(event)");
+    }
+    
+    window.onresize = function() {
+        setMiddle();
+        setBottom();
+    }

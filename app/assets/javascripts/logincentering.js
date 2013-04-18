@@ -57,12 +57,3 @@
             }
         }
     }
-    window.onload = function() {
-        setMiddle();
-        setBottom();
-    }
-    window.onresize = function() {
-        setMiddle();
-        setBottom();
-    }
-

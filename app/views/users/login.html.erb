@@ -50,13 +50,13 @@
 
 
                 <%= f.label :email, "Username", class: "inputLabel" %>
-                <%= f.text_field :email, value: "username", class: "inputLabel" %>
+                <%= f.text_field :email, value: "", class: "inputLabel" %>
                 
                 <%= f.label :password, "Password" ,class: "inputLabel"  %>
-                <%= f.password_field :password, value: "password"%>
+                <%= f.password_field :password, value: ""%>
                 
                 <%= f.label :password_confirmation, "Retype Password" , class: "inputLabel" %>
-                <%= f.password_field :password_confirmation, value: "password confirmation" %>
+                <%= f.password_field :password_confirmation, value: "" %>
                <br>
                 <%= f.submit " SIGN-UP", class: "button"%>
                 </div>
@@ -71,10 +71,10 @@
                 <input type="text" name="email" value="username">
                 <br />
                 <%= f.label :password, "Password" %>
-                <input type="text" name="password" value="password">
+                <input type="text" name="password" value="">
                 <br />
                 <%= f.label :password_confirmation, "Retype Password" %>
-                <input type="text" name="password confrm" value="re-type password">
+                <input type="text" name="password confrm" value="">
                 <br />
                 Kevin, how do we change the css for f.button? 
 

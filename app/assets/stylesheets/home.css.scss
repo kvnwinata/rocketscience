@@ -45,12 +45,41 @@ h2{
 	text-align: left;
 }
 h3 {
-	font-family: Tahoma, Geneva, sans-serif;
+	font-family: sans-serif;
 	font-size: 24px;
 	font-style: normal;
 	font-weight: normal;
 	color: #09C;
 	text-align: left;
+}
+
+.h4 {
+	font-family: sans-serif;
+	font-size: 30pt;
+	color: #999999;
+	font-style: normal;
+	font-weight: normal;
+}
+.titles {
+	font-family: sans-serif;
+	font-size: 15pt;
+	color: #999999;
+	font-style: normal;
+	font-weight: normal;
+}
+.titles2 {
+	font-family: sans-serif;
+	font-size: 15pt;
+	color: #333333;
+	font-style: normal;
+	font-weight: normal;
+}
+.text {
+	font-family: sans-serif;
+	font-size: 12pt;
+	color: #999999;
+	font-style: normal;
+	font-weight: normal;
 }
 
 .subheading{	
@@ -143,12 +172,25 @@ a:hover, a:active {
 	background: url('shared/logodouble.png') bottom;
 	text-indent: -99999px;
     position: relative;
-    top: 51px;
+    top: 15px;
     
 }
     
 .logoclick:hover {
 	background-position: 0 0;
+}
+
+
+.analyze{
+    width: 281px;
+    height: 69px;
+    display: block;
+    background: url('shared/analyze.png') bottom;
+	text-indent: -99999px;
+    position: relative;
+}
+.analyze:hover{
+    background-position: 0 0;
 }
     
 .credits {

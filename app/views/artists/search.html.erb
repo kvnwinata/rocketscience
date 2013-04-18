@@ -1,4 +1,3 @@
-
 <div class = "main-container">
 <div class = "content-container"> 
 
@@ -31,6 +30,7 @@
 <table id="container">
 <tr>
 <td id="infoPanel">
+
 <% Artist.all.each do |artist| %>
 
 <div class="artist-tab inactiveTab" id="<%= artist.id %>">
@@ -51,12 +51,14 @@
 
 	<% @images.each do |image| %>
 	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
-<% end %>
+<%end%>
 -->
     
 </div>
 
+
 <% end %>
+
 </td>
 <td id="artistPanel"></td>
 </tr>

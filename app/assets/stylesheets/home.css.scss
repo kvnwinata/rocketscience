@@ -161,28 +161,37 @@ a:hover, a:active {
     margin-right: auto ;
     z-index: 999;
     background: #000000;
-}
-
-.menubutton{
-    vertical-align: middle;
-    text-align: center;
-    height: 50px;
-    background: #b6b6b2;
+    
 }
 
 .menubuttonpressed{
     vertical-align: middle;
     text-align: center;
     height: 50px;
-    background: #eaeaea;
+    background: #b6b6b2;
+    margin: 0px 1px 1px 1px;
+    font-weight: bold;
+    color: #444444;
+    
+}
 
+.menubutton{
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+    background: #eaeaea;
+    margin: 0px 1px 1px 1px;
+    color: #777777;
+    
 }
 
 .menubutton:hover {
     background: #55a390;
+    color: #ffffff;
 }
 .menubuttonpressed:hover {
     background: #55a390;
+    color: #ffffff;
 }
 
 

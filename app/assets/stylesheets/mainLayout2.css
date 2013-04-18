@@ -1,0 +1,38 @@
+﻿
+#container{
+/*	height:300px;
+	width:1000px;
+	overflow:hidden;*/
+}
+#artistPanel{
+	/*
+	width:600;
+	background-color:#3F6AE8;
+	float:left;*/
+}
+#infoPanel{
+	/*
+	height:300px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	float:left;
+	direction:rtl;*/
+}
+.artist-tab{
+	color:white;/*
+	height:100px;*/
+	direction:ltr;
+}
+
+.activeTab{
+	background-color:#3F6AE8;
+}
+.inactiveTab{
+	background-color:#203678;
+}
+.hoverTab{
+	background-color:#CC56FF;
+}
+
+
+

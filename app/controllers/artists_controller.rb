@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController
 
 def search
-	gon.page_type = "artist_search"
+	gon.page_type = "search"
 	# render the search page
 end
 

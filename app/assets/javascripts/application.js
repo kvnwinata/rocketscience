@@ -15,9 +15,17 @@
 //= require_tree .
 
     window.onload = function() {
-    	resizeMediumImages();
-        setMiddle();
-        setBottom();
+    	
+        if (gon.page_type === "login"){
+            setMiddle();
+            setBottom();
+        }
+
+        if (gon.page_type === "search"){
+            tab_setup();
+        }
+        
+        resizeMediumImages();
 
         $("#dustbin").attr("ondrop","drop(event)");
 		$("#dustbin").attr("ondragover","allowDrop(event)");
@@ -28,6 +36,8 @@
     }
     
     window.onresize = function() {
-        setMiddle();
-        setBottom();
+        if (gon.page_type === "login"){
+            setMiddle();
+            setBottom();
+        }
     }

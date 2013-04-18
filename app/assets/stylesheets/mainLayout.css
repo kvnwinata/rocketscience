@@ -1,0 +1,22 @@
+﻿#background {
+	background-color:#000000;
+	width:600px;
+	height:400px;
+	position:relative;
+	left: 100;
+}
+#activator{
+	background-color:red;
+	position:relative;
+	width:10px;
+	height:20px;
+	top:200;
+	left:-5;
+	
+}
+#container{
+	height:400px;
+}
+.hidden{
+	overflow:hidden;
+}

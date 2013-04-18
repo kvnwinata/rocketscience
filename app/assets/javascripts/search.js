@@ -9,7 +9,6 @@ var tab_setup = function(){
     var containerID = "#container";
     var infoPanel = document.getElementById('infoPanel');
 
-    $(infoPanel).css('width',0.35*$(containerID).width());
     var artistPanel = document.getElementById('artistPanel');
     // $(artistPanel).appendTo($(containerID));
     // $(artistPanel).attr('id','artistPanel');
@@ -33,8 +32,6 @@ var tab_setup = function(){
         <div id='9' class='artist-tab inactiveTab'>div9</div>\
         <div id='10' class='artist-tab inactiveTab'>div10</div>\
         <div id='11' class='artist-tab inactiveTab'>div11</div>")*/
-        $(".artist-tab").css('width',$("#infoPanel").width());
-        $(".artist-tab").css('height',70);
         // add function listener
         $(infoPanel).children('div').each(function(){
             if($(this).hasClass('artist-tab')){

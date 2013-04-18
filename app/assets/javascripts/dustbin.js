@@ -10,8 +10,11 @@ function allowDrop(ev)
 function drop(ev)
 {
 	ev.preventDefault();
-	var data=ev.dataTransfer.getData("Text");
-	$(document.getElementById(data)).remove();
+	var data = ev.dataTransfer.getData("Text");
+
+	$(document.getElementById(data)).remove().appendTo($(".artwork-container"));
+	//$(image).remove();
+	//$(image).;
 	// need to do some update to the database
 }
 

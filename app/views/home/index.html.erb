@@ -1,49 +1,6 @@
 
 
 
-<script>
-// set the size
-		$(".hidden").css("width",$(window).width());
-		var isopen = true;
-		var out_x = $(window).width()-25;
-		var in_x = 10;
-		var pane = document.createElement('div');
-		$("#sliding").css('width',$(document).width());
-		$(pane).attr('id','background');
-		var activator = document.createElement('div');
-		$(activator).attr('id','activator');
-		$(pane).appendTo('#sliding');
-		$(activator).appendTo('#background');
-		$(pane).css('left',in_x);
-		$(".analyze").mousedown(function(e){
-			e.preventDefault();
-			if (isopen){
-				$("#sliding").toggleClass("hidden");
-				$(pane).animate({left:out_x},1000,'swing',function(){isopen = false;})
-				//
-				//$(pane).hide({direction:'right',easing:'swing',duration:1000,done:function(){
-				//	isopen = false;
-				//}})
-				//$(pane).hide("slide", { direction: "right" }, 1000);
-			} else {
-				//$(pane).show(1000);
-				//isopen = true;
-				$("#sliding").toggleClass("hidden");
-				$(pane).animate({left:in_x},1000,'swing',function(){isopen = true;})
-			}
-		});
-		$(window).resize(function(){
-			console.log('resize called '+$(window).width());
-			$("#sliding").css('width',$(window).width());
-			out_x = $(document).width()-25;
-			if(isopen){
-				$(pane).css('left',in_x);
-			} else {
-				$(pane).css('left',out_x);
-			}
-		});</script>
-
-
 
 
 <div class = "main-container">
@@ -85,13 +42,13 @@
     
     
     <br>
-    <table width="100%"><tr><td width = "*">
+    <table width="100%"><tr><td width = "*" style="vertical-align: top;">
     <div class = "artwork-container">
     <!-- *% wide -->    
     
     <!-- CODE FOR IMAGES HERE -->
     <% Image.all.each do |image| %>
-    <%= image_tag(image.path + image.name, {class: "medium", id: "id", style: "visibility: hidden;"}) %>
+    <%= image_tag(image.path + image.name, {class: "medium selectable-img", id:image.id, style: "visibility: hidden;"}) %>
     <% end %>
     
     
@@ -99,7 +56,7 @@
     
     
     </div>
-    </td><td width = "368px">
+    </td><td width = "368px" style="vertical-align: top;">
     <div class = "inkbox-container">
     <!-- fixed wide -->
     <div class = "topbox"></div>
@@ -118,13 +75,6 @@
     
     
     
-     <div id = "background" class="sliding">
-    sdfsdf
-    test</div>
-    
-    
-    
-    
     
     <div class="analyze">
 
@@ -134,14 +84,13 @@
    
     
     <div class = "boxnotice">
-    drag your favourite tattoos here<br>
-    or trash bad ones in the bin
+    Click on tattoos you like<br>
+    or trash bad ones in the bin.
     </div>
-    
     <br /><br />
-    <%= image_tag("example/1asian1.jpeg", {:class=>"inInkBox", :id=>'3'}) %> 
-    <%= image_tag("example/1asian1.jpeg", {:class=>"inInkBox", :id=>'3'}) %> 
-    
+    <div id="inkBox-image">
+    <p class="inkBox-message">No images yet.</p>    
+    </div>
     
      </center>
     <br /><br />
@@ -149,13 +98,14 @@
     <%= image_tag("shared/bin.png", {:class=>"dustbin", :id=>'dustbin'}) %>
     
     
-    
-    
     </div>
     </div>
     
     <div class"clear"></div>
     </td></tr></table>
+
+    <div id="sliding" style="display:none;overflow:scroll; position:absolute; top: 300px; left:150px; width:900px; height:600px; background-color:black;"></div>
+
 </div>
 </div>
 

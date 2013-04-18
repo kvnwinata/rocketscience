@@ -1,14 +1,3 @@
-<h1> This is analyze </h1>
-
-<h2>Test image:</h2>
-
-To pull, send ajax request to /analyze
-
-<%= @userid%>
-
-<%= image_tag("example/1asian1.jpeg", {:class=>"put classes here", :id=>'3'}) %> 
-
-
 <h1>Analysis</h1>
 
 <h3>Based on your selection of images, we think you like:</h3>
@@ -20,17 +9,15 @@ To pull, send ajax request to /analyze
 </h3> More Nature-Inspired Tattoos <h3>
 
 <% @image = Image.find(61) %>
-<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<%= image_tag(@image.path + @image.name, {class: "medium", id: "id"}) %>
 <% @image = Image.find(62) %>
-<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<%= image_tag(@image.path + @image.name, {class: "medium", id: "id"}) %>
 <% @image = Image.find(63) %>
-<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<%= image_tag(@image.path + @image.name, {class: "medium", id: "id"}) %>
 <% @image = Image.find(64) %>
-<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
+<%= image_tag(@image.path + @image.name, {class: "medium", id: "id"}) %>
 <% @image = Image.find(65) %>
-<%= image_tag(@image.path + @image.name, {class: "class", id: "id"}) %>
-
-Maybe we should allow interaction with these images as well?
+<%= image_tag(@image.path + @image.name, {class: "medium", id: "id"}) %>
 
 </h3> Artists we think you'll like: <h3>
 
@@ -48,7 +35,7 @@ Maybe we should allow interaction with these images as well?
 	<% @images.push(Image.find(artist.id*6+1))%>
 
 	<% @images.each do |image| %>
-	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
+	<%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
 	<% end %>
 
 	Add like button!

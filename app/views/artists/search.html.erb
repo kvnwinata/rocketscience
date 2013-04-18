@@ -28,6 +28,7 @@
 
 
 <table id="container">
+<!--<tr id="filterPanel"></tr>-->
 <tr>
 <td id="infoPanel">
 
@@ -35,9 +36,9 @@
 
 <div class="artist-tab inactiveTab" id="<%= artist.id %>">
 	
-	<h2><%= artist.name %></h2>
-	<h2><%= artist.address1 %></h2>
-	<h2><%= artist.email %></h2>
+	<%= artist.name %><br>
+	<%= artist.address1 %><br>
+	<%= artist.email %>
 
 	<!---
 	6 images by this artist, remove the lines if need less:

@@ -25,14 +25,20 @@
             tab_setup();
         }
         
+        if (gon.page_type === "index"){
+            slidingThing();
+            attach_listener_to_images();
+        }
+        
+    
         resizeMediumImages();
 
         $("#dustbin").attr("ondrop","drop(event)");
 		$("#dustbin").attr("ondragover","allowDrop(event)");
 
 		// run when new elements added to inkbox
-		$(".inInkBox").attr("draggable","true");
-		$(".inInkBox").attr("ondragstart","drag(event)");
+		$(".selectable-img").attr("draggable","true");
+		$(".selectable-img").attr("ondragstart","drag(event)");
     }
     
     window.onresize = function() {

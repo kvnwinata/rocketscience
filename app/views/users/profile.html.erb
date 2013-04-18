@@ -72,7 +72,7 @@
 	<% @images.push(Image.find(artist.id*6+1))%>
 
 	<% @images.each do |image| %>
-	<%= image_tag(image.path + image.name, {class: "class", id: "id"}) %>
+	<%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
 	<% end %>
 
 	Add like button!

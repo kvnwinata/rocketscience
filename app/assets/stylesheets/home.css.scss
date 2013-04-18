@@ -179,6 +179,19 @@ a:hover, a:active {
 .logoclick:hover {
 	background-position: 0 0;
 }
+
+
+.analyze{
+    width: 281px;
+    height: 69px;
+    display: block;
+    background: url('shared/analyze.png') bottom;
+	text-indent: -99999px;
+    position: relative;
+}
+.analyze:hover{
+    background-position: 0 0;
+}
     
 .credits {
     width: 100%;

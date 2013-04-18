@@ -136,6 +136,18 @@ a:hover, a:active {
 	color: #f6a100;
 	}
     
+.logoclick{ 
+    display: block;
+    width: 255px;
+	height: 27px;
+	background: url('shared/logodouble.png') bottom;
+	text-indent: -99999px;
+}
+    
+.logoclick:hover {
+	background-position: 0 0;
+}
+    
 .credits {
     width: 100%;
     height: 20px;

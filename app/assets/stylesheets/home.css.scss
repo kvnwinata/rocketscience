@@ -163,6 +163,28 @@ a:hover, a:active {
     background: #000000;
 }
 
+.menubutton{
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+    background: #b6b6b2;
+}
+
+.menubuttonpressed{
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+    background: #eaeaea;
+
+}
+
+.menubutton:hover {
+    background: #55a390;
+}
+.menubuttonpressed:hover {
+    background: #55a390;
+}
+
 
 .main-container{
     background: #ffffff;

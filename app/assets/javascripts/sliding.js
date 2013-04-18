@@ -3,14 +3,15 @@ $(".hidden").css("width",$(window).width());
 		var out_x = $(window).width()-25;
 		var in_x = 10;
 		var pane = document.createElement('div');
-		$("#container").css('width',$(document).width());
+		$("#container").css('width',600);
 		$(pane).attr('id','background');
 		var activator = document.createElement('div');
 		$(activator).attr('id','activator');
 		$(pane).appendTo('#container');
 		$(activator).appendTo('#background');
 		$(pane).css('left',in_x);
-		$(".analyze").mousedown(function(e){
+		$('.analyze').mousedown(function(e){
+            console.log("hello");
 			e.preventDefault();
 			if (isopen){
 				$("#container").toggleClass("hidden");

@@ -5,7 +5,7 @@
 		var out_x = $(window).width()-25;
 		var in_x = 10;
 		var pane = document.createElement('div');
-		$("#container").css('width',$(document).width());
+		$("#container").css('width',600);
 		$(pane).attr('id','background');
 		var activator = document.createElement('div');
 		$(activator).attr('id','activator');

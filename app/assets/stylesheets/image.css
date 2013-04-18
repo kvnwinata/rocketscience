@@ -1,0 +1,16 @@
+﻿.selectable-img{
+	padding: 5px;	
+}
+
+.selectable-img:hover{
+	padding: 3px;
+	padding: 3px;
+	border: solid 2px;
+	border-color: grey;
+	cursor: pointer;
+}
+
+.inInkBox:hover{
+	cursor: pointer;
+	border: solid 2px;
+}

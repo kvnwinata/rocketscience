@@ -1,0 +1,77 @@
+﻿#filterPanel{
+	margin-top: 10px;
+	height: 30px;
+	background-color: "white";
+}
+
+#container{
+	background-color:#EAEAEA;
+/*	height:300px;
+	width:1000px;
+	overflow:hidden;*/
+}
+#artistPanel{
+	/*
+	width:600;
+	float:left;*/
+	min-width: 800px;
+	vertical-align: top;
+
+}
+#infoPanel{
+	width: 300px;
+	vertical-align: top;
+	/*
+	height:300px;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	float:left;
+	direction:rtl;*/
+}
+.artist-tab{
+	padding: 20px;
+	min-height: auto;
+	overflow: hidden;
+	font-size: 20px;
+	/*
+	height:100px;*/
+}
+
+.activeTab{
+	border-top:solid 3px;
+	border-bottom:solid 3px;
+	border-color: #333333;
+	color:#555555;
+	font-weight: bold;
+	background-color:#EAEAEA;
+}
+.inactiveTab{
+	border-right: solid 3px;
+	border-color: #333333;
+	background-color:#FFFFFF;
+	color:#000000;
+	border-bottom: solid 1px grey;
+}
+.hoverTab{
+	border-right: solid 3px;
+	border-color: #333333;
+	color:white;
+	background-color:#55a390;
+}
+
+.artist-name{
+	font-weight: bold; 
+}
+
+.artist-email{
+	font-size: 10px;
+}
+
+.artist-address{
+	font-size: 14px;
+}
+
+.info-message{
+	margin:20px;
+}
+

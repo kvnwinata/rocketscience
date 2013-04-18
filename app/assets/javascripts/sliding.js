@@ -3,7 +3,8 @@ var slidingThing = function(){
 		$(".analyze").mousedown(function(e){
 			e.preventDefault();
 			if ($("#sliding").css('display')==="none"){
-				$("#sliding").show(500);
+				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
+
 				$.ajax({
                         url: "/images/analyze",
                         type: "GET",
@@ -24,9 +25,14 @@ var slidingThing = function(){
 			} else {
 				//$(pane).show(1000);
 				//isopen = true;
+				$("#closeAnalysis").hide(500);
 				$("#sliding").hide(500);
 		}
 	});
+	$("#closeAnalysis").click(function(){
+		$("#closeAnalysis").hide(500);
+		$("#sliding").hide(500);
+	})
 		
 }
 

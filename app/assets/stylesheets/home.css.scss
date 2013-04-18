@@ -142,6 +142,9 @@ a:hover, a:active {
 	height: 27px;
 	background: url('shared/logodouble.png') bottom;
 	text-indent: -99999px;
+    position: relative;
+    top: 51px;
+    
 }
     
 .logoclick:hover {
@@ -223,6 +226,11 @@ a:hover, a:active {
     min-height:500px; 
 }
 
+.content-container2{
+    width: 90%;
+    margin-left: auto ;
+    margin-right: auto ; 
+}
 
 .artwork-container{
 

@@ -1,59 +1,41 @@
-// Vertical centering for the login window
-// Applied <div id="centered" align="center"> </div>
 
-
-    function getWindowHeight() {
-        var windowHeight = 0;
-        if (typeof(window.innerHeight) == 'number') {
-            windowHeight = window.innerHeight;
-        }
-        else {
-            if (document.documentElement && document.documentElement.clientHeight) {
-                windowHeight = document.documentElement.clientHeight;
-            }
-            else {
-                if (document.body && document.body.clientHeight) {
-                    windowHeight = document.body.clientHeight;
-                }
-            }
-        }
-        return windowHeight;
-    }
-    function setMiddle() {
-        if (document.getElementById) {
-            var windowHeight = getWindowHeight();
-            if (windowHeight > 0) {
-                var contentElement = document.getElementById('centered');
-                var contentHeight = contentElement.offsetHeight;
-                if (windowHeight - contentHeight > 0) {
-                    contentElement.style.position = 'relative';
-                    contentElement.style.top = ((windowHeight / 2) - (contentHeight / 2)) + 'px';
-                }
-                else {
-                    contentElement.style.position = 'static';
-                }
-            }
-        }
-    }
-    
-    
-
-    function setBottom() {
-        if (document.getElementById) {
-            var windowHeight = getWindowHeight();
-            var windowWidth = document.documentElement.clientWidth;
-            if (windowHeight > 0) {
-                var contentElement = document.getElementById('bottoms');
-                var contentHeight = contentElement.offsetHeight;
-                var contentWidth = contentElement.offsetWidth;
-                if (windowHeight - contentHeight > 0) {
-                    contentElement.style.position = 'absolute';
-                    contentElement.style.top = ((windowHeight) - (contentHeight) ) + 'px';
-                    contentElement.style.left = ((windowWidth/2) - (contentWidth/2)) + 'px';
-                }
-                else {
-                    contentElement.style.position = 'static';
-                }
-            }
-        }
-    }
+		// set the size
+		$(".hidden").css("width",$(window).width());
+		var isopen = true;
+		var out_x = $(window).width()-25;
+		var in_x = 10;
+		var pane = document.createElement('div');
+		$("#container").css('width',$(document).width());
+		$(pane).attr('id','background');
+		var activator = document.createElement('div');
+		$(activator).attr('id','activator');
+		$(pane).appendTo('#container');
+		$(activator).appendTo('#background');
+		$(pane).css('left',in_x);
+		$(activator).mousedown(function(e){
+			e.preventDefault();
+			if (isopen){
+				$("#container").toggleClass("hidden");
+				$(pane).animate({left:out_x},1000,'swing',function(){isopen = false;})
+				//
+				//$(pane).hide({direction:'right',easing:'swing',duration:1000,done:function(){
+				//	isopen = false;
+				//}})
+				//$(pane).hide("slide", { direction: "right" }, 1000);
+			} else {
+				//$(pane).show(1000);
+				//isopen = true;
+				$("#container").toggleClass("hidden");
+				$(pane).animate({left:in_x},1000,'swing',function(){isopen = true;})
+			}
+		});
+		$(window).resize(function(){
+			console.log('resize called '+$(window).width());
+			$("#container").css('width',$(window).width());
+			out_x = $(document).width()-25;
+			if(isopen){
+				$(pane).css('left',in_x);
+			} else {
+				$(pane).css('left',out_x);
+			}
+		});

@@ -41,5 +41,8 @@ var attach_listener_to_images = function(){
 		$(this).remove();
 		$(this).appendTo($("#inkBox-image"));
 		$(".inkBox-message").remove();
+		$(this).attr("draggable","true").attr("ondragstart","drag(event)");
+		numImgInInkbox++;
+		console.log('inkbox height: ' + $("#inkBox-image").height())
 	});
 }

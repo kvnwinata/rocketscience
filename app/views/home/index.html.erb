@@ -48,7 +48,12 @@
     
     <!-- CODE FOR IMAGES HERE -->
     <% Image.all.each do |image| %>
-    <%= image_tag(image.path + image.name, {class: "medium selectable-img", id:image.id, style: "visibility: hidden;"}) %>
+    <span class="tattoo-image-container" style:'position:relative;'>
+        <%= image_tag(image.path + image.name, {class: "medium selectable-img", id:image.id, style: "position:relative; visibility: hidden; z-index:0;"}) %>
+        <span style:'position: relative; width:10px; z-index:1'
+        <%= image_tag("shared/magglass.png", {:class=>"mag-glass", :id=>image.id.to_s() + 'mag',style:'position:relative; left:-19px; visibility: hidden; z-index: 1;height: 30px;'}) %>
+
+    </span></span>
     <% end %>
     
     

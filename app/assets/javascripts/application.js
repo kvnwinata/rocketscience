@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require_tree .
 
+// need global variable to keep track of states of the system, such as how many images is selected
+var numImgInInkbox = 0;
+
     window.onload = function() {
     	
         if (gon.page_type === "login"){
@@ -37,8 +40,8 @@
 		$("#dustbin").attr("ondragover","allowDrop(event)");
 
 		// run when new elements added to inkbox
-		$(".selectable-img").attr("draggable","true");
-		$(".selectable-img").attr("ondragstart","drag(event)");
+		$(".selectable-img").attr("draggable","false");
+		//$(".selectable-img").attr("ondragstart","drag(event)");
     }
     
     window.onresize = function() {

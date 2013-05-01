@@ -5,4 +5,5 @@
 		$(".medium").css('height',"100px");
 		$(".medium").css('width',"100px");
 		$(".medium").css('visibility',"visible");
+		$(".mag-glass").css('visibility',"visible");
 	};

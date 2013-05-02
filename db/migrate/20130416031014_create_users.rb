@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :password_confirmation
       t.string :password_digest
-
+      t.integer :category_id
       t.timestamps
     end
   end

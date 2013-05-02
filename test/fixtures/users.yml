@@ -7,6 +7,7 @@
 #  password              :string(255)
 #  password_confirmation :string(255)
 #  password_digest       :string(255)
+#  category_id           :integer
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
 #

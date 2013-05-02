@@ -1,26 +1,21 @@
 # == Schema Information
 #
-# Table name: images
+# Table name: artist_images
 #
 #  id          :integer          not null, primary key
-#  name        :string(255)
-#  path        :string(255)
+#  image_id    :integer
+#  artist_id   :integer
 #  category_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  description :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
-  path: MyString
-  category: MyString
+  image_id: 1
+  artist_id: 1
 
 two:
-  name: MyString
-  description: MyText
-  path: MyString
-  category: MyString
+  image_id: 1
+  artist_id: 1

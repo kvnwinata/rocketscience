@@ -30,15 +30,18 @@
 <table id="container">
 <!--<tr id="filterPanel"></tr>-->
 <tr>
-<td id="infoPanel">
+
+&nbsp;
+
+<td id="infoPanel" width = "100%">
 
 <% Artist.all.each do |artist| %>
 
 <div class="artist-tab inactiveTab" id="<%= artist.id %>">
 	
 	<span class="artist-name"><%= artist.name %></span>
-    <span class="artist-email">(<%= artist.email %>)</span>
-	<div class="artist-address"><%= artist.address1 %></div>
+    <span class="artist-email">(<%= artist.email %>)</span><br>
+	<span class="artist-address"><%= artist.address1 %></span><br>
     <span class="artist-email"><%= artist.address2 %></span>
 
 	<!---

@@ -1,25 +1,31 @@
-<h1 style="color:black;"> <%= @artist.name %> </h1>
 
-<table style="font-size:20px; margin-right:10px; margin-left:auto">
-	<tr>
-<td colspan=2 style="font-weight:bold"><%= @artist.address1 %></td><td rowspan=6>&nbsp;&nbsp;&nbsp;<%= image_tag(@artist.profile_picture, {class: ""})%></td>
-</tr>
-<tr>
-<td colspan=2><%= @artist.address2 %></td>
-</tr><tr>
-<td><%= @artist.city %>, <%= @artist.state %></td>
-</tr><tr>
-<td><%= @artist.phone %></td>
-</tr><tr>
-<td><%= @artist.email %></td>
-</tr><tr></tr>
+
+<table width="100%" style="padding:15px;">
+    <tr>
+        <td>
+            <p class='h4'> <%= @artist.name %> </p>
+            <hr color="#555555" height="1px">
+            <%= @artist.address1 %>
+            <%= @artist.address2 %>
+            <%= @artist.city %>, <%= @artist.state %>
+            <%= @artist.phone %>
+            <%= @artist.email %>
+        </td>
+        <td style="text-align:right">
+            <%= image_tag(@artist.profile_picture, {class: ""})%>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">    
+            <span style="font-size:20px; font-weight:bold">Sample Arts</span><br>
+            &nbsp;&nbsp;&nbsp;
+            <% @images.each do |image| %>
+                <%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
+            <% end %>
+        </td>
+    </tr>
 </table>
-
-<br><span style="font-size:20px; font-weight:bold">Sample Arts</span><br>
-&nbsp;&nbsp;&nbsp;
-<% @images.each do |image| %>
-	<%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
-<% end %>
+    
 
 
 

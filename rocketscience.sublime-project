@@ -15,6 +15,9 @@
 		},
 		{
 			"path": "app/assets"
+		},
+		{
+			"path": "db"
 		}
 	]
 }

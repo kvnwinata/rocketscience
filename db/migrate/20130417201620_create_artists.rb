@@ -10,6 +10,7 @@ class CreateArtists < ActiveRecord::Migration
       t.string :phone
       t.string :email
       t.string :profile_picture
+      t.integer :category_id
 
       t.timestamps
     end

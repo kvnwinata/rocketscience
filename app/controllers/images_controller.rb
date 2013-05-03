@@ -1,7 +1,11 @@
 class ImagesController < ApplicationController
 
 def analyze
-	@userid = 5
+
+	@category = Category.find(5)
+	@artists  = @category.artists
+	@samples  = @category.images   
+
 	render :layout => false
 end
 

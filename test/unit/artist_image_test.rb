@@ -1,19 +1,18 @@
 # == Schema Information
 #
-# Table name: images
+# Table name: artist_images
 #
 #  id          :integer          not null, primary key
-#  name        :string(255)
-#  path        :string(255)
+#  image_id    :integer
+#  artist_id   :integer
 #  category_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  description :string(255)
 #
 
 require 'test_helper'
 
-class ImageTest < ActiveSupport::TestCase
+class ArtistImageTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

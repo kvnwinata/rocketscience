@@ -4,8 +4,7 @@ class CreateImages < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.string :path
-      t.string :category
-
+      t.integer :category_id
       t.timestamps
     end
   end

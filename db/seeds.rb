@@ -14,13 +14,48 @@
 #  path        :string(255)
 #  category    :string(255)
 
+Category.create(
+    :id => 1,
+    :name => "American Traditional",
+    :description => "xxx"
+    )
+Category.create(
+    :id => 2,
+    :name => "Black and Grey",
+    :description => "xxx"
+    )
+Category.create(
+    :id => 3,
+    :name => "Horror and Gore",
+    :description => "xxx"
+    )
+Category.create(
+    :id => 4,
+    :name => "Japanese Traditional",
+    :description => "xxx"
+    )
+Category.create(
+    :id => 5,
+    :name => "Nature Inspired",
+    :description => "xxx"
+    )
+Category.create(
+    :id => 6,
+    :name => "New School",
+    :description => "xxx"
+    )
+Category.create(
+    :id => 7,
+    :name => "Tribal",
+    :description => "xxx"
+    )
 
 Image.create(
     :id => 1,
     :name => "tumblr_lxh1abULhm1qkfwf2o1_500.jpg",
     :description => "American Traditional",
     :path => "tattoos/",
-    :category => "American Traditional")
+    :category_id => 1)
 
 Image.create(
     :id => 2,
@@ -297,7 +332,7 @@ Image.create(
 
 Image.create(
     :id => 41,
-    :name => "1001_lrap_12_o+mexico_city_tattoo_convention+monster.jpg",
+    :name => "1001_lrap_12_omexico_city_tattoo_conventionmonster.jpg",
     :description => "Horror and Gore",
     :path => "tattoos/",
     :category => "Horror and Gore")

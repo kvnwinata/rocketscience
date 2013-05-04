@@ -62,6 +62,9 @@ var numImgInInkbox = 0;
             setMiddle();
             setBottom();
         }
+        if (gon.page_type === "search"){
+            setsearch();
+        }
         // take care of the modal-screen
         $("#modal-screen").css('width',$(window).width());
         $("#modal-screen").css('height', $(document).height());

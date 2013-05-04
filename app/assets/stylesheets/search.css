@@ -32,16 +32,7 @@
 	float:left;
 	direction:rtl;*/
 }
-#infoPanel2{
-    overflow:auto;
-    max-height:500px;
-	/*
-	height:300px;
-	overflow-y:scroll;
-	overflow-x:hidden;
-	float:left;
-	direction:rtl;*/
-}
+
 .artist-tab{
 	padding: 10px;
 	min-height: auto;

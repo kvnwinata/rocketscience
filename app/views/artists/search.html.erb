@@ -33,8 +33,14 @@
 
 &nbsp;
 
-<td id="infoPanel" width = "100%">
-<div class="infoPanel2">
+<td width = "296px" >
+
+<div id="infoPanel" style="height: 400px;
+    max-height:100%;
+    z-index: -999;
+    overflow:scroll;
+    overflow-x: hidden;
+    width: 100%">
 
 <% Artist.all.each do |artist| %>
 
@@ -61,14 +67,19 @@
 -->
     
 </div>
-</div>
+
 
 <% end %>
 
 </td>
+
 <td id="artistPanel"><p class="info-message">Click on the tabs on the right to view more details.</p></td>
 </tr>
 </table>
 </div>
 
 </div>
+
+
+
+

@@ -1,19 +1,23 @@
 
 
 <table width="100%" style="padding:15px;">
-    <tr>
-        <td>
-            <p class='h4'> <%= @artist.name %> </p>
-            <hr color="#555555" height="1px">
-            <%= @artist.address1 %>
-            <%= @artist.address2 %>
-            <%= @artist.city %>, <%= @artist.state %>
-            <%= @artist.phone %>
-            <%= @artist.email %>
-        </td>
-        <td style="text-align:right">
+    <tr height="300px">
+        <td style="text-align:left" width="300px">
             <%= image_tag(@artist.profile_picture, {class: ""})%>
         </td>
+        <td width="*" style="vertical-align:bottom;" height="300px">
+            <span class='h4'> <%= @artist.name %> </span>
+            <hr color="#555555" height="1px">
+            <p class="titles">
+            <b>
+            <%= @artist.address1 %><br /></b>
+            <%= @artist.address2 %><br />
+            <%= @artist.city %>, <%= @artist.state %><p></p><p class="titles">
+            <%= @artist.phone %><br />
+            <%= @artist.email %>
+            </p>
+        </td>
+        
     </tr>
     <tr>
         <td colspan="2">    

@@ -172,7 +172,6 @@ Artist.create(
     :profile_picture => "profile/kate.jpg"
     )
 
-
 Image.create(
     :id => 1,
     :name => "tumblr_lxh1abULhm1qkfwf2o1_500.jpg",
@@ -277,573 +276,6 @@ Image.create(
     :description => "American Traditional",
     :path => "tattoos/",
     :category_id => 1)
-
-Image.create(
-    :id => 129,
-    :name => "tumblr_m6cfl8zIIw1ryitvho1_500.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 130,
-    :name => "traditional-american-eagle-animal-tattoo.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 131,
-    :name => "kay-kutta-ink-master.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 132,
-    :name => "tumblr_mj0lur54R81qjgoi2o1_400.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 133,
-    :name => "tumblr_lovr0kHZAM1qmj2s0o1_500.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 134,
-    :name => "traditioanl-bird-tattoo.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 135,
-    :name => "36678_1423712965807_1622232808_1019055_617266_n.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 136,
-    :name => "lalo-yunda-ink-master.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 137,
-    :name => "6234844195_dd7a880f35_z.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 138,
-    :name => "american-flag-cannon-tattoo.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 139,
-    :name => "Flags_tattoo_28.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 140,
-    :name => "kaicreep.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 141,
-    :name => "3511251262_eb18f1f0ab.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 142,
-    :name => "itattooz-american-flag-pic-tattoo-design.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 143,
-    :name => "indian-tattoo.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 144,
-    :name => "traditional-american-tattoo.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 145,
-    :name => "native-woman-tattoo.jpg",
-    :description => "American Traditional",
-    :path => "tattoos/",
-    :category_id => 1)
-
-Image.create(
-    :id => 46,
-    :name => "5017468544_b23b016d6e_m.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 47,
-    :name => "HotChick_Black_Grey-Tattoos16.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 48,
-    :name => "2798753295_b66b809701.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 49,
-    :name => "blacktattoo29.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 50,
-    :name => "st-michael-tattoo.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 51,
-    :name => "black-grey-tattoo.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 52,
-    :name => "angel_tattoo_black_and_grey_by_Remistattoo.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 53,
-    :name => "black-grey-tattoo-06-curatedmag-360x540.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 54,
-    :name => "black_and_grey_vol1_12_1.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 55,
-    :name => "boegarretts.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 56,
-    :name => "black and grey calla lily foot tattoo.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 57,
-    :name => "Grey_tattoo_144.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 58,
-    :name => "black-and-grey-tattoos-by-eric-marcinizyn-a.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 59,
-    :name => "l (1).jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 60,
-    :name => "black-and-grey-tattoos-by-eric-marcinizyn-2.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 181,
-    :name => "black&grey-angel1.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 182,
-    :name => "black-and-grey-tattoos-by-eric-marcinizyn-5.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 183,
-    :name => "twogs.jpeg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 184,
-    :name => "bgtattoo5-thumb-567x671-26122.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 185,
-    :name => "bgtattoo6-thumb-567x671-26123.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 186,
-    :name => "lll.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 187,
-    :name => "black and grey tattoo designs 5.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 188,
-    :name => "Mask Black and GreySAMLL.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 189,
-    :name => "CSP Zombie.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 190,
-    :name => "Dog-black-and-grey-Tattoo-by-Phil-Colvin.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 191,
-    :name => "Black-and-Grey-Koi-Fish-Tattoos-500x400.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 192,
-    :name => "Teneile-Napoli-Black-and-Grey-Pin-Up-Tattoo.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 193,
-    :name => "Picture 7.png",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 194,
-    :name => "black_and_grey_tattoos_by_richkoosmcgowen-d5l8ceh.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 195,
-    :name => "asdsad.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 196,
-    :name => "12.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 197,
-    :name => "Img199483_black_grey_skull_cover_up.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 198,
-    :name => "t1_-black-and-grey-skull-tattoo_990.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 199,
-    :name => "lionnn.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 200,
-    :name => "black_and_grey_vol3_5_1_1.jpg",
-    :description => "Black and Grey",
-    :path => "tattoos/",
-    :category_id => 2)
-
-Image.create(
-    :id => 31,
-    :name => "Profile_captain.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 32,
-    :name => "l_bd670f0dbb6e3e0a33a6ce913b04af93.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 33,
-    :name => "l.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 34,
-    :name => "edclown.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 35,
-    :name => "gore-print-Dan-Henk.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 36,
-    :name => "tumblr_mats8vRqqq1rhwqp7o1_500.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 37,
-    :name => "leather-tattoo.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 38,
-    :name => "Self_Tattooed_Hand_by_KatGore.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 39,
-    :name => "406-31011l.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 40,
-    :name => "zombie.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 41,
-    :name => "1001_lrap_12_o+mexico_city_tattoo_convention+monster.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 42,
-    :name => "petestrain.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 43,
-    :name => "56_d861b2f4c192bb9463bba5302011eea11332274919.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 44,
-    :name => "ashleythigh.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 45,
-    :name => "zombie-tattoo.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 115,
-    :name => "viking.JPG",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 116,
-    :name => "222_92e07ddfde106d8d6357bdef433e2acb.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 117,
-    :name => "4BB97493558E-16_thumb[5].jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 118,
-    :name => "ieaturapple.jpeg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 119,
-    :name => "gore-creation-tattoo-83718.jpeg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 120,
-    :name => "t1_Horror-Tattoos_736.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 121,
-    :name => "ieaturtattoo.jpeg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 122,
-    :name => "0220a2.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 123,
-    :name => "575319_401013073266206_429751596_n.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 124,
-    :name => "A33061A19D85-16_thumb[3].jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 125,
-    :name => "American-Psycho-Dan-Henk.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 126,
-    :name => "grayan-tattoo.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 127,
-    :name => "FH000011.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
-
-Image.create(
-    :id => 128,
-    :name => "1.jpg",
-    :description => "Horror and Gore",
-    :path => "tattoos/",
-    :category_id => 3)
 
 Image.create(
     :id => 16,
@@ -951,102 +383,214 @@ Image.create(
     :category_id => 4)
 
 Image.create(
-    :id => 101,
-    :name => "Koi Fish Japanese tattoo.jpg",
-    :description => "Japanese Traditional",
+    :id => 31,
+    :name => "Profile_captain.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 102,
-    :name => "Traditional-Japanese-tattoos-Wabori-2-580x846.jpg",
-    :description => "Japanese Traditional",
+    :id => 32,
+    :name => "l_bd670f0dbb6e3e0a33a6ce913b04af93.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 103,
-    :name => "Japanese-Tattoo-10.jpg",
-    :description => "Japanese Traditional",
+    :id => 33,
+    :name => "l.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 104,
-    :name => "japanese-demon-tattoo-on-half-sleeve.jpg",
-    :description => "Japanese Traditional",
+    :id => 34,
+    :name => "edclown.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 105,
-    :name => "japanese-tattoos07.jpg",
-    :description => "Japanese Traditional",
+    :id => 35,
+    :name => "gore-print-Dan-Henk.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 106,
-    :name => "giant.jpeg",
-    :description => "Japanese Traditional",
+    :id => 36,
+    :name => "tumblr_mats8vRqqq1rhwqp7o1_500.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 107,
-    :name => "Japanese Dragon Tattoo Designs and Meaning.jpg",
-    :description => "Japanese Traditional",
+    :id => 37,
+    :name => "leather-tattoo.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 108,
-    :name => "traditional-japanese-tattoos2.jpg",
-    :description => "Japanese Traditional",
+    :id => 38,
+    :name => "Self_Tattooed_Hand_by_KatGore.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 109,
-    :name => "japanese057.jpg",
-    :description => "Japanese Traditional",
+    :id => 39,
+    :name => "406-31011l.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 110,
-    :name => "Japanese-Fantasy-Tattoos.jpg",
-    :description => "Japanese Traditional",
+    :id => 40,
+    :name => "zombie.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 111,
-    :name => "traditional-geisha-thigh-japanese-tattoo.jpg",
-    :description => "Japanese Traditional",
+    :id => 41,
+    :name => "1001_lrap_12_o+mexico_city_tattoo_convention+monster.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 112,
-    :name => "Hannya_Veil_Tattoo_M.jpg",
-    :description => "Japanese Traditional",
+    :id => 42,
+    :name => "petestrain.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 113,
-    :name => "sakura.jpeg",
-    :description => "Japanese Traditional",
+    :id => 43,
+    :name => "56_d861b2f4c192bb9463bba5302011eea11332274919.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
 
 Image.create(
-    :id => 114,
-    :name => "japanese-doll-stretch-tattoo-m.jpg",
-    :description => "Japanese Traditional",
+    :id => 44,
+    :name => "ashleythigh.jpg",
+    :description => "Horror and Gore",
     :path => "tattoos/",
-    :category_id => 4)
+    :category_id => 3)
+
+Image.create(
+    :id => 45,
+    :name => "zombie-tattoo.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 46,
+    :name => "5017468544_b23b016d6e_m.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 47,
+    :name => "HotChick_Black_Grey-Tattoos16.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 48,
+    :name => "2798753295_b66b809701.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 49,
+    :name => "blacktattoo29.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 50,
+    :name => "st-michael-tattoo.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 51,
+    :name => "black-grey-tattoo.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 52,
+    :name => "angel_tattoo_black_and_grey_by_Remistattoo.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 53,
+    :name => "black-grey-tattoo-06-curatedmag-360x540.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 54,
+    :name => "black_and_grey_vol1_12_1.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 55,
+    :name => "boegarretts.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 56,
+    :name => "black and grey calla lily foot tattoo.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 57,
+    :name => "Grey_tattoo_144.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 58,
+    :name => "black-and-grey-tattoos-by-eric-marcinizyn-a.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 59,
+    :name => "l (1).jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 60,
+    :name => "black-and-grey-tattoos-by-eric-marcinizyn-2.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
 
 Image.create(
     :id => 61,
@@ -1329,6 +873,321 @@ Image.create(
     :category_id => 6)
 
 Image.create(
+    :id => 101,
+    :name => "Koi Fish Japanese tattoo.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 102,
+    :name => "Traditional-Japanese-tattoos-Wabori-2-580x846.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 103,
+    :name => "Japanese-Tattoo-10.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 104,
+    :name => "japanese-demon-tattoo-on-half-sleeve.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 105,
+    :name => "japanese-tattoos07.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 106,
+    :name => "giant.jpeg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 107,
+    :name => "Japanese Dragon Tattoo Designs and Meaning.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 108,
+    :name => "traditional-japanese-tattoos2.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 109,
+    :name => "japanese057.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 110,
+    :name => "Japanese-Fantasy-Tattoos.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 111,
+    :name => "traditional-geisha-thigh-japanese-tattoo.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 112,
+    :name => "Hannya_Veil_Tattoo_M.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 113,
+    :name => "sakura.jpeg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 114,
+    :name => "japanese-doll-stretch-tattoo-m.jpg",
+    :description => "Japanese Traditional",
+    :path => "tattoos/",
+    :category_id => 4)
+
+Image.create(
+    :id => 115,
+    :name => "viking.JPG",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 116,
+    :name => "222_92e07ddfde106d8d6357bdef433e2acb.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 117,
+    :name => "4BB97493558E-16_thumb.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 118,
+    :name => "ieaturapple.jpeg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 119,
+    :name => "gore-creation-tattoo-83718.jpeg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 120,
+    :name => "t1_Horror-Tattoos_736.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 121,
+    :name => "ieaturtattoo.jpeg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 122,
+    :name => "0220a2.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 123,
+    :name => "575319_401013073266206_429751596_n.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 124,
+    :name => "A33061A19D85-16_thumb.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 125,
+    :name => "American-Psycho-Dan-Henk.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 126,
+    :name => "grayan-tattoo.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 127,
+    :name => "FH000011.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 128,
+    :name => "1.jpg",
+    :description => "Horror and Gore",
+    :path => "tattoos/",
+    :category_id => 3)
+
+Image.create(
+    :id => 129,
+    :name => "tumblr_m6cfl8zIIw1ryitvho1_500.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 130,
+    :name => "traditional-american-eagle-animal-tattoo.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 131,
+    :name => "kay-kutta-ink-master.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 132,
+    :name => "tumblr_mj0lur54R81qjgoi2o1_400.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 133,
+    :name => "tumblr_lovr0kHZAM1qmj2s0o1_500.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 134,
+    :name => "traditioanl-bird-tattoo.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 135,
+    :name => "36678_1423712965807_1622232808_1019055_617266_n.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 136,
+    :name => "lalo-yunda-ink-master.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 137,
+    :name => "6234844195_dd7a880f35_z.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 138,
+    :name => "american-flag-cannon-tattoo.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 139,
+    :name => "Flags_tattoo_28.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 140,
+    :name => "kaicreep.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 141,
+    :name => "3511251262_eb18f1f0ab.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 142,
+    :name => "itattooz-american-flag-pic-tattoo-design.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 143,
+    :name => "indian-tattoo.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 144,
+    :name => "traditional-american-tattoo.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
+    :id => 145,
+    :name => "native-woman-tattoo.jpg",
+    :description => "American Traditional",
+    :path => "tattoos/",
+    :category_id => 1)
+
+Image.create(
     :id => 146,
     :name => "Shoulder-Tribal-Tattoo-2011-Design-for-Guys.jpg",
     :description => "Tribal",
@@ -1573,9 +1432,151 @@ Image.create(
     :path => "tattoos/",
     :category_id => 7)
 
+Image.create(
+    :id => 181,
+    :name => "black&grey-angel1.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 182,
+    :name => "black-and-grey-tattoos-by-eric-marcinizyn-5.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 183,
+    :name => "twogs.jpeg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 184,
+    :name => "bgtattoo5-thumb-567x671-26122.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 185,
+    :name => "bgtattoo6-thumb-567x671-26123.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 186,
+    :name => "lll.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 187,
+    :name => "black and grey tattoo designs 5.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 188,
+    :name => "Mask Black and GreySAMLL.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 189,
+    :name => "CSP Zombie.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 190,
+    :name => "Dog-black-and-grey-Tattoo-by-Phil-Colvin.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 191,
+    :name => "Black-and-Grey-Koi-Fish-Tattoos-500x400.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 192,
+    :name => "Teneile-Napoli-Black-and-Grey-Pin-Up-Tattoo.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 193,
+    :name => "Picture 7.png",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 194,
+    :name => "black_and_grey_tattoos_by_richkoosmcgowen-d5l8ceh.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 195,
+    :name => "asdsad.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 196,
+    :name => "12.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 197,
+    :name => "Img199483_black_grey_skull_cover_up.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 198,
+    :name => "t1_-black-and-grey-skull-tattoo_990.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 199,
+    :name => "lionnn.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+Image.create(
+    :id => 200,
+    :name => "black_and_grey_vol3_5_1_1.jpg",
+    :description => "Black and Grey",
+    :path => "tattoos/",
+    :category_id => 2)
+
+
+
 artist_images = 
 [
-     [71,169,175,6,5,11,159,163,15,149,61,179,146,158,3],#1
+    [71,169,175,6,5,11,159,163,15,149,61,179,146,158,3],#1
     [52,10,61,15,75,9,143,5,196,67,141,191,58,137,47],#2
     [10,6,138,135,60,2,8,180,11,59,134,14,145,170,47],#3
     [150,152,154,62,73,36,89,86,37,149,61,32,158,146,94],#4
@@ -1583,8 +1584,8 @@ artist_images =
     [152,41,122,127,113,106,160,39,177,27,40,158,102,24,45],#6
     [12,1,8,14,129,100,130,152,76,86,187,54,97,92,89],#7
     [51,190,105,30,59,74,69,106,196,75,25,186,52,197,58],#8
-[81,33,25,117,41,126,113,119,79,22,97,95,39,124,111],#9
-[144,135,15,76,18,200,3,197,182,184,133,53,92,91,28],#10
+    [81,33,25,117,41,126,113,119,79,22,97,95,39,124,111],#9
+    [144,135,15,76,18,200,3,197,182,184,133,53,92,91,28],#10
 ]
 
 artist_images.each_with_index do |val, index|
@@ -1608,6 +1609,6 @@ artist_category =
 ]
 artist_category.each_with_index do |val, index|
     val.each do |categoryID|
-    ArtistCategory.create(:category_id=>categoryID, :artist_id=>index)
+    #ArtistCategory.create(:category_id=>categoryID, :artist_id=>index)
     end
 end

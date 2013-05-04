@@ -1573,5 +1573,22 @@ Image.create(
     :path => "tattoos/",
     :category_id => 7)
 
+artist_images = 
+[
+    [1],#1
+    [2],#2
+    [3],#3
+    [4],#4
+    [5],#5
+    [6],#6
+    [7],#7
+    [8],#8
+    [9],#9
+    [10]#10
+]
 
-
+artist_images.each_with_index do |val, index|
+    val.each do |imageID|
+    ArtistImage.create(:image_id=>imageID, :artist_id=>index)
+    end
+end

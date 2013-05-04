@@ -24,7 +24,7 @@ class Artist < ActiveRecord::Base
   has_many :users, :through => :artist_likes 
 
   has_many :artist_images
-  has_many :images, :through => :image_likes
+  has_many :images, :through => :artist_images
 
   belongs_to :category
   

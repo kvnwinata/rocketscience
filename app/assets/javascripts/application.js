@@ -35,6 +35,7 @@ var numImgInInkbox = 0;
         
     
         resizeMediumImages();
+        attach_listeners_for_add_buttons();
 
         $("#dustbin").attr("ondrop","drop(event)");
 		$("#dustbin").attr("ondragover","allowDrop(event)");

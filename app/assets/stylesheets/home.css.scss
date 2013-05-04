@@ -149,7 +149,26 @@ box-shadow: 0px 0px 8px #b7b7b7;
 
 }
 
-
+.addbutton{ 
+    display: block;
+    width: 30px;
+	height: 30px;
+	background: url('shared/add.png') bottom;
+	text-indent: -99999px;
+    position: relative;
+    top: -23px;
+    position:absolute; 
+    right:10px; 
+    bottom:-15px;
+    z-index: 2;
+    height: 30px;
+    
+}
+    
+.addbutton:hover {
+	background-position: 0 0;
+    cursor:pointer;
+}
 
 a:link { 
 	font-weight: normal; 
@@ -193,6 +212,7 @@ a:hover, a:active {
 }
 .analyze:hover{
     background-position: 0 0;
+    cursor:pointer;
 }
     
 .credits {

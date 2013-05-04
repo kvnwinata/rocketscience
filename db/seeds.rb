@@ -755,7 +755,7 @@ Image.create(
 
 Image.create(
     :id => 84,
-    :name => "new-school-anchor-tattoo-1115819147.jpg",
+    :name => "1115819147.jpg",
     :description => "New School",
     :path => "tattoos/",
     :category_id => 6)
@@ -1371,7 +1371,7 @@ Image.create(
 
 Image.create(
     :id => 172,
-    :name => "tribal-phoenix-tattoo-1039427727.jpg",
+    :name => "1039427727.jpg",
     :description => "Tribal",
     :path => "tattoos/",
     :category_id => 7)

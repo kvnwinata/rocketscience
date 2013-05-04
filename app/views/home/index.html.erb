@@ -48,18 +48,12 @@
 
     <!-- CODE FOR IMAGES HERE -->
     <% Image.all.each do |image| %>
-<<<<<<< HEAD
-    <span class="tattoo-image-container" style='position: relative;'>
+
+    <span class="tattoo-image-container" id=<%= image.id%> style='position: relative;'>
         <%= image_tag(image.path + image.name, {class: "medium selectable-img", id:image.id, style: "visibility: hidden; z-index:0;"}) %>
-        <div class="addbutton">
+        <div class="addbutton" id=<%= image.id%>+"add">
         </div>
         <!--<%= image_tag("shared/add.png", {:class=>"mag-glass", :id=>image.id.to_s() + 'mag', }) %>-->
-=======
-    <span class="tattoo-image-container" id=<%= image.id%> style='position: relative;'>
-        <%= image_tag(image.path + image.name, {class: "medium selectable-img", id: image.id, style: "visibility: hidden; z-index:0;"}) %>
-
-        <%= image_tag("shared/magglass.jpg", {:class=>"add-button", id: image.id.to_s() + 'add', style:'position:absolute; right:6px; bottom:6px;visibility: hidden; z-index: 2;height: 30px;'}) %>
->>>>>>> 9b625b67b6fd147b0142dad2b591c0a565a256af
     </span>
     <% end %>
     

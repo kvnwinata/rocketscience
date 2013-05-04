@@ -44,14 +44,3 @@ var slidingThing = function(){
 		$("#modal-screen").css('visibility','hidden');
 	})	
 }
-
-var attach_listener_to_images = function(){
-	$(".selectable-img").click(function(){
-		$(this).remove();
-		$(this).appendTo($("#inkBox-image"));
-		$(".inkBox-message").remove();
-		$(this).attr("draggable","true").attr("ondragstart","drag(event)");
-		numImgInInkbox++;
-		console.log('inkbox height: ' + $("#inkBox-image").height())
-	});
-}

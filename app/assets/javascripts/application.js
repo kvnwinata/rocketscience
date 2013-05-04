@@ -64,4 +64,12 @@ var numImgInInkbox = 0;
         // take care of the modal-screen
         $("#modal-screen").css('width',$(window).width());
         $("#modal-screen").css('height', $(document).height());
+        $("#modal-screen").css('width',$(window).width());
+        $("#modal-screen").css('height', $(document).height());
+        $("#sliding").css('width',$(window).width()*0.9)
+        $("#sliding").css('height',$(window).height()*0.9)
+        $("#sliding").css('left',$(window).width()*0.05)
+        $("#sliding").css('top',$(window).height()*0.05)
+        $("#closeAnalysis").css('left',$(window).width()*0.05)
+        $("#closeAnalysis").css('top',$(window).height()*0.05)
     }

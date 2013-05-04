@@ -1,10 +1,12 @@
 var slidingThing = function(){
 		
+
+
 		$(".analyze").mousedown(function(e){
 			e.preventDefault();
 			if ($("#sliding").css('display')==="none"){
 				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
-
+				$("#modal-screen").css('visibility','visible');
 				$.ajax({
                         url: "/images/analyze",
                         type: "GET",
@@ -17,6 +19,7 @@ var slidingThing = function(){
         					resizeMediumImages();
         				}
                     });
+
 				//
 				//$(pane).hide({direction:'right',easing:'swing',duration:1000,done:function(){
 				//	isopen = false;
@@ -27,13 +30,19 @@ var slidingThing = function(){
 				//isopen = true;
 				$("#closeAnalysis").hide(500);
 				$("#sliding").hide(500);
+				$("#modal-screen").css('visibility','hidden');
 		}
 	});
 	$("#closeAnalysis").click(function(){
 		$("#closeAnalysis").hide(500);
 		$("#sliding").hide(500);
+		$("#modal-screen").css('visibility','hidden');
 	})
-		
+	$("#modal-screen").click(function(){
+		$("#closeAnalysis").hide(500);
+		$("#sliding").hide(500);
+		$("#modal-screen").css('visibility','hidden');
+	})	
 }
 
 var attach_listener_to_images = function(){

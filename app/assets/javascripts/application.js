@@ -42,6 +42,18 @@ var numImgInInkbox = 0;
 		// run when new elements added to inkbox
 		$(".selectable-img").attr("draggable","false");
 		//$(".selectable-img").attr("ondragstart","drag(event)");
+
+        // take care of the modal-screen
+        $("#modal-screen").css('width',$(window).width());
+        $("#modal-screen").css('height', $(document).height());
+        console.log($(document).height())
+        console.log($("#modal-screen").css('height'));
+        $("#sliding").css('width',$(window).width()*0.9)
+        $("#sliding").css('height',$(window).height()*0.9)
+        $("#sliding").css('left',$(window).width()*0.05)
+        $("#sliding").css('top',$(window).height()*0.05)
+        $("#closeAnalysis").css('left',$(window).width()*0.05)
+        $("#closeAnalysis").css('top',$(window).height()*0.05)
     }
     
     window.onresize = function() {
@@ -49,4 +61,7 @@ var numImgInInkbox = 0;
             setMiddle();
             setBottom();
         }
+        // take care of the modal-screen
+        $("#modal-screen").css('width',$(window).width());
+        $("#modal-screen").css('height', $(document).height());
     }

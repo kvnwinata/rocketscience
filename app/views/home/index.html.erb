@@ -50,7 +50,9 @@
     <% Image.all.each do |image| %>
     <span class="tattoo-image-container" style='position: relative;'>
         <%= image_tag(image.path + image.name, {class: "medium selectable-img", id:image.id, style: "visibility: hidden; z-index:0;"}) %>
-        <%= image_tag("shared/magglass.jpg", {:class=>"mag-glass", :id=>image.id.to_s() + 'mag', style:'position:absolute; right:6px; bottom:6px;visibility: hidden; z-index: 2;height: 30px;'}) %>
+        <div class="addbutton">
+        </div>
+        <!--<%= image_tag("shared/add.png", {:class=>"mag-glass", :id=>image.id.to_s() + 'mag', }) %>-->
     </span>
     <% end %>
     

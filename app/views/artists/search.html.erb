@@ -1,3 +1,31 @@
+<script>
+
+
+function setsearch() {
+	if (document.getElementById) {
+		var windowHeight = getWindowHeight();
+		var windowWidth = document.documentElement.clientWidth;
+		if (windowHeight > 0) {
+			var contentElement = document.getElementById('infoPanel');
+			var contentHeight = contentElement.offsetHeight;
+			var contentWidth = contentElement.offsetWidth;
+            contentElement.style.height= windowHeight +"px";
+            
+		
+		}
+	}
+}
+
+
+
+window.onresize = function() {
+            setsearch();
+        }
+</script>
+
+
+
+
 <div class = "main-container">
 <div class = "content-container"> 
 
@@ -35,7 +63,7 @@
 
 <td width = "296px" >
 
-<div id="infoPanel" style="height: 400px;
+<div id="infoPanel" style="height: 508px;
     max-height:100%;
     z-index: -999;
     overflow:scroll;

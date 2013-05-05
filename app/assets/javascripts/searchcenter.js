@@ -8,7 +8,7 @@ function setsearch() {
 			var contentElement = document.getElementById('infoPanel');
 			var contentHeight = contentElement.offsetHeight;
 			var contentWidth = contentElement.offsetWidth;
-            contentElement.style.height="contentHeight"+"px";
+            contentElement.style.height= windowHeight +"px";
             
 		
 		}

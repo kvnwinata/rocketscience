@@ -468,6 +468,32 @@ opacity: 0.4;
 	z-index:1;
 		color: #FFF}
 
-	
+.closeAnaly{	
+    display:none; 
+    
+    opacity:1; 
+    top:85px; 
+    left:135px; 
+    width:30px; 
+    height:30px; 
 
+    color:black; 
+    vertical-align:middle; 
+    horizontal-align:middle; 
+    z-index:999;
+    
+    
+    display: block;
+    background: url('shared/close.png') bottom;
+	text-indent: -99999px;
+    position: absolute;
+    visibility: hidden;
+    }
 
+    
+    
+.closeAnaly:hover{
+    background-position: 0 0;
+    cursor:pointer;
+}
+    

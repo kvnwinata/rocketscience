@@ -7,6 +7,7 @@ var slidingThing = function(){
 			if ($("#sliding").css('display')==="none"){
 				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
 				$("#modal-screen").css('visibility','visible');
+                $("#closeAnalysis").css('visibility','visible');
 				$.ajax({
                         url: "/images/analyze",
                         type: "GET",

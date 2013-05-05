@@ -33,7 +33,20 @@
 	}
 
 	var attach_listener_to_images = function(){
-	$(".selectable-img").click(function(){
-		// put code for zooming in here
+	$(".selectable-img").click(function(e){
+		e.preventDefault();
+			if ($("#sliding").css('display')==="none"){
+				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
+				$("#modal-screen").css('visibility','visible');
+                $("#closeAnalysis").css('visibility','visible');
+        		$("#sliding").html("<img src='"+$(this).attr('src')+"' style='width:300px'/>");
+        					
+			} else {
+				//$(pane).show(1000);
+				//isopen = true;
+				$("#closeAnalysis").hide(500);
+				$("#sliding").hide(500);
+				$("#modal-screen").css('visibility','hidden');
+		}
 		}
 	);}

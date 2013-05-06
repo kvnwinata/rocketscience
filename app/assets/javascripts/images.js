@@ -39,14 +39,18 @@
 				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
 				$("#modal-screen").css('visibility','visible');
                 $("#closeAnalysis").css('visibility','visible');
-        		$("#sliding").html("<img src='"+$(this).attr('src')+"' style='width:300px'/>");
+				// clear content
+                $('#sliding').html('');
+                var thisTattoo = document.createElement('img');
+                $(thisTattoo).attr('src',$(this).attr('src'));
+                $(thisTattoo).css('width',0.9*$(window).height()*0.9);
+                $(thisTattoo).css('position','absolute');
+                $(thisTattoo).css('top','5%');
+                $(thisTattoo).css('left','5%');
+                $(thisTattoo).appendTo($('#sliding'))
         					
-			} else {
-				//$(pane).show(1000);
-				//isopen = true;
-				$("#closeAnalysis").hide(500);
-				$("#sliding").hide(500);
-				$("#modal-screen").css('visibility','hidden');
 		}
 		}
-	);}
+	);
+
+}

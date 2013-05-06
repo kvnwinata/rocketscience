@@ -31,12 +31,13 @@ var numImgInInkbox = 0;
         if (gon.page_type === "index"){
             slidingThing();
             attach_listener_to_images();
+            pull_images('random');
         }
         
     
         resizeMediumImages();
         attach_listeners_for_add_buttons();
-
+        attach_listener_to_images();
         $("#dustbin").attr("ondrop","drop(event)");
 		$("#dustbin").attr("ondragover","allowDrop(event)");
 

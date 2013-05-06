@@ -45,10 +45,15 @@
     <table width="100%"><tr><td width = "*" style="vertical-align: top;">
     <div class = "filter-bar">
         <label>Tattoo Type:</label>
-        <select id="tattoo-filter" onchange = "refreshTattooType(this.value)">
-            <option value="a">a</option>
-            <option value="b">b</option>
-            <option value="c">c</option>
+        <select id="tattoo-filter" onchange = "pull_images(this.value)">
+            <option value="random">Random...</option>
+            <option value="American Traditional">American Traditional</option>
+            <option value="Black and Grey">Black and Grey</option>
+            <option value="Horror and Gore">Horror and Gore</option>
+            <option value="Japanese Traditional">Japanese Traditional</option>
+            <option value="Nature Inspired">Nature Inspired</option>
+            <option value="New School">New School</option>
+            <option value="Tribal">Tribal</option>
         </select>
         <label>Items per page:</label>
         <select id="items-per-page" onchange = "refreshItemsPerPage(this.value)">
@@ -61,15 +66,6 @@
     <div class = "artwork-container">
     <!-- *% wide -->    
 
-    <!-- CODE FOR IMAGES HERE -->
-    <% Image.all.each do |image| %>
-
-    <span class="tattoo-image-container" id=<%=image.id%> style='position: relative;'>
-        <%= image_tag(image.path + image.name, {class: "medium selectable-img", id:image.id, style: "visibility: hidden; z-index:0;"}) %>
-        <div class="addbutton" id=<%=image.id%>></div>
-    </span>
-    <% end %>
-    
     
     </div>
     </td><td width = "368px" style="vertical-align: top;">

@@ -14,6 +14,7 @@ Rocketscience::Application.routes.draw do
   match 'guest'			=> 'home#index' # default as logged in.
 
   # images
+  match 'images/get_category' => 'images#get_category' 
   match 'images/like' 	=> 'images#like'
   match 'images/unlike' => 'images#unlike'
   match 'images/analyze'=> 'images#analyze'

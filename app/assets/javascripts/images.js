@@ -51,6 +51,25 @@
         					
 		}
 		}
-	);
 
-}
+	);}
+
+	var render_images = function(data, status){
+		// data = {id: path}
+	}
+
+	var pull_images = function(category){
+		$.ajax({
+			url: "/images/get_category",
+			type: "GET",
+			headers: {
+				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+			},
+			dataType:'json',
+			data:{
+				'category': category
+			},
+			success: render_images
+		});
+
+	}

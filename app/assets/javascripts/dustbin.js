@@ -1,6 +1,7 @@
 // http://www.w3schools.com/html/html5_draganddrop.asp
 function drag(ev)
-{
+{	
+			$(".undo-display").css('display','none');
 	ev.dataTransfer.setData("Text",ev.target.id);
 }
 function allowDrop(ev)
@@ -12,8 +13,14 @@ function drop(ev)
 	ev.preventDefault();
 	var data = ev.dataTransfer.getData("Text");
 	// add the image back to the search area
-	var img = createImageWithContainer(data,$("#"+data+".medium").attr('src'),true);
+	removeImageFromInkBox(data)
+}
+
+var removeImageFromInkBox = function(data){
+	var source  = $("#"+data+".medium").attr('src')
+	var img = createImageWithContainer(data,source,true);
 	$(document.getElementById(data)).remove();
+	undo_data.added = false;
 	if (tattoo_type[data] === current_tattoo_type){
 		if(tattoo_generation[data] === browsing_number){ // from the same generation, need to insert
 			
@@ -31,7 +38,16 @@ function drop(ev)
 			current_images.push(data);
 			current_images_status.push(false);
 		}
+		undo_data.added = true;
 	}
+
+	// undo data
+	undo_data.ID = data;
+	undo_data.src = source;
+	undo_data.pos_in_inkbox = images_in_inkbox.indexOf(data);
+	undo_data.gen = tattoo_generation[data];
+	undo_data.type = tattoo_type[data];
+
 	// need to do some update to the database
 	numImgInInkbox--;
 	delete tattoo_type[data];
@@ -40,5 +56,6 @@ function drop(ev)
 	if(!numImgInInkbox){
 		$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')
 	}
-}
+	$(".undo-display").fadeIn(500);
 
+}

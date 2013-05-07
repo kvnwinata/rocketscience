@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require_tree .
 
+// Action that hides undo:
+//  dragging in dustbin.js -> drag
+//  adding new image in image.js -> addButton click fxn
+//  zooming on an image
 // need global variable to keep track of states of the system, such as how many images is selected
 var numImgInInkbox = 0;
 var tattoo_type = {}; // dictionary from ID to tattoo type
@@ -23,6 +27,7 @@ var current_images_status = []; // array tracking current images if they had bee
 var images_in_inkbox = []; // array of images added to inkBox
 var current_tattoo_type = "random";
 var browsing_number = 0; // a number indicating which iteration of image query the page is on
+var undo_data = {};
 // support for IE8
 // http://stackoverflow.com/questions/1181575/javascript-determine-whether-an-array-contains-a-value
 if(!Array.prototype.indexOf) {
@@ -55,6 +60,7 @@ if(!Array.prototype.indexOf) {
             images_in_inkbox = []; // array of images added to inkBox
             current_tattoo_type = "random";
             browsing_number = -1;
+            undo_data = {};
             // NEED TO POPULATE INKBOX BEFORE PULLING IMAGES
             pull_images('random');
         }
@@ -66,7 +72,8 @@ if(!Array.prototype.indexOf) {
 		// run when new elements added to inkbox
 		$(".selectable-img").attr("draggable","false");
 		//$(".selectable-img").attr("ondragstart","drag(event)");
-
+        $("#sliding").css('position','fixed');
+        $("#closeAnalysis").css('position','fixed');
         // take care of the modal-screen
         $("#modal-screen").css('width',$(window).width());
         $("#modal-screen").css('height', $(document).height());
@@ -76,6 +83,10 @@ if(!Array.prototype.indexOf) {
         $("#sliding").css('top',$(window).height()*0.05)
         $("#closeAnalysis").css('left',$(window).width()*0.05)
         $("#closeAnalysis").css('top',$(window).height()*0.05)
+
+        $(".undo-display").css('width',$(window).width()*0.7)
+        $(".undo-display").css('left',$(window).width()*0.15)
+        $(".undo-button").click(undoTattoo);
     }
     
     window.onresize = function() {
@@ -97,4 +108,7 @@ if(!Array.prototype.indexOf) {
         $("#sliding").css('top',$(window).height()*0.05)
         $("#closeAnalysis").css('left',$(window).width()*0.05)
         $("#closeAnalysis").css('top',$(window).height()*0.05)
+
+        $(".undo-display").css('width',$(window).width()*0.7)
+        $(".undo-display").css('left',$(window).width()*0.15)
     }

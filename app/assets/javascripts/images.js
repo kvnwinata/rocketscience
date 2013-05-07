@@ -87,6 +87,7 @@ var attach_listeners_for_add_buttons = function(){
 			$(addButton).click(function(){
 				// code for add.
 				// don't forget to remove the add button
+			$(".undo-display").css('display','none');
 				var source = $("#"+this.id+'.medium').attr('src');
 				$("#"+this.id+'.tattoo-image-container').remove();
 				addImageToInkBox(this.id,source);
@@ -102,6 +103,8 @@ var attach_listeners_for_add_buttons = function(){
 		// add listener to image
 		$(img).click(function(e){
 			e.preventDefault();
+			$(".undo-display").css('display','none');
+
 			if ($("#sliding").css('display')==="none"){
 				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
 				$("#modal-screen").css('visibility','visible');

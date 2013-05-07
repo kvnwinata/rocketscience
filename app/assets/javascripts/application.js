@@ -16,7 +16,25 @@
 
 // need global variable to keep track of states of the system, such as how many images is selected
 var numImgInInkbox = 0;
-
+var tattoo_type = {}; // dictionary from ID to tattoo type
+var tattoo_generation = {}; // generation of image query
+var current_images = []; // array of current images displayed to the left of the screen
+var current_images_status = []; // array tracking current images if they had been added to the inkbox
+var images_in_inkbox = []; // array of images added to inkBox
+var current_tattoo_type = "random";
+var browsing_number = 0; // a number indicating which iteration of image query the page is on
+// support for IE8
+// http://stackoverflow.com/questions/1181575/javascript-determine-whether-an-array-contains-a-value
+if(!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function(needle) {
+        for(var i = 0; i < this.length; i++) {
+            if(this[i] === needle) {
+                return i;
+            }
+        }
+        return -1;
+    };
+}
     window.onload = function() {
     	
         if (gon.page_type === "login"){
@@ -30,14 +48,18 @@ var numImgInInkbox = 0;
         
         if (gon.page_type === "index"){
             slidingThing();
-            attach_listener_to_images();
+            numImgInInkbox = 0;
+            tattoo_type = {}; // dictionary from ID to tattoo type
+            current_images = []; // array of current images on display (on the left)
+            current_images_status = [];
+            images_in_inkbox = []; // array of images added to inkBox
+            current_tattoo_type = "random";
+            browsing_number = -1;
+            // NEED TO POPULATE INKBOX BEFORE PULLING IMAGES
             pull_images('random');
         }
         
     
-        resizeMediumImages();
-        attach_listeners_for_add_buttons();
-        attach_listener_to_images();
         $("#dustbin").attr("ondrop","drop(event)");
 		$("#dustbin").attr("ondragover","allowDrop(event)");
 

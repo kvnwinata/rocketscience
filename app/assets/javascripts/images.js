@@ -7,7 +7,7 @@ var resizeMediumImages = function(){
 	$(".medium").css('visibility',"visible");
 };
 
-
+/* should not need these functions anymore
 var attach_listeners_for_add_buttons = function(){
 		// mouse enter
 		$(".tattoo-image-container").mouseenter(function(){
@@ -56,6 +56,7 @@ var attach_listeners_for_add_buttons = function(){
 		}
 		);
 	}
+*/
 
 	var createImageWithContainer = function(id,src,withAddButton){
 		var im_container= document.createElement('span');
@@ -72,31 +73,28 @@ var attach_listeners_for_add_buttons = function(){
 			$(addButton).addClass('addbutton').attr('id',id);
 			$(addButton).appendTo($(im_container));
 			// add listener for the buttons
-		// mouse enter
-		$(im_container).mouseenter(function(){
-			$("#"+$(this).attr('id')+".addbutton").css('visibility', "visible");
-		});
+			// mouse enter
+			$(im_container).mouseenter(function(){
+				$("#"+$(this).attr('id')+".addbutton").css('visibility', "visible");
+			});
 		
-		// mouse leave
-		$(im_container).mouseleave(function(){
-			var id = $(this).attr('id');
-			$("#"+$(this).attr('id')+".addbutton").css('visibility', "hidden");
-		});
+			// mouse leave
+			$(im_container).mouseleave(function(){
+				var id = $(this).attr('id');
+				$("#"+$(this).attr('id')+".addbutton").css('visibility', "hidden");
+			});
 
-		$(addButton).click(function(){
-			// code for add.
-			// don't forget to remove the add button
-			var source = $("#"+this.id+'.medium').attr('src');
-			$("#"+this.id+'.tattoo-image-container').remove();
-			var img = createImageWithContainer(this.id,source,false);
-			$(img).appendTo($("#inkBox-image"))
-			$(".inkBox-message").remove();
-			$("#"+this.id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
-			numImgInInkbox++;
-			console.log('inkbox height: ' + $("#inkBox-image").height());
-		});
+			$(addButton).click(function(){
+				// code for add.
+				// don't forget to remove the add button
+				var source = $("#"+this.id+'.medium').attr('src');
+				$("#"+this.id+'.tattoo-image-container').remove();
+				addImageToInkBox(this.id,source);
+				$(".inkBox-message").remove();
+				console.log('inkbox height: ' + $("#inkBox-image").height());
+			});
 
-	}
+		}
 		// resize medium image
 		$(img).css('height',"100px");
 		$(img).css('width',"100px");
@@ -124,20 +122,48 @@ var attach_listeners_for_add_buttons = function(){
 
 		return im_container;
 	}
+
+	var addImageToInkBox = function(id,source,type,gen){
+		// the last two parameters are not required if the image has been added by the user
+			type = (typeof type !== 'undefined' )? type : current_tattoo_type;
+			gen = (typeof gen !== 'undefined' )? gen : browsing_number;
+			var img = createImageWithContainer(id,source,false);
+			$(img).appendTo($("#inkBox-image"))
+			$("#"+id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
+			numImgInInkbox++;
+			images_in_inkbox.push(id);
+			tattoo_type[id] = type;
+			tattoo_generation[id] = gen;
+			// set the status of the image
+			current_images_status[current_images.indexOf(id)] = true;
+	}
 	var render_images = function(data, status){
 		// data = {id: path}
 		// clear content
+		current_images = [];
 		$(".artwork-container").html("");
 		for(var id in data){
 			if (data.hasOwnProperty(id)){
-				var img = createImageWithContainer(id,"/assets/"+data[id],true);
-				$(img).appendTo($('.artwork-container'))
+				if (images_in_inkbox.indexOf(id) < 0) {// if the image isn't already in the inkBox
+					
+					var img = createImageWithContainer(id,"/assets/"+data[id],true);
+					$(img).appendTo($('.artwork-container'))
+					current_images.push(id);
+					current_images_status.push(false);
+				}
 			}
 		}
 		
 		$(".selectable-img").attr("draggable","false");
 	};
-
+	// need to do another ajax call for images in inkbox
+	var populate_inkBox = function(img_in_inkbox){
+		$("#inkBox-image").html('');
+		numImgInInkbox = 0;
+		for(var id in img_in_inkbox){
+			addImageToInkBox(id,SRC,TYPE,-1);
+		}
+	};
 	var pull_images = function(category){
 
 		$.ajax({
@@ -152,5 +178,6 @@ var attach_listeners_for_add_buttons = function(){
 			},
 			success: render_images
 		});
-
+		current_tattoo_type = category;
+		browsing_number++;
 	};

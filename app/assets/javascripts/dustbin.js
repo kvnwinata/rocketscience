@@ -12,7 +12,10 @@ function drop(ev)
 	ev.preventDefault();
 	var data = ev.dataTransfer.getData("Text");
 	// add the image back to the search area
-	$(document.getElementById(data)).remove().appendTo($(".artwork-container")).attr("draggable",'false').removeAttr("ondragstart");
+	var img = createImageWithContainer(data,$("#"+data+".medium").attr('src'),true);
+	$(document.getElementById(data)).remove();
+	$(img).appendTo($(".artwork-container")).attr("draggable",'false').removeAttr("ondragstart");
+
 	// need to do some update to the database
 	numImgInInkbox--;
 	if(!numImgInInkbox){

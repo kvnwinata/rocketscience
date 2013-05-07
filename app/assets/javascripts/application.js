@@ -48,8 +48,6 @@ var numImgInInkbox = 0;
         // take care of the modal-screen
         $("#modal-screen").css('width',$(window).width());
         $("#modal-screen").css('height', $(document).height());
-        console.log($(document).height())
-        console.log($("#modal-screen").css('height'));
         $("#sliding").css('width',$(window).width()*0.9)
         $("#sliding").css('height',$(window).height()*0.9)
         $("#sliding").css('left',$(window).width()*0.05)

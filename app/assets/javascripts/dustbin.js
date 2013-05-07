@@ -50,6 +50,7 @@ var removeImageFromInkBox = function(data){
 
 	// need to do some update to the database
 	numImgInInkbox--;
+	fixInkBoxSize();
 	delete tattoo_type[data];
 	delete tattoo_generation[data];
 	images_in_inkbox.splice(images_in_inkbox.indexOf(data),1)

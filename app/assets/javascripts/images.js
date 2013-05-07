@@ -134,6 +134,7 @@ var attach_listeners_for_add_buttons = function(){
 			$(img).appendTo($("#inkBox-image"))
 			$("#"+id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
 			numImgInInkbox++;
+			fixInkBoxSize();
 			images_in_inkbox.push(id);
 			tattoo_type[id] = type;
 			tattoo_generation[id] = gen;
@@ -163,6 +164,7 @@ var attach_listeners_for_add_buttons = function(){
 	var populate_inkBox = function(img_in_inkbox){
 		$("#inkBox-image").html('');
 		numImgInInkbox = 0;
+		fixInkBoxSize();
 		for(var id in img_in_inkbox){
 			addImageToInkBox(id,SRC,TYPE,-1);
 		}

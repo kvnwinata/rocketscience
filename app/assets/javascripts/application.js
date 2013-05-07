@@ -63,6 +63,7 @@ if(!Array.prototype.indexOf) {
             undo_data = {};
             // NEED TO POPULATE INKBOX BEFORE PULLING IMAGES
             pull_images('random');
+            fixInkBoxSize();
         }
         
     

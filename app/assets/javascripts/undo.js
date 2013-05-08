@@ -1,6 +1,7 @@
 
 var undoTattoo = function(){
-	console.log('undo clicked')
+	if (undo_data.remove_mode){
+		console.log('undo clicked')
 	$(".undo-display").css('display','none');
 
 	$(".inkBox-message").remove();
@@ -42,6 +43,13 @@ var undoTattoo = function(){
 				'image_id': undo_data.ID
 			}
 		});
+	} else {
+		$(".undo-display").css('visibility','hidden');
+		removeImageFromInkBox(undo_data.ID,true);
+		$(".undo-display").css('display','none');
+		$(".undo-display").css('visibility','visible');
+		constructSlideShow(undo_data.ID,undo_data.SRC);
+	}
 }
 
 var fixInkBoxSize = function(){

@@ -15,14 +15,16 @@ function drop(ev)
 	// add the image back to the search area
 	removeImageFromInkBox(data)
 }
-
-var removeImageFromInkBox = function(data){
+// forced parameter used if the client is sure that the image was added from the same generation
+var removeImageFromInkBox = function(data,forced){
+	forced = (typeof forced !== 'undefined' )? forced : false;
+		
 	var source  = $("#"+data+".medium").attr('src')
 	var img = createImageWithContainer(data,source,true);
 	$(document.getElementById(data)).remove();
 	undo_data.added = false;
-	if (tattoo_type[data] === current_tattoo_type){
-		if(tattoo_generation[data] === browsing_number){ // from the same generation, need to insert
+	if (tattoo_type[data] === current_tattoo_type || forced){
+		if(tattoo_generation[data] === browsing_number || forced){ // from the same generation, need to insert
 			
 			for(var ind = current_images.indexOf(data); ind < current_images.length; ind++)
 				if (!current_images_status[ind]) break; // found the one that hasn't been added
@@ -40,7 +42,7 @@ var removeImageFromInkBox = function(data){
 		}
 		undo_data.added = true;
 	}
-
+	undo_data.remove_mode = true;
 	// undo data
 	undo_data.ID = data;
 	undo_data.src = source;
@@ -58,7 +60,7 @@ var removeImageFromInkBox = function(data){
 		$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')
 	}
 	$(".undo-display").html('The tattoo has been removed from your InkBox.&nbsp;<span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undoTattoo()">Undo</span>');
-	$(".undo-display").fadeIn(500);
+	$(".undo-display").fadeOut(0,function(){$(this).fadeIn(500)});
 	// ajax call to update info on the server side
 	var img_id = data;
 	$.ajax({

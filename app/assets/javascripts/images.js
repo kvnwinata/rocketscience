@@ -7,58 +7,8 @@ var resizeMediumImages = function(){
 	$(".medium").css('visibility',"visible");
 };
 
-/* should not need these functions anymore
-var attach_listeners_for_add_buttons = function(){
-		// mouse enter
-		$(".tattoo-image-container").mouseenter(function(){
-			$("#"+$(this).attr('id')+".addbutton").css('visibility', "visible");
-		});
-		
-		// mouse leave
-		$(".tattoo-image-container").mouseleave(function(){
-			var id = $(this).attr('id');
-			$("#"+$(this).attr('id')+".addbutton").css('visibility', "hidden");
-		});
 
-		$(".addbutton").click(function(){
-			// code for add.
-			// don't forget to remove the add button
-			var source = $("#"+this.id+'.medium').attr('src');
-			$("#"+this.id+'.tattoo-image-container').remove();
-			var img = createImageWithContainer(this.id,source,false);
-			$(img).appendTo($("#inkBox-image"))
-			resizeMediumImages();
-			$(".inkBox-message").remove();
-			$("#"+this.id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
-			numImgInInkbox++;
-			console.log('inkbox height: ' + $("#inkBox-image").height());
-		});
-	}
-
-	var attach_listener_to_images = function(){
-		$(".selectable-img").click(function(e){
-			e.preventDefault();
-			if ($("#sliding").css('display')==="none"){
-				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
-				$("#modal-screen").css('visibility','visible');
-				$("#closeAnalysis").css('visibility','visible');
-				// clear content
-				$('#sliding').html('');
-				var thisTattoo = document.createElement('img');
-				$(thisTattoo).attr('src',$(this).attr('src'));
-				$(thisTattoo).css('width',0.9*$(window).height()*0.9);
-				$(thisTattoo).css('position','absolute');
-				$(thisTattoo).css('top','5%');
-				$(thisTattoo).css('left','5%');
-				$(thisTattoo).appendTo($('#sliding'))
-
-			}
-		}
-		);
-	}
-	*/
-
-	var createImageWithContainer = function(id,src,withAddButton){
+var createImageWithContainer = function(id,src,withAddButton){
 		var im_container= document.createElement('span');
 		$(im_container).addClass("tattoo-image-container")
 		$(im_container).attr('id',id);
@@ -176,6 +126,14 @@ var slideshowButton = function(){
 		console.log(source)
 		$("#"+id+'.tattoo-image-container').remove();
 		addImageToInkBox(id,source);
+		// undo data
+		undo_data = {};
+		undo_data.remove_mode = false;
+		undo_data.ID = id;
+		undo_data.SRC = source;
+		$(".undo-display").html('The tattoo has been added to your InkBox.&nbsp;<span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undoTattoo()">Undo</span>');
+		$(".undo-display").fadeOut(0,function(){$(this).fadeIn(500)});
+	
 		$(".inkBox-message").remove();
 		if (numImgOnDisplay() === 0){
 			$('#sliding').html('<div style="color:black">There is no more tattoo to display. Please choose a different category or randomize again.</div>')

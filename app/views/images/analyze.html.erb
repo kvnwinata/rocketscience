@@ -16,18 +16,41 @@
     <hr>
     
 	<p class = "titles" style="color: grey;"> Artists we think you'll like: </p>
-
+    <center>
+<table border ="0">
+<tr>
 	<div style="display:table;">
 	<% @artists.each do |artist| %>
 	<span style="display:table;">
     
     
-	<table>
-	<tr class="artist-suggestion" id="<%= artist.id %>">
-		<td>
-		<p class="h5"><b><%= artist.name %></b><br>
+	<t class="artist-suggestion" id="<%= artist.id %>">
+        
+		<td width="200px"><center><font color="#444444">
+		<b><%= artist.name %></b><br>
 		<%= artist.address1 %><br>
-		<%= artist.email %></p><br>
+		<%= artist.email %><br>
+        
+        
+
+            
+            <br>
+
+            <% if session[:user_id] > 0 %>
+                <% if artist.users.exists?(session[:user_id]) %>
+                    <div class="liked like-button" onclick="like_button_func()" id="<%= artist.id %>"></span>
+                <% else %>
+                    <div class="like like-button"  onclick="like_button_func()" id="<%= artist.id %>"></span>
+                <% end%>
+            <% else %>
+                <p class="liked22">Sign-up to Like this Artist!</p>
+            <% end %> 
+
+            
+            
+            
+            
+            </center>
 	</td>
 
 
@@ -36,25 +59,26 @@
 
 		<%= image_tag(artist.profile_picture, {class: "",style:"width:200px"})%>
 		<br>
-            <% if session[:user_id] > 0 %>
-                <% if artist.users.exists?(session[:user_id]) %>
-                    <span class="liked" id="<%= artist.id %>"></span>
-                <% else %>
-                    <span class="like"  id="<%= artist.id %>"></span>
-                <% end%>
-            <% else %>
-                <span class="signup-link">signup to like</span>
-            <% end %>
+            
 
     <% artist.images.sample(2).each do |image| %>
     	<%= image_tag(image.path + image.name, {class: "medium", id: image.id}) %>
     <% end %>
 
 </td>
-</tr>
-</table>
+
+
+
+
 </span>
 	<% end %>
+    </tr>
+    </table>
 	</div>
-
+</center>
 </div>
+
+  <hr>
+  
+ <p align = "right"> 
+<%= image_tag("shared/logo_blacksm.png", ) %> &nbsp;&nbsp;&nbsp;&nbsp;</p>

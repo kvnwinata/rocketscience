@@ -87,14 +87,15 @@ var constructSlideShow = function(ID,SRC){
 				$(control).css('bottom',0.05* theWidth)
 				$(control).css('z-index',100)
 				$(control).css('color','black')
-				var button = document.createElement('span')
+				var button = document.createElement('button')
 				$(button).attr('id','add').appendTo($(control)).click(slideshowButton)
 				var progress = document.createElement('span')
 				$(progress).attr('id','prog').appendTo($(control))
-				var next = document.createElement('span')
-				$(next).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' next ');
-				var prev = document.createElement('span')
-				$(prev).attr('id','prev').appendTo($(control)).click(prevSlideshow).html(' prev ');
+				var prev = document.createElement('button')
+				$(prev).attr('id','prev').appendTo($(control)).click(prevSlideshow).html(' < prev ');
+				var next = document.createElement('button')
+				$(next).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' next > ');
+				
 				inkBox_slideshow = $('#'+ID+'.medium').hasClass('in-inkbox');
 				if(inkBox_slideshow){
 					current_slideshow = images_in_inkbox.indexOf(ID);

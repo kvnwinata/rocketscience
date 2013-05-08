@@ -101,8 +101,10 @@ if(!Array.prototype.indexOf) {
 		//$(".selectable-img").attr("ondragstart","drag(event)");
         $("#sliding").css('position','fixed');
         $("#closeAnalysis").css('position','fixed');
+        
         // take care of the modal-screen
         resizeModalScreen();
+
     }
     
     window.onresize = function() {

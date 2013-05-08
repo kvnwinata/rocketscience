@@ -45,7 +45,7 @@ var undoTattoo = function(){
 }
 
 var fixInkBoxSize = function(){
-	var fix = numImgInInkbox > 9;
+	var fix = numImgInInkbox > 8;
 	if(fix){
 		$("#inkBox-image").css('height',$("#inkBox-image").height());
 		$("#inkBox-image").css('overflow-y','scroll');

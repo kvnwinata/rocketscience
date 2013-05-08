@@ -177,7 +177,7 @@ var slideshowButton = function(){
 		$("#"+id+'.tattoo-image-container').remove();
 		addImageToInkBox(id,source);
 		$(".inkBox-message").remove();
-		if (numImgOnDisplay === 0){
+		if (numImgOnDisplay() === 0){
 			$('#sliding').html('<div style="color:black">There is no more tattoo to display. Please choose a different category or randomize again.</div>')
 		} else {
 			current_slideshow = incrementIndex(current_slideshow);
@@ -197,7 +197,8 @@ var indexForSlideShow = function(currentOne){
 
 }
 var incrementIndex = function(currentOne){
-	var ans = currentOne + 1;
+
+	var ans = currentOne;
 	if (ans === current_images_status.length) ans = 0;
 	for (var i = 0; i < current_images_status.length; i++){
 		ans++;
@@ -207,7 +208,8 @@ var incrementIndex = function(currentOne){
 	return ans;
 }
 var decrementIndex = function(currentOne){
-	var ans = currentOne - 1;
+
+	var ans = currentOne;
 	if (ans < 0 ) ans = current_images_status.length - 1;
 	for (var i = 0; i < current_images_status.length; i++){
 		ans--;
@@ -217,9 +219,11 @@ var decrementIndex = function(currentOne){
 	return ans;
 }
 var numImgOnDisplay = function(){
+	console.log(current_images_status)
 	var ans = 0;
 	for(var i = 0; i < current_images_status.length; i++)
 		if(!current_images_status[i]) ans++;
+	console.log(ans)
 	return ans;
 }
 var nextSlideshow = function(){

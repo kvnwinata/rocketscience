@@ -43,12 +43,12 @@
 
             <% if session[:user_id] > 0 %>
                 <% if @artist.users.exists?(session[:user_id]) %>
-                    <div class="like"  id="<%= @artist.id %>">liked</div>
+                    <span class="liked" id="<%= @artist.id %>"></span>
                 <% else %>
-                    <div class="liked" id="<%= @artist.id %>">like</div>
+                    <span class="like"  id="<%= @artist.id %>"></span>
                 <% end%>
             <% else %>
-                <div class="signup-link">signup to like</div>
+                <span class="signup-link">signup to like</span>
             <% end %>
 </td>
 </tr>

@@ -74,14 +74,14 @@ def get_category
 
 		images = Hash.new
 		all_images.each do |image|
-			images[image.id] = image.path + image.name
+			images[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
 		end 
 		render :json => images.to_json
 	else
 		@category = Category.find_by_name(category_name) 
 		images = Hash.new
 		@category.images.all.each do |image|
-			images[image.id] = image.path + image.name
+			images[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
 		end 
 		render :json => images.to_json
 	end

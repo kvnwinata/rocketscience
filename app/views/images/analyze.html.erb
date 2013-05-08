@@ -27,20 +27,13 @@
 		<h5><%= artist.address1 %></h5>
 		<h5><%= artist.email %></h5>
 	</td>
-	<td>
-		2 images by this artist:
-	</td>
-	</tr>
-	<tr>
+
+
 		<td>
-		<% @images = [] %>
-		<% @images.push(Image.find(artist.id*6)) %>
-		<% @images.push(Image.find(artist.id*6+1))%>
+		
 
-		<% @images.each do |image| %>
-		<%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
-		<% end %>
-
+		<%= image_tag(artist.profile_picture, {class: "",style:"width:200px"})%>
+		<br>
             <% if session[:user_id] > 0 %>
                 <% if @artist.users.exists?(session[:user_id]) %>
                     <span class="liked" id="<%= @artist.id %>"></span>

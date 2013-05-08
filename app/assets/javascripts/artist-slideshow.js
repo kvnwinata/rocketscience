@@ -38,45 +38,55 @@ var constructSlideShowArtist = function(ID,SRC){
 	var next = document.createElement('button')
 	$(next).attr('id','next').appendTo($(control)).click(nextSlideshow_art).html(' next > ');
 	$(next).attr('class','smbutton');
-	current_slideshow = images_in_inkbox.indexOf(ID);
-	$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length)
-
+	current_slideshow = current_images.indexOf(ID);
+	$(progress).html((current_slideshow + 1)+' of '+current_images.length)
+	console.log(ID)
+	console.log(images_in_inkbox)
 	if(images_in_inkbox.indexOf(ID) < 0){ //
+		$('#add').html('+ add ')
+		$('#add').removeClass('smbuttond');
+		$('#add').addClass('smbutton');
+		$('#add').removeAttr('disabled');
+	} else {
+		$('#add').html('added ')
+		$('#add').removeClass('smbutton');
+		$('#add').addClass('smbuttond');
+		$('#add').attr('disabled','disabled');
+	}
+}
+var nextSlideshow_art = function(){
+	console.log('next clicked')
+
+		current_slideshow++;
+		if (current_slideshow > current_images.length - 1) current_slideshow = 0;
+		$('#prog').html((current_slideshow + 1)+' of '+current_images.length)
+		var id = current_images[current_slideshow]
+	
+	$("#slideshow-image").attr('src',$('#'+id+'.medium').attr('src'));
+	if(images_in_inkbox.indexOf(id) < 0){ //
 		$(button).html('+ add ')
 	} else {
 		$(button).html('added ')
 		$(button).attr('disabled','disabled');
 	}
 }
-var nextSlideshow_art = function(){
-	console.log('next clicked')
-	if(inkBox_slideshow){
-		current_slideshow++;
-		if (current_slideshow > images_in_inkbox.length - 1) current_slideshow = 0;
-		$('#prog').html((current_slideshow + 1)+' of '+images_in_inkbox.length)
-		var id = images_in_inkbox[current_slideshow]
-	} else {
-		current_slideshow = incrementIndex(current_slideshow);
-		$('#prog').html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
-		var id = current_images[current_slideshow]
-	}
-	$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
-}
 var prevSlideshow_art = function(){
 	console.log('prev clicked')
-	if(inkBox_slideshow){
 		current_slideshow--;
-		if (current_slideshow < 0) current_slideshow = images_in_inkbox.length - 1;
-		$('#prog').html((current_slideshow + 1)+' of '+images_in_inkbox.length)
-		var id = images_in_inkbox[current_slideshow]
-	} else {
-		current_slideshow = decrementIndex(current_slideshow);
-		$('#prog').html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
+		if (current_slideshow < 0) current_slideshow = current_images.length - 1;
+		$('#prog').html((current_slideshow + 1)+' of '+current_images.length)
 		var id = current_images[current_slideshow]
+	
+	$("#slideshow-image").attr('src',$('#'+id+'.medium').attr('src'));
+if(images_in_inkbox.indexOf(id) < 0){ //
+		$(button).html('+ add ')
+	} else {
+		$(button).html('added ')
+		$(button).attr('disabled','disabled');
 	}
-	$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
 }
 var slideshowButton_art = function(){
+	console.log('add clicked')
 	if(inkBox_slideshow){
 		// need to remove image
 		removeImageFromInkBox(images_in_inkbox[current_slideshow]);

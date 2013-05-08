@@ -17,7 +17,9 @@ def like
 		new_like.user_id = user_id
 		new_like.save
 	else #guest
-		session[:images_id].push(image.id)
+		if !session[:images_id].include?(image.id)
+			session[:images_id].push(image.id)
+		end
 	end
 	render :nothing => true
 end
@@ -32,11 +34,14 @@ def unlike
 			unliked.destroy
 		end
 	else #guest
+		logger.debug session[:images_id]
 		session[:images_id].each_with_index do |val, index|
-			if val == image.id
+			if val.to_s() == image.id.to_s()
 				session[:images_id].delete_at(index)
 			end
 		end
+		logger.debug "ABCD"
+		logger.debug session[:images_id]
 	end
 	render :nothing => true
 end

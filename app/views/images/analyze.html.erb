@@ -17,15 +17,22 @@
     
 	<h4 style="color: grey;"> Artists we think you'll like: </h4>
 
+	<div style="display:table;">
 	<% @artists.all.each do |artist| %>
-
-	<div class="artist-suggestion" id="<%= artist.id %>">
-		
-		<h2><%= artist.name %></h2>
-		<h2><%= artist.address1 %></h2>
-		<h2><%= artist.email %></h2>
-
+	<span style="display:table;">
+	<table>
+	<tr class="artist-suggestion" id="<%= artist.id %>">
+		<td rowspan=2>
+		<h5><%= artist.name %></h5>
+		<h5><%= artist.address1 %></h5>
+		<h5><%= artist.email %></h5>
+	</td>
+	<td>
 		2 images by this artist:
+	</td>
+	</tr>
+	<tr>
+		<td>
 		<% @images = [] %>
 		<% @images.push(Image.find(artist.id*6)) %>
 		<% @images.push(Image.find(artist.id*6+1))%>
@@ -43,8 +50,11 @@
             <% else %>
                 <div class="signup-link">signup to like</div>
             <% end %>
-	</div>
-
+</td>
+</tr>
+</table>
+</span>
 	<% end %>
+	</div>
 
 </div>

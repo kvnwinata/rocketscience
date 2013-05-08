@@ -8,6 +8,7 @@
     }
 
         resizeMediumImages();
+        $(".medium").css('cursor','pointer');
         $(".medium").click(function(e){
             e.preventDefault();
             $(".undo-display").css('display','none');

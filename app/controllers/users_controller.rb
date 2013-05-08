@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+skip_before_filter :require_login, :except => :profile
+
+
 def login
 	gon.page_type = "login";
 	@new_user = User.new
@@ -7,11 +10,11 @@ end
 
 def guest
 	if session[:images_id] == nil
-		session[:images_id] == Array.new 
+		session[:images_id] = Array.new 
 	end
 	session[:user_id] = -1
 	# go to home
-	render home_path
+	redirect_to root_path
 end
 
 def prompt

@@ -199,7 +199,7 @@ var attach_listeners_for_add_buttons = function(){
 			if (data.hasOwnProperty(id)){
 				if (images_in_inkbox.indexOf(id) < 0) {// if the image isn't already in the inkBox
 					
-					var img = createImageWithContainer(id,"/assets/"+data[id].path,true);
+					var img = createImageWithContainer(id,data[id].path,true);
 
 					$(img).appendTo($('.artwork-container'))
 					current_images.push(id);
@@ -215,8 +215,13 @@ var attach_listeners_for_add_buttons = function(){
 		images_in_inkbox = [];
 		tattoo_generation = {};
 		tattoo_type = {};
+		numImgInInkbox = 0;
 		for(var id in data){
 			addImageToInkBox(id,data[id].path,data[id].category_name,-1);
+			console.log(id);
+		}
+		if(images_in_inkbox.length === 0){
+			$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')
 		}
 	}
 	// need to do another ajax call for images in inkbox
@@ -237,6 +242,7 @@ var attach_listeners_for_add_buttons = function(){
 		});
 
 	};
+
 	var pull_images = function(category){
 
 		$.ajax({

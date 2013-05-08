@@ -134,14 +134,11 @@
         <tr>
           <td width="165" height="32">&nbsp;</td>
           <td width="*" height="32">
-           <%= form_for(@new_user) do |f| %>
-           <!---<div class='error_message'><%= f.error_messages %></div>-->
            <div class='signup-fields'>
             <br>
             <div align = left>
-            <%= f.submit " BROWSE", class: "button"%>
+              <input class="button" onclick="window.open('/guest')" name="commit" type="submit" value=" BROWSE">
             </div>
-            <% end %>
 
             <div class = "loginSubs"><br>*your preferences will not be saved.</div>
           </tr>

@@ -6,7 +6,7 @@ Rocketscience::Application.routes.draw do
   match 'login' 		    => 'users#login' # login page
   match 'users/prompt' 	=> 'users#prompt' # prompting user to signup: return form?
   match 'users/profile' => 'users#profile' # user's profile page: currently John Smith's
-  match 'guest'         => 'user#guest' # browse as guest.
+  match 'guest'         => 'users#guest' # browse as guest.
 
   match 'users' 		=> 'home#index' # skip signup, this url is the same as signup/submit
   #match 'users' 		=> 'users#new' 

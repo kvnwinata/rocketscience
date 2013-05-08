@@ -17,7 +17,7 @@ def like
 		new_like.user_id = user_id
 		new_like.save
 	else #guest
-		session[:images_id].push[image.id]
+		session[:images_id].push(image.id)
 	end
 	render :nothing => true
 end
@@ -52,13 +52,13 @@ def get_inkbox
 		# get data from database
 		user = User.find(user_id)
 		user.images.each do |image|
-			inkbox[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
+			inkbox[image.id] = {'category_name' => image.category.name, 'path' => "/assets/"+image.path+image.name } 
 		end
 	else
 		# get data from session[:images_id]
 		session[:images_id].each do |image_id|
-			image = image.find(image_id)
-			inkbox[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
+			image = Image.find(image_id)
+			inkbox[image.id] = {'category_name' => image.category.name, 'path' => "/assets/"+image.path+image.name } 
 		end
 	end
 	render :json => inkbox.to_json
@@ -74,14 +74,14 @@ def get_category
 
 		images = Hash.new
 		all_images.each do |image|
-			images[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
+			images[image.id] = {'category_name' => image.category.name, 'path' => "/assets/"+image.path+image.name } 
 		end 
 		render :json => images.to_json
 	else
 		@category = Category.find_by_name(category_name) 
 		images = Hash.new
 		@category.images.all.each do |image|
-			images[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
+			images[image.id] = {'category_name' => image.category.name, 'path' => "/assets/"+image.path+image.name } 
 		end 
 		render :json => images.to_json
 	end

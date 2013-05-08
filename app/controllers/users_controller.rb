@@ -11,6 +11,9 @@ end
 def logout
 	session[:user_id] = nil
 	flash[:notice] = "You have successfully logged out."
+	gon.page_type = "login"
+	@current_page = "login"
+	@user = User.new
 	render 'login'
 end
 

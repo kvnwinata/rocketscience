@@ -12,13 +12,6 @@ def info
 	@artist = Artist.find(params[:artist_id])
 
 	@images = @artist.images
-	# @images = []
-	# @images.push(Image.find(@artist.id*6))
-	# @images.push(Image.find(@artist.id*6+1))
-	# @images.push(Image.find(@artist.id*6+2))
-	# @images.push(Image.find(@artist.id*6+3))
-	# @images.push(Image.find(@artist.id*6+4))
-	# @images.push(Image.find(@artist.id*6+5))
 
 	render :layout => false
 end

@@ -1,9 +1,39 @@
 class ImagesController < ApplicationController
 
 def analyze
-	@category = Category.find(5)
+
+	user_id = session[:user_id]
+	category_counts = Array.new(Category.count, 0)
+
+	if user_id > 0 
+		user = User.find(user_id)
+		user.images.each do |image|
+			category_counts[image.category_id-1] = category_counts[image.category_id-1] + 1 
+		end
+	else 
+		session[:images_id].each do |image_id|
+			image = Image.find(image_id)
+			category_counts[image.category_id-1] = category_counts[image.category_id-1] + 1 
+		end 
+	end
+	
+	# get highest count
+	max = -1
+	max_index = -1
+	category_counts.each_with_index do |val, index| 
+		if max < val
+			max = val
+			max_index = index
+		end
+	end
+
+	@category = Category.find(max_index+1)
 	@artists  = @category.artists
-	@samples  = @category.images   
+	@samples  = @category.images 
+
+	if user_id > 0 
+		user.category_id = @category.id
+  	end
 
 	render :layout => false
 end
@@ -34,14 +64,7 @@ def unlike
 			unliked.destroy
 		end
 	else #guest
-		logger.debug session[:images_id]
-		session[:images_id].each_with_index do |val, index|
-			if val.to_s() == image.id.to_s()
-				session[:images_id].delete_at(index)
-			end
-		end
-		logger.debug "ABCD"
-		logger.debug session[:images_id]
+		session[:images_id].delete(image.id)
 	end
 	render :nothing => true
 end

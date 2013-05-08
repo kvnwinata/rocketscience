@@ -28,7 +28,7 @@ def analyze
 	end
 
 	@category = Category.find(max_index+1)
-	@artists  = @category.artists
+	@artists  = @category.artists.sample(2)
 	@samples  = @category.images 
 
 	if user_id > 0 

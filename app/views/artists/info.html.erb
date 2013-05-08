@@ -7,6 +7,17 @@
         </td>
         <td width="*" style="vertical-align:bottom;" height="300px">
             <span class='h4'> <%= @artist.name %> </span>
+
+            <% if session[:user_id] > 0 %>
+                <% if @artist.users.exists?(session[:user_id]) %>
+                    <div class="like"  id="<%= @artist.id %>">liked</div>
+                <% else %>
+                    <div class="liked" id="<%= @artist.id %>">like</div>
+                <% end%>
+            <% else %>
+                <div class="signup-link">signup to like</div>
+            <% end %>
+
             <hr color="#555555" height="1px">
             <p class="titles">
             <b>
@@ -22,7 +33,6 @@
     <tr>
         <td colspan="2">    
             <span style="font-size:20px; font-weight:bold">Sample Arts</span><br>
-            &nbsp;&nbsp;&nbsp;
             <% @images.each do |image| %>
                 <%= image_tag(image.path + image.name, {class: "medium", id: image.id}) %>
             <% end %>

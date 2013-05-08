@@ -26,6 +26,8 @@ Rocketscience::Application.routes.draw do
   match 'artists/info/:artist_id'  => 'artists#info'
   match 'artists/like/:artist_id'  => 'artists#like'   # liking an artist, update db
   match 'artists/unlike/:artist_id'=> 'artists#unlike' # disliking an artist, update db
+  match 'artists/like'  => 'artists#like'   # liking an artist, update db
+  match 'artists/unlike'=> 'artists#unlike' # disliking an artist, update db
 
   match 'artists/get_category'     => 'artists#get_category'
 

@@ -17,10 +17,33 @@ def info
 end
 
 def like
+	user_id = session[:user_id]
+	artist = Artist.find(params[:artist_id])
+
+	if user_id > 0 
+		new_like = artist.artist_likes.new
+		new_like.user_id = user_id
+		new_like.save
+	else #guest
+		# if !session[:images_id].include?(image.id)
+		# 	session[:images_id].push(image.id)
+		# end
+	end
 	render :nothing => true
 end
 
 def unlike
+	user_id = session[:user_id]
+	artist = Artist.find(params[:artist_id])
+
+	if user_id > 0 
+		unliked = artist.artist_likes.find_by_user_id(user_id)
+		if unliked
+			unliked.destroy
+		end
+	else #guest
+		#session[:images_id].delete(image.id)
+	end
 	render :nothing => true
 end
 

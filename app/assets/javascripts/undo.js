@@ -1,6 +1,7 @@
 
 var undoTattoo = function(){
-	console.log('undo clicked')
+	if (undo_data.remove_mode){
+		console.log('undo clicked')
 	$(".undo-display").css('display','none');
 
 	$(".inkBox-message").remove();
@@ -11,6 +12,7 @@ var undoTattoo = function(){
 	images_in_inkbox.splice(undo_data.pos_in_inkbox,0,undo_data.ID);
 	var img = createImageWithContainer(undo_data.ID,undo_data.src,false);
 	$(img).addClass('in-inkbox');
+	$(img).children().each(function(){ $(this).addClass('in-inkbox')})
 	if (undo_data.pos_in_inkbox === images_in_inkbox.length - 1) { // if it's the last element
 		$(img).appendTo($("#inkBox-image"))
 	} else {
@@ -24,6 +26,11 @@ var undoTattoo = function(){
 		// set the status of the image
 		current_images_status[current_images.indexOf(undo_data.ID)] = true;
 	}
+
+	//update the modal screen, if needed
+	if($("#sliding").css('display')!=="none"){
+		constructSlideShow(undo_data.ID,undo_data.src);
+	}
 	// ajax call to update server-side database
 	$.ajax({
 			url: "/images/like",
@@ -36,10 +43,17 @@ var undoTattoo = function(){
 				'image_id': undo_data.ID
 			}
 		});
+	} else {
+		$(".undo-display").css('visibility','hidden');
+		removeImageFromInkBox(undo_data.ID,true);
+		$(".undo-display").css('display','none');
+		$(".undo-display").css('visibility','visible');
+		constructSlideShow(undo_data.ID,undo_data.SRC);
+	}
 }
 
 var fixInkBoxSize = function(){
-	var fix = numImgInInkbox > 9;
+	var fix = numImgInInkbox > 8;
 	if(fix){
 		$("#inkBox-image").css('height',$("#inkBox-image").height());
 		$("#inkBox-image").css('overflow-y','scroll');

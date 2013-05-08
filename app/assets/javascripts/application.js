@@ -103,7 +103,6 @@ if(!Array.prototype.indexOf) {
         $("#closeAnalysis").css('position','fixed');
         // take care of the modal-screen
         resizeModalScreen();
-        $(".undo-button").click(undoTattoo);
     }
     
     window.onresize = function() {
@@ -140,6 +139,8 @@ var resizeModalScreen = function(){
         $("#sliding").css('top',(screenH - theHeight)/2)
         $("#closeAnalysis").css('left',(screenW - theWidth)/2)
         $("#closeAnalysis").css('top',(screenH - theHeight)/2)
+        // now for the undo bar
+        theWidth = Math.max($(window).width()*0.9,700);
     $(".undo-display").css('width',theWidth*0.7)
     $(".undo-display").css('left',theWidth*0.15)
 }

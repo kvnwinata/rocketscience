@@ -9,10 +9,9 @@ Rocketscience::Application.routes.draw do
   match 'users/profile' => 'users#profile' # user's profile page: currently John Smith's
   match 'guest'         => 'users#guest' # browse as guest.
 
-  match 'users' 		=> 'home#index' # skip signup, this url is the same as signup/submit
-  #match 'users' 		=> 'users#new' 
-  match 'login/submit'	=> 'home#index' # skip login
-  #match 'login/submit'	=> 'users#login_submit'
+  match 'users' 		                     => 'users#new' 
+  match 'login/submit'                   => 'users#login_submit'
+  match 'login/submit/:email/:password'  => 'users#login_submit'
 
   # images
   match 'images/get_category'   => 'images#get_category' 

@@ -45,7 +45,7 @@ if(!Array.prototype.indexOf) {
     };
 }
     window.onload = function() {
-        
+        console.log(gon.user_status)
         setContent();
     	
         if (gon.page_type === "login"){

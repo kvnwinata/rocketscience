@@ -99,13 +99,17 @@
           </td>
         </tr>
         <tr>
-          <td width="165" height="120"  valign="top"><span class="subheading">signup</span></td>
+          <%= form_for(@user) do |f| %>
+
+          <td width="165" height="120"  valign="top"><span class="subheading">signup</span>
+
+          </td>
           <td width="*" height="120">
             <div class="signup-form">
 
-              <%= form_for(@new_user) do |f| %>
               <!---<div class='error_message'><%= f.error_messages %></div>-->
               <!---<div class='error_message'><%= f.error_messages %></div>-->
+          <div class=error_message><%= f.error_messages %></div>
 
               <div class='signup-fields'>
 

@@ -13,13 +13,13 @@
 <body>
 
 	<!-- Exclude header and footer on login page-->
-	<% if !current_page?(login_path) %>
+	<% if !current_page?(login_path) && !current_page?(users_path) %>
 		<%= render 'layouts/header' %>
 	<% end %>
 
 	<%= yield %>
 
-	<% if !current_page?(login_path) %>
+	<% if !current_page?(login_path) && !current_page?(users_path) %>
 	    <%= render 'layouts/footer' %>
 	<% end %>
 

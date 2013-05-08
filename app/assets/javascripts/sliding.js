@@ -31,12 +31,12 @@ var slidingThing = function(){
 		}
 	});
 	$("#closeAnalysis").click(function(){
-		$("#closeAnalysis").hide(500);
+		$("#closeAnalysis").hide(00);
 		$("#sliding").hide(500);
 		$("#modal-screen").css('visibility','hidden');
 	})
 	$("#modal-screen").click(function(){
-		$("#closeAnalysis").hide(500);
+		$("#closeAnalysis").hide(0);
 		$("#sliding").hide(500);
 		$("#modal-screen").css('visibility','hidden');
 	})	

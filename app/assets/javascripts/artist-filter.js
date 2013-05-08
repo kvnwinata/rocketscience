@@ -12,10 +12,12 @@ var artist_populate_inkBox = function(){
 		});
 }
 var artist_pop_IB = function(data,status){
-	images_in_inkBox = [];
+	images_in_inkbox = [];
 	for(var id in data){
-		images_in_inkBox.push(id);
+		images_in_inkbox.push(id);
+		console.log(id)
 	}
+	console.log(images_in_inkbox)
 }
 
 var render_artist_tab = function(data,status){

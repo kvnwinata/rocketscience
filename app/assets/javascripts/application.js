@@ -98,8 +98,8 @@ if(!Array.prototype.indexOf) {
             modal_screen_mode = false;
             resizeModalScreen();
             artist_populate_inkBox();
-            tab_setup();
-            //pull_artist("All");
+            
+            pull_artist("All");
 
         }
         

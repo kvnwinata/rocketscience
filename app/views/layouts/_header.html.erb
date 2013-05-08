@@ -20,13 +20,16 @@
 
 <td style="vertical-align:bottom" align="right" width ="*" > 
 
-
-
-
-
           <nav>
             <ul>
-                <li id="login"><font size="2pt">Hello <B>Tim Beaver!</font>
+
+            	<% if session[:user_id] > 0 %>
+            		<% @username = User.find(session[:user_id]).email %>
+            	<% else %>
+            	    <% @username = "Guest" %>
+            	<% end %>
+
+                <li id="login"><font size="2pt">Hello <B><%= @username %>!</font>
                     <a id="login-trigger" href="#"><font size="2pt">&nbsp;&nbsp;
  
                          Log-out <span>&#x25BC;</span></font>

@@ -64,7 +64,7 @@ window.onresize = function() {
 <td id = "aaa" width = "296px" style="vertical-align:top" >
 <div id="artist-filter-bar">
 <label>Artist Type:</label>
-        <select id="artist-filter" >
+        <select id="artist-filter" onchange="pull_artist(this.value)">
             <option value="All">All</option>
             <option value="American Traditional">American Traditional</option>
             <option value="Black and Grey">Black and Grey</option>
@@ -86,7 +86,7 @@ window.onresize = function() {
 
 </td>
 
-<td id="artistPanel"><p class="info-message">Click on the tabs on the right to view more details.</p></td>
+<td id="artistPanel"><p class="info-message">Click on the tabs on the left to view more details.</p></td>
 </tr>
 </table>
 </div>

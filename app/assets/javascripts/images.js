@@ -68,5 +68,4 @@
 			},
 			success: render_images
 		});
-
 	}

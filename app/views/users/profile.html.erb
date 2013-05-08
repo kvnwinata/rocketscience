@@ -33,7 +33,7 @@
 
 <table><tr><td width="210px"  height="200px">
         
-    <%= image_tag("profile/tim.jpg", {:class=>"profile_picture", :id=>''}) %>
+<%= image_tag("profile/tim.jpg", {:class=>"profile_picture", :id=>''}) %>
 </td><td width = "*" height="200px" style="vertical-align:bottom">
     
 <div class="h4">Tim L. Beaver</div>
@@ -42,17 +42,21 @@
 
 </td></tr><p><p><p>
 <td></td><td><p><hr><p>
-<div class="titles2">Bio-data</div>
 
-<p class="text"> [ Bio-data here ]</p>
-
-
+<!---<div class="titles2">Bio-data</div><p class="text"> [ Bio-data here ]</p>-->
 <h2 style="color:black;">Preferred Style</h2>
+<% if @category != nil %>
+    <div class="titles2"><%= @category.name %> Tattoos</div>
+    <p class="text"><%= @category.description %></p>
+<% else %>
+    <p>You haven't done the analysis yet. Go to the Browse page, select images, and hit analyze to find out.</p>
+<% end %>
+<!---<%= image_tag("shared/temp.jpg", {:class=>"profile_picture", :id=>''}) %>-->
 
-<div class="titles2">Nature-Inspired Tattoos</div>
-
-<p class="text">Popular among all ages, nature inspired tattoos aim to reflect this passion towards the natural. Nature, in the broadest sense, is equivalent to the natural world, physical world, or material world. "Nature" refers to the phenomena of the physical world, and also to life in general. It ranges in scale from the subatomic to the cosmic. The word nature is derived from the Latin word natura, or "essential qualities, innate disposition", and in ancient times, literally meant "birth". Natura was a Latin translation of the Greek word physis (φύσις), which originally related to the intrinsic characteristics that plants, animals, and other features of the world develop of their own accord. The concept of nature as a whole, the physical universe, is one of several expansions of the original notion; it began with certain core applications of the word φύσις by pre-Socratic philosophers, and has steadily gained currency ever since. This usage was confirmed during the advent of modern scientific method in the last several centuries.  </p>
-<%= image_tag("shared/temp.jpg", {:class=>"profile_picture", :id=>''}) %>
+<h3>Artists I liked</h3>
+<% if @artists.size == 0 %>
+    <p>You haven't liked any artists yet. Go to the Search page to find artists.</p>
+<% end %>
 
 </td>
 </table>

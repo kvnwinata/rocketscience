@@ -1,21 +1,20 @@
-<div style="padding: 30px;">
+<div style="padding: 40px; background-image: url('assets/shared/bgg.jpg')">
 
-	<h3 class="titles2">Analysis</h1>
+    
+    <%= image_tag("shared/analysis.png", ) %>
 
-	<h4 style="color: grey;">Based on your selection of images, we think you like:</h4>
+	<h4 style="color: grey;">Based on your selection of images, we think that your preferred style is:</h4>
 
 	<h3 class="titles2" ><%= @category.name %> Tattoos</h3>
 
-	<p style="color: #AAAAAA;"> <%= @category.description %> </p>
-
-	</h3> More <%= @category.name %> Tattoos <h3>
+	<p style="color: grey;"> <%= @category.description %> </p>
 
 	<% @samples.all.each do |image| %>
 	<%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
 	<% end %>
 
 
-	</h3> Artists we think you'll like: <h3>
+	<h4 style="color: grey;"> Artists we think you'll like: </h4>
 
 	<% @artists.all.each do |artist| %>
 

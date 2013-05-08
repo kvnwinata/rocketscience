@@ -18,7 +18,7 @@
 	<p class = "titles" style="color: grey;"> Artists we think you'll like: </p>
 
 	<div style="display:table;">
-	<% @artists.all.each do |artist| %>
+	<% @artists.each do |artist| %>
 	<span style="display:table;">
     
     
@@ -45,6 +45,11 @@
             <% else %>
                 <span class="signup-link">signup to like</span>
             <% end %>
+
+    <% artist.images.sample(2).each do |image| %>
+    	<%= image_tag(image.path + image.name, {class: "medium", id: image.id}) %>
+    <% end %>
+
 </td>
 </tr>
 </table>

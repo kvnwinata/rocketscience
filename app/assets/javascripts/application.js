@@ -24,10 +24,12 @@ var tattoo_type = {}; // dictionary from ID to tattoo type
 var tattoo_generation = {}; // generation of image query
 var current_images = []; // array of current images displayed to the left of the screen
 var current_images_status = []; // array tracking current images if they had been added to the inkbox
+var current_images_type = [];
 var images_in_inkbox = []; // array of images added to inkBox
 var current_tattoo_type = "random";
 var browsing_number = 0; // a number indicating which iteration of image query the page is on
 var undo_data = {};
+var modal_screen_mode = true; // true means showing analysis page, false means showing image
 // support for IE8
 // http://stackoverflow.com/questions/1181575/javascript-determine-whether-an-array-contains-a-value
 if(!Array.prototype.indexOf) {
@@ -55,8 +57,10 @@ if(!Array.prototype.indexOf) {
             slidingThing();
             numImgInInkbox = 0;
             tattoo_type = {}; // dictionary from ID to tattoo type
+            tattoo_generation = {};
             current_images = []; // array of current images on display (on the left)
             current_images_status = [];
+            current_images_type = [];
             images_in_inkbox = []; // array of images added to inkBox
             current_tattoo_type = "random";
             browsing_number = -1;
@@ -113,3 +117,26 @@ if(!Array.prototype.indexOf) {
         $(".undo-display").css('width',$(window).width()*0.7)
         $(".undo-display").css('left',$(window).width()*0.15)
     }
+var resizeModalScreen = function(){
+    $("#modal-screen").css('width',$(window).width());
+    $("#modal-screen").css('height', $(document).height());
+    $("#modal-screen").css('width',$(window).width());
+    $("#modal-screen").css('height', $(document).height());
+    var theWidth, theHeight;
+    if (modal_screen_mode){
+        theWidth = Math.max($(window).width(),700)
+        theHeight = Math.max($(window).height(),500)
+    } else {
+        theWidth = Math.max($(window).width(),400)
+        theHeight = theWidth*1.1;
+    }
+    $("#sliding").css('width',theWidth*0.9)
+    $("#sliding").css('height',theHeight*0.9)
+    $("#sliding").css('left',theWidth*0.05)
+    $("#sliding").css('top',theHeight*0.05)
+    $("#closeAnalysis").css('left',theWidth*0.05)
+    $("#closeAnalysis").css('top',theHeight*0.05)
+    
+    $(".undo-display").css('width',theWidth*0.7)
+    $(".undo-display").css('left',theWidth*0.15)
+}

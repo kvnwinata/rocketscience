@@ -107,15 +107,24 @@ var attach_listeners_for_add_buttons = function(){
 			modal_screen_mode = false;
 			resizeModalScreen();
 			if ($("#sliding").css('display')==="none"){
-				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
+				constructSlideShow(this.id,$(this).attr('src'));
+			}
+		}
+		);
+
+return im_container;
+}
+var constructSlideShow = function(ID,SRC){
+			$("#sliding").show(500,function(){$("#closeAnalysis").show();});
 				$("#modal-screen").css('visibility','visible');
 				$("#closeAnalysis").css('visibility','visible');
 				// clear content & set up content for the slinding pane
 				$('#sliding').html('');
 				var theWidth = 400;
 				var thisTattoo = document.createElement('img');
-				$(thisTattoo).attr('src',$(this).attr('src'));
+				$(thisTattoo).attr('src',SRC);
 				var frac = 0.9;
+				$(thisTattoo).attr('id','slideshow-image')
 				$(thisTattoo).css('width',frac*theWidth);
 				$(thisTattoo).css('position','absolute');
 				$(thisTattoo).css('top',(1.0-frac)/2.0*theWidth);
@@ -129,36 +138,117 @@ var attach_listeners_for_add_buttons = function(){
 				$(control).css('z-index',100)
 				$(control).css('color','black')
 				var button = document.createElement('span')
-				$(button).attr('id','add').appendTo($(control))
+				$(button).attr('id','add').appendTo($(control)).click(slideshowButton)
 				var progress = document.createElement('span')
 				$(progress).attr('id','prog').appendTo($(control))
 				var next = document.createElement('span')
 				$(next).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' next ');
 				var prev = document.createElement('span')
 				$(prev).attr('id','prev').appendTo($(control)).click(prevSlideshow).html(' prev ');
-				inkBox_slideshow = $('#'+$(img).attr('id')+'.medium').hasClass('in-inkbox');
-				console.log(inkBox_slideshow)
+				inkBox_slideshow = $('#'+ID+'.medium').hasClass('in-inkbox');
 				if(inkBox_slideshow){
-					current_slideshow = images_in_inkbox.indexOf(this.id);
+					current_slideshow = images_in_inkbox.indexOf(ID);
 					$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length)
 					$(button).html('remove ')
 				} else {
-					current_slideshow = current_images.indexOf(this.id);
-					$(progress).html((current_slideshow + 1)+' of '+current_images.length)
+					current_slideshow = current_images.indexOf(ID);
+					$(progress).html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
 					$(button).html('add ')
 				}
 
-			}
+}
+var slideshowButton = function(){
+	if(inkBox_slideshow){
+		// need to remove image
+		removeImageFromInkBox(images_in_inkbox[current_slideshow]);
+		// need to update the image
+		if(images_in_inkbox.length === 0){
+			$('#sliding').html('<div style="color:black">There is no image in inkbox</div>')
+		} else {
+			var id = images_in_inkbox[current_slideshow]
+			$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
+			$('#prog').html((current_slideshow + 1)+' of '+images_in_inkbox.length)
 		}
-		);
+	} else {
+		var id = current_images[current_slideshow]
+		var source = $("#"+id+'.medium').attr('src');
+		console.log(id)
+		console.log(source)
+		$("#"+id+'.tattoo-image-container').remove();
+		addImageToInkBox(id,source);
+		$(".inkBox-message").remove();
+		if (numImgOnDisplay === 0){
+			$('#sliding').html('<div style="color:black">There is no more tattoo to display. Please choose a different category or randomize again.</div>')
+		} else {
+			current_slideshow = incrementIndex(current_slideshow);
+			var id = current_images[current_slideshow]
+			$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
+			$('#prog').html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
+		}
+	}
+}
+var indexForSlideShow = function(currentOne){
+	var ans = 1;
+	for(var i = 0; i < current_images_status.length; i++){
+		if(i === currentOne) break;
+		if(!current_images_status[i]) ans++;
+	}
+	return ans;
 
-return im_container;
+}
+var incrementIndex = function(currentOne){
+	var ans = currentOne + 1;
+	if (ans === current_images_status.length) ans = 0;
+	for (var i = 0; i < current_images_status.length; i++){
+		ans++;
+		if (ans === current_images_status.length) ans = 0;
+		if (!current_images_status[ans]) break;
+	}
+	return ans;
+}
+var decrementIndex = function(currentOne){
+	var ans = currentOne - 1;
+	if (ans < 0 ) ans = current_images_status.length - 1;
+	for (var i = 0; i < current_images_status.length; i++){
+		ans--;
+		if (ans < 0 ) ans = current_images_status.length - 1;
+		if (!current_images_status[ans]) break;
+	}
+	return ans;
+}
+var numImgOnDisplay = function(){
+	var ans = 0;
+	for(var i = 0; i < current_images_status.length; i++)
+		if(!current_images_status[i]) ans++;
+	return ans;
 }
 var nextSlideshow = function(){
 	console.log('next clicked')
+	if(inkBox_slideshow){
+		current_slideshow++;
+		if (current_slideshow > images_in_inkbox.length - 1) current_slideshow = 0;
+		$('#prog').html((current_slideshow + 1)+' of '+images_in_inkbox.length)
+		var id = images_in_inkbox[current_slideshow]
+	} else {
+		current_slideshow = incrementIndex(current_slideshow);
+		$('#prog').html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
+		var id = current_images[current_slideshow]
+	}
+	$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
 }
 var prevSlideshow = function(){
 	console.log('prev clicked')
+	if(inkBox_slideshow){
+		current_slideshow--;
+		if (current_slideshow < 0) current_slideshow = images_in_inkbox.length - 1;
+		$('#prog').html((current_slideshow + 1)+' of '+images_in_inkbox.length)
+		var id = images_in_inkbox[current_slideshow]
+	} else {
+		current_slideshow = decrementIndex(current_slideshow);
+		$('#prog').html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
+		var id = current_images[current_slideshow]
+	}
+	$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
 }
 var addImageToInkBox = function(id,source,type,gen,ajaxCall){
 		// the last two parameters are not required if the image has been added by the user

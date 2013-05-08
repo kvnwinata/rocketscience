@@ -57,6 +57,7 @@ var removeImageFromInkBox = function(data){
 	if(!numImgInInkbox){
 		$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')
 	}
+	$(".undo-display").html('The tattoo has been removed from your InkBox.&nbsp;<span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undoTattoo()">Undo</span>');
 	$(".undo-display").fadeIn(500);
 	// ajax call to update info on the server side
 	var img_id = data;

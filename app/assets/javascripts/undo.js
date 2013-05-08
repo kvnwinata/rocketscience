@@ -11,6 +11,7 @@ var undoTattoo = function(){
 	images_in_inkbox.splice(undo_data.pos_in_inkbox,0,undo_data.ID);
 	var img = createImageWithContainer(undo_data.ID,undo_data.src,false);
 	$(img).addClass('in-inkbox');
+	$(img).children().each(function(){ $(this).addClass('in-inkbox')})
 	if (undo_data.pos_in_inkbox === images_in_inkbox.length - 1) { // if it's the last element
 		$(img).appendTo($("#inkBox-image"))
 	} else {
@@ -23,6 +24,11 @@ var undoTattoo = function(){
 		$('#'+undo_data.ID).remove();
 		// set the status of the image
 		current_images_status[current_images.indexOf(undo_data.ID)] = true;
+	}
+
+	//update the modal screen, if needed
+	if($("#sliding").css('display')!=="none"){
+		constructSlideShow(undo_data.ID,undo_data.src);
 	}
 	// ajax call to update server-side database
 	$.ajax({

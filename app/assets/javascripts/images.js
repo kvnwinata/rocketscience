@@ -128,9 +128,10 @@ var attach_listeners_for_add_buttons = function(){
 
 	var addImageToInkBox = function(id,source,type,gen){
 		// the last two parameters are not required if the image has been added by the user
-			type = (typeof type !== 'undefined' )? type : current_tattoo_type;
+			type = (typeof type !== 'undefined' )? type : current_images_type[current_images.indexOf(id)];
 			gen = (typeof gen !== 'undefined' )? gen : browsing_number;
 			var img = createImageWithContainer(id,source,false);
+			$(img).addClass('in-inkbox');
 			$(img).appendTo($("#inkBox-image"))
 			$("#"+id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
 			numImgInInkbox++;
@@ -157,15 +158,19 @@ var attach_listeners_for_add_buttons = function(){
 		// data = {id: path}
 		// clear content
 		current_images = [];
+		current_images_type = [];
+		current_images_status = [];
 		$(".artwork-container").html("");
 		for(var id in data){
 			if (data.hasOwnProperty(id)){
 				if (images_in_inkbox.indexOf(id) < 0) {// if the image isn't already in the inkBox
 					
-					var img = createImageWithContainer(id,"/assets/"+data[id],true);
+					var img = createImageWithContainer(id,"/assets/"+data[id].path,true);
+
 					$(img).appendTo($('.artwork-container'))
 					current_images.push(id);
 					current_images_status.push(false);
+					current_images_type.push(data[id].category_name);
 				}
 			}
 		}

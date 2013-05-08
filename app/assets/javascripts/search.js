@@ -3,7 +3,13 @@
         $("#artistPanel").html(data);
         resizeMediumImages();
         $(".medium").click(function(){
-            
+            e.preventDefault();
+            $(".undo-display").css('display','none');
+            modal_screen_mode = false;
+            resizeModalScreen();
+            if ($("#sliding").css('display')==="none"){
+                constructSlideShowArtist(this.id,$(this).attr('src'));
+            }
         })
     };
 

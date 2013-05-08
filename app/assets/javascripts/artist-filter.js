@@ -1,4 +1,21 @@
-
+var artist_populate_inkBox = function(){
+	$.ajax({
+			url: "/images/get_inkbox",
+			type: "GET",
+			headers: {
+				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+			},
+			dataType:'json',
+			
+			success: artist_pop_IB
+		});
+}
+var artist_pop_IB = function(data,status){
+	images_in_inkBox = [];
+	for(var id in data){
+		images_in_inkBox.push(id);
+	}
+}
 var pull_artist = function(category){
 	tab_setup();
 	return;

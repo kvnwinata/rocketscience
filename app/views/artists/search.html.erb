@@ -23,8 +23,34 @@ window.onresize = function() {
         }
 </script>
 
+<div id = 'modal-screen' style="visibility:hidden; opacity: 0.5; background-color:black; position:absolute; left:0;top:0;z-index:30;">  </div> 
+    <div id="sliding" style="
+    
+    display:none;
+    overflow:auto; 
+    position:absolute;
+    opacity:1; 
+    top: 100px; 
+    left:150px; 
+    width:600px; 
+    height:400px; 
+    background-color:white;
+    z-index:50;
+    
+    -moz-box-shadow: 0 0 0px 7px #999;
+    -webkit-box-shadow: 0 0 0px 7px #999;
+    
+    
+    "></div>
+    
+    <div id="closeAnalysis" class="closeAnaly">
 
-
+<div class = "undo-display" 
+    style = "font-size:12px; display:none; position:fixed; top:0;background-color:#f6cc80;color:#111111;z-index:999;text-align:center;
+            width:400px; float:left; padding: 5px 5px 5px 5px;">
+    The tattoo has been removed from your InkBox.&nbsp;
+    <span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undoTattoo()">Undo</span>   
+</div>
 
 <div class = "main-container">
 <div class = "content-container" id="contz" style="display:table;"> 

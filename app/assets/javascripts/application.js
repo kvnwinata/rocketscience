@@ -95,8 +95,11 @@ if(!Array.prototype.indexOf) {
         }
 
         if (gon.page_type === "search"){
-            
-            pull_artist("All");
+            modal_screen_mode = false;
+            resizeModalScreen();
+            artist_populate_inkBox();
+            tab_setup();
+            //pull_artist("All");
 
         }
         

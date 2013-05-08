@@ -270,7 +270,6 @@ var addImageToInkBox = function(id,source,type,gen,ajaxCall){
 		numImgInInkbox = 0;
 		for(var id in data){
 			addImageToInkBox(id,data[id].path,data[id].category_name,-1,false);
-
 		}
 		if(images_in_inkbox.length === 0){
 			$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')

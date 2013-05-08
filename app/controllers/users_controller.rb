@@ -2,10 +2,15 @@ class UsersController < ApplicationController
 
 skip_before_filter :require_login, :except => :profile
 
-
 def login
 	gon.page_type = "login";
 	@new_user = User.new
+end
+
+def logout
+	session[:user_id] = nil
+	flash[:notice] = "You have successfully logged out."
+	render 'login'
 end
 
 def guest
@@ -33,11 +38,38 @@ def profile
 end
 
 def login_submit
-
+    user = User.find_by_email(params[:email])
+    if user && user.authenticate(params[:password])
+      # Sign the user in and redirect to the user's show page.
+      session[:is_logged_in] = true
+      session[:user_id] = user.id
+      flash[:notification] = "Welcome back, "+user.user_name+"!"
+      redirect_to root_path
+    else
+      flash[:error] = 'Invalid email/password combination'
+      render 'signin_form'
+    end
 end
 
 def new
+	@user = User.new
+end
 
+def create
+	@user = User.new(params[:user])
+
+	if @user.save
+		flash[:notice] = "Welcome! Start by selecting images you like"
+        session[:user_id] = @user.id 
+        redirect_to root_path
+	else
+		render 'login'
+	end
+end
+
+def clear
+	reset_session
+	redirect_to login_path
 end
 
 

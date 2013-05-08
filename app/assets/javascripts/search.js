@@ -2,6 +2,9 @@
     var load_info = function(data,status){
         $("#artistPanel").html(data);
         resizeMediumImages();
+        $(".medium").click(function(){
+            
+        })
     };
 
 

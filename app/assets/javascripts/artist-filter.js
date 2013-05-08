@@ -10,6 +10,7 @@ var artist_populate_inkBox = function(){
 			
 			success: artist_pop_IB
 		});
+
 }
 var artist_pop_IB = function(data,status){
 	images_in_inkbox = [];
@@ -23,6 +24,7 @@ var artist_pop_IB = function(data,status){
 
 var render_artist_tab = function(data,status){
 	$("#infoPanel").html(""); // clear content
+	$("#artistPanel").html('<p class="info-message">Click on the tabs on the left to view more details.</p>')
 	for(var id in data){
 		if (data.hasOwnProperty(id)){
 			var tab = document.createElement('div');

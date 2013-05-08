@@ -38,9 +38,9 @@
 
             <% if session[:user_id] > 0 %>
                 <% if artist.users.exists?(session[:user_id]) %>
-                    <div class="liked like-button" onclick="like_button_func()" id="<%= artist.id %>"></span>
+                    <div class="liked like-button"  id="<%= artist.id %>"></span>
                 <% else %>
-                    <div class="like like-button"  onclick="like_button_func()" id="<%= artist.id %>"></span>
+                    <div class="like like-button"   id="<%= artist.id %>"></span>
                 <% end%>
             <% else %>
                 <p class="liked22">Sign-up to Like this Artist!</p>

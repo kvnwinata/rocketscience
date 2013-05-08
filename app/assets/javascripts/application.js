@@ -30,6 +30,8 @@ var current_tattoo_type = "random";
 var browsing_number = 0; // a number indicating which iteration of image query the page is on
 var undo_data = {};
 var modal_screen_mode = true; // true means showing analysis page, false means showing image
+var inkBox_slideshow;
+var current_slideshow;
 // support for IE8
 // http://stackoverflow.com/questions/1181575/javascript-determine-whether-an-array-contains-a-value
 if(!Array.prototype.indexOf) {
@@ -96,17 +98,7 @@ if(!Array.prototype.indexOf) {
         $("#sliding").css('position','fixed');
         $("#closeAnalysis").css('position','fixed');
         // take care of the modal-screen
-        $("#modal-screen").css('width',$(window).width());
-        $("#modal-screen").css('height', $(document).height());
-        $("#sliding").css('width',$(window).width()*0.9)
-        $("#sliding").css('height',$(window).height()*0.9)
-        $("#sliding").css('left',$(window).width()*0.05)
-        $("#sliding").css('top',$(window).height()*0.05)
-        $("#closeAnalysis").css('left',$(window).width()*0.05)
-        $("#closeAnalysis").css('top',$(window).height()*0.05)
-
-        $(".undo-display").css('width',$(window).width()*0.7)
-        $(".undo-display").css('left',$(window).width()*0.15)
+        resizeModalScreen();
         $(".undo-button").click(undoTattoo);
     }
     
@@ -119,40 +111,30 @@ if(!Array.prototype.indexOf) {
             setsearch();
         }
         // take care of the modal-screen
-        $("#modal-screen").css('width',$(window).width());
-        $("#modal-screen").css('height', $(document).height());
-        $("#modal-screen").css('width',$(window).width());
-        $("#modal-screen").css('height', $(document).height());
-        $("#sliding").css('width',$(window).width()*0.9)
-        $("#sliding").css('height',$(window).height()*0.9)
-        $("#sliding").css('left',$(window).width()*0.05)
-        $("#sliding").css('top',$(window).height()*0.05)
-        $("#closeAnalysis").css('left',$(window).width()*0.05)
-        $("#closeAnalysis").css('top',$(window).height()*0.05)
-
-        $(".undo-display").css('width',$(window).width()*0.7)
-        $(".undo-display").css('left',$(window).width()*0.15)
+        resizeModalScreen();
     }
 var resizeModalScreen = function(){
     $("#modal-screen").css('width',$(window).width());
     $("#modal-screen").css('height', $(document).height());
     $("#modal-screen").css('width',$(window).width());
     $("#modal-screen").css('height', $(document).height());
-    var theWidth, theHeight;
+    var theWidth, theHeight, screenW, screenH;
     if (modal_screen_mode){
-        theWidth = Math.max($(window).width(),700)
-        theHeight = Math.max($(window).height(),500)
+        theWidth = Math.max($(window).width()*0.9,700)
+        theHeight = Math.max($(window).height()*0.9,500)
+        
     } else {
-        theWidth = Math.max($(window).width(),400)
+        theWidth = 400
         theHeight = theWidth*1.1;
     }
-    $("#sliding").css('width',theWidth*0.9)
-    $("#sliding").css('height',theHeight*0.9)
-    $("#sliding").css('left',theWidth*0.05)
-    $("#sliding").css('top',theHeight*0.05)
-    $("#closeAnalysis").css('left',theWidth*0.05)
-    $("#closeAnalysis").css('top',theHeight*0.05)
-    
+    screenW = Math.max(1.1*theWidth,$(window).width());
+    screenH = Math.max(1.1*theHeight,$(window).height());
+    $("#sliding").css('width',theWidth)
+        $("#sliding").css('height',theHeight)
+        $("#sliding").css('left',(screenW - theWidth)/2)
+        $("#sliding").css('top',(screenH - theHeight)/2)
+        $("#closeAnalysis").css('left',(screenW - theWidth)/2)
+        $("#closeAnalysis").css('top',(screenH - theHeight)/2)
     $(".undo-display").css('width',theWidth*0.7)
     $(".undo-display").css('left',theWidth*0.15)
 }

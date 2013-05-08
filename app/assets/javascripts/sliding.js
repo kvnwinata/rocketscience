@@ -4,6 +4,8 @@ var slidingThing = function(){
 
 		$(".analyze").mousedown(function(e){
 			e.preventDefault();
+			modal_screen_mode = true;
+			resizeModalScreen();
 			if ($("#sliding").css('display')==="none"){
 				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
 				$("#modal-screen").css('visibility','visible');

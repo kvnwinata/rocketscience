@@ -104,20 +104,49 @@ var attach_listeners_for_add_buttons = function(){
 		$(img).click(function(e){
 			e.preventDefault();
 			$(".undo-display").css('display','none');
-
+			modal_screen_mode = false;
+			resizeModalScreen();
 			if ($("#sliding").css('display')==="none"){
 				$("#sliding").show(500,function(){$("#closeAnalysis").show();});
 				$("#modal-screen").css('visibility','visible');
 				$("#closeAnalysis").css('visibility','visible');
 				// clear content & set up content for the slinding pane
 				$('#sliding').html('');
+				var theWidth = 400;
 				var thisTattoo = document.createElement('img');
 				$(thisTattoo).attr('src',$(this).attr('src'));
-				$(thisTattoo).css('width',0.9*$(window).height()*0.9);
+				var frac = 0.9;
+				$(thisTattoo).css('width',frac*theWidth);
 				$(thisTattoo).css('position','absolute');
-				$(thisTattoo).css('top','5%');
-				$(thisTattoo).css('left','5%');
+				$(thisTattoo).css('top',(1.0-frac)/2.0*theWidth);
+				$(thisTattoo).css('left',(1.0-frac)/2.0*theWidth);
+				$(thisTattoo).css('z-index',100)
 				$(thisTattoo).appendTo($('#sliding'))
+				var control = document.createElement('div');
+				$(control).appendTo($('#sliding'));
+				$(control).css('position','absolute');
+				$(control).css('bottom',0.05* theWidth)
+				$(control).css('z-index',100)
+				$(control).css('color','black')
+				var button = document.createElement('span')
+				$(button).attr('id','add').appendTo($(control))
+				var progress = document.createElement('span')
+				$(progress).attr('id','prog').appendTo($(control))
+				var next = document.createElement('span')
+				$(next).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' next ');
+				var prev = document.createElement('span')
+				$(prev).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' prev ');
+				inkBox_slideshow = $('#'+img.attr('id')+'.medium').hasClass('in-inkbox');
+				console.log(inkBox_slideshow)
+				if(inkBox_slideshow){
+					current_slideshow = images_in_inkbox.indexOf(this.id);
+					$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length)
+					$(button).html('remove')
+				} else {
+					current_slideshow = current_images.indexOf(this.id);
+					$(progress).html((current_slideshow + 1)+' of '+current_images.length)
+					$(button).html('add')
+				}
 
 			}
 		}
@@ -125,7 +154,12 @@ var attach_listeners_for_add_buttons = function(){
 
 		return im_container;
 	}
+	var nextSlideshow = function(){
 
+	}
+	var prevSlideshow = function(){
+
+	}
 	var addImageToInkBox = function(id,source,type,gen){
 		// the last two parameters are not required if the image has been added by the user
 			type = (typeof type !== 'undefined' )? type : current_images_type[current_images.indexOf(id)];

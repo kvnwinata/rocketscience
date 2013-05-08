@@ -34,19 +34,21 @@
     
 <br> &nbsp;<br>
 
+
+<% if @user != nil %>
+
+
+
 <table><tr><td width="210px"  height="200px">
         
-<%= image_tag("profile/tim.jpg", {:class=>"profile_picture", :id=>''}) %>
 </td><td width = "*" height="200px" style="vertical-align:bottom">
     
-<div class="h4">Tim L. Beaver</div>
-<div class="titles"> Hi! I'm Tim the Beaver from MIT. I'm looking for ideas for my first tattoo.</div>
+<div class="h4"><%= @user.email %></div>
 
 
 </td></tr><p><p><p>
 <td></td><td><p><hr><p>
 
-<!---<div class="titles2">Bio-data</div><p class="text"> [ Bio-data here ]</p>-->
 <h2 style="color:black;">Preferred Style</h2>
 <% if @category != nil %>
     <div class="titles2"><%= @category.name %> Tattoos</div>
@@ -54,7 +56,6 @@
 <% else %>
     <p>You haven't done the analysis yet. Go to the Browse page, select images, and hit analyze to find out.</p>
 <% end %>
-<!---<%= image_tag("shared/temp.jpg", {:class=>"profile_picture", :id=>''}) %>-->
 
 <h3>Artists I liked</h3>
 <% if @artists.size == 0 %>
@@ -63,5 +64,15 @@
 
 </td>
 </table>
+
+<% else %>
+
+    <div class="message">
+        This is the profile page where you can view your artist selections and your preferred style based on the analysis.
+        (If you sign up).
+        Sign up now.
+    </div>
+
+<% end %>
 
 </div></div>

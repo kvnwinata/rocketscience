@@ -30,11 +30,14 @@ def profile
 	gon.page_type = "profile";
 	# only render static profile for John Smith for now
 
-	@user = User.new
-
-	@category = @user.category
-	@artists = @user.artists
-
+	user_id = session[:user_id]
+	if user_id > 0
+		@user = User.find(user_id);
+		@category = @user.category
+		@artists = @user.artists
+	else
+		@user = nil 
+	end
 end
 
 def login_submit

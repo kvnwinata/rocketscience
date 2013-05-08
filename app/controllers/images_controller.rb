@@ -32,7 +32,7 @@ def analyze
 	@samples  = @category.images 
 
 	if user_id > 0 
-		user.category_id = @category.id
+		User.find(user_id).category_id = @category.id
   	end
 
 	render :layout => false

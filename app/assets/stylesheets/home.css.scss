@@ -94,12 +94,22 @@ h3 {
 	text-align: left;
 }
 
-.error_message{
+.errorExplanation{
     font-family: sans-serif;
 	font-size: 10px;
 	color: #aaa;
-    position: absolute;
-    right: -300px;
+    position: fixed;
+    right: 200px;
+    float: left;
+    background: black;
+    visibility:hidden;
+    }
+    
+
+
+.error_message{
+
+
     
 }
 
@@ -403,6 +413,28 @@ margin: 4px;
 border-radius: 0px;
 opacity: 1;
 cursor:pointer;
+    font-family: sans-serif;
+	font-size: 10pt;
+    font-weight: bold;
+	color: #fff;
+	line-height: normal;
+}
+
+.smbuttond {
+border:0px;
+padding: 2px;
+align: right;
+position: relative;
+width:70px;
+background:#eaeaea;
+color:#555555;
+height:26px;
+margin: 4px;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+opacity: 1;
+
     font-family: sans-serif;
 	font-size: 10pt;
     font-weight: bold;

@@ -5,6 +5,15 @@ def login
 	@new_user = User.new
 end
 
+def guest
+	if session[:images_id] == nil
+		session[:images_id] == Array.new 
+	end
+	session[:user_id] = -1
+	# go to home
+	render home_path
+end
+
 def prompt
 
 end
@@ -12,6 +21,12 @@ end
 def profile
 	gon.page_type = "profile";
 	# only render static profile for John Smith for now
+
+	@user = User.new
+
+	@category = @user.category
+	@artists = @user.artists
+
 end
 
 def login_submit

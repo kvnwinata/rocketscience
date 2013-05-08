@@ -26,6 +26,7 @@ class Artist < ActiveRecord::Base
   has_many :artist_images
   has_many :images, :through => :artist_images
 
-  belongs_to :category
+  has_many :artist_categories
+  has_many :categories, :through => :artist_categories
   
 end

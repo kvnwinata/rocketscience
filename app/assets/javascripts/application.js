@@ -70,7 +70,9 @@ if(!Array.prototype.indexOf) {
         }
 
         if (gon.page_type === "search"){
-            tab_setup();
+            
+            pull_artist("All");
+
         }
         
         if (gon.page_type === "index"){
@@ -101,7 +103,7 @@ if(!Array.prototype.indexOf) {
 		//$(".selectable-img").attr("ondragstart","drag(event)");
         $("#sliding").css('position','fixed');
         $("#closeAnalysis").css('position','fixed');
-        
+
         // take care of the modal-screen
         resizeModalScreen();
 

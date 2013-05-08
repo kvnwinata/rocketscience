@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+
+
 // Action that hides undo:
 //  dragging in dustbin.js -> drag
 //  adding new image in image.js -> addButton click fxn
@@ -45,7 +47,6 @@ if(!Array.prototype.indexOf) {
     };
 }
     window.onload = function() {
-        console.log(gon.user_status)
         setContent();
     	
         if (gon.page_type === "login"){

@@ -10,12 +10,5 @@ class ApplicationController < ActionController::Base
     unless session[:user_id] != nil
       redirect_to login_path
     end
-
-    if session[:user_id] > 0
-    	gon.user_status = "logged in"
-    else
-      gon.user_status = "browsing as guest"
-    end
   end
-
 end

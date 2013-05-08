@@ -135,17 +135,17 @@ var attach_listeners_for_add_buttons = function(){
 				var next = document.createElement('span')
 				$(next).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' next ');
 				var prev = document.createElement('span')
-				$(prev).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' prev ');
-				inkBox_slideshow = $('#'+img.attr('id')+'.medium').hasClass('in-inkbox');
+				$(prev).attr('id','prev').appendTo($(control)).click(prevSlideshow).html(' prev ');
+				inkBox_slideshow = $('#'+$(img).attr('id')+'.medium').hasClass('in-inkbox');
 				console.log(inkBox_slideshow)
 				if(inkBox_slideshow){
 					current_slideshow = images_in_inkbox.indexOf(this.id);
 					$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length)
-					$(button).html('remove')
+					$(button).html('remove ')
 				} else {
 					current_slideshow = current_images.indexOf(this.id);
 					$(progress).html((current_slideshow + 1)+' of '+current_images.length)
-					$(button).html('add')
+					$(button).html('add ')
 				}
 
 			}
@@ -155,10 +155,10 @@ var attach_listeners_for_add_buttons = function(){
 		return im_container;
 	}
 	var nextSlideshow = function(){
-
+		console.log('next clicked')
 	}
 	var prevSlideshow = function(){
-
+		console.log('prev clicked')
 	}
 	var addImageToInkBox = function(id,source,type,gen){
 		// the last two parameters are not required if the image has been added by the user
@@ -218,7 +218,7 @@ var attach_listeners_for_add_buttons = function(){
 		numImgInInkbox = 0;
 		for(var id in data){
 			addImageToInkBox(id,data[id].path,data[id].category_name,-1);
-			console.log(id);
+		
 		}
 		if(images_in_inkbox.length === 0){
 			$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')

@@ -58,5 +58,17 @@ var removeImageFromInkBox = function(data){
 		$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')
 	}
 	$(".undo-display").fadeIn(500);
-
+	// ajax call to update info on the server side
+	var img_id = data;
+	$.ajax({
+			url: "/images/unlike",
+			type: "GET",
+			headers: {
+				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+			},
+			dataType:'json',
+			data:{
+				'image_id': img_id
+			}
+		});
 }

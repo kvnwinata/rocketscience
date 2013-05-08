@@ -140,6 +140,18 @@ var attach_listeners_for_add_buttons = function(){
 			tattoo_generation[id] = gen;
 			// set the status of the image
 			current_images_status[current_images.indexOf(id)] = true;
+			// ajax call to update server-side database
+			$.ajax({
+			url: "/images/like",
+			type: "GET",
+			headers: {
+				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+			},
+			dataType:'json',
+			data:{
+				'image_id': id
+			}
+		});
 	}
 	var render_images = function(data, status){
 		// data = {id: path}
@@ -160,14 +172,31 @@ var attach_listeners_for_add_buttons = function(){
 		
 		$(".selectable-img").attr("draggable","false");
 	};
+	var populate_inkBox_backend = function(data,status){
+		images_in_inkbox = [];
+		tattoo_generation = {};
+		tattoo_type = {};
+		for(var id in data){
+			addImageToInkBox(id,data[id].path,data[id].category_name,-1);
+		}
+	}
 	// need to do another ajax call for images in inkbox
-	var populate_inkBox = function(img_in_inkbox){
+	var populate_inkBox = function(){
 		$("#inkBox-image").html('');
 		numImgInInkbox = 0;
 		fixInkBoxSize();
-		for(var id in img_in_inkbox){
-			addImageToInkBox(id,SRC,TYPE,-1);
-		}
+		// ajax call to get the images
+		$.ajax({
+			url: "/images/get_inkbox",
+			type: "GET",
+			headers: {
+				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+			},
+			dataType:'json',
+			
+			success: populate_inkBox_backend
+		});
+
 	};
 	var pull_images = function(category){
 

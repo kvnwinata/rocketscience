@@ -3,21 +3,22 @@ Rocketscience::Application.routes.draw do
   root :to => 'home#index'
 
   # users
-  match 'login' 		=> 'users#login' # login page
+  match 'login' 		    => 'users#login' # login page
   match 'users/prompt' 	=> 'users#prompt' # prompting user to signup: return form?
   match 'users/profile' => 'users#profile' # user's profile page: currently John Smith's
+  match 'guest'         => 'user#guest' # browse as guest.
 
   match 'users' 		=> 'home#index' # skip signup, this url is the same as signup/submit
   #match 'users' 		=> 'users#new' 
   match 'login/submit'	=> 'home#index' # skip login
   #match 'login/submit'	=> 'users#login_submit'
-  match 'guest'			=> 'home#index' # default as logged in.
 
   # images
-  match 'images/get_category' => 'images#get_category' 
-  match 'images/like' 	=> 'images#like'
-  match 'images/unlike' => 'images#unlike'
-  match 'images/analyze'=> 'images#analyze'
+  match 'images/get_category'   => 'images#get_category' 
+  match 'images/get_inkbox'     => 'images#get_inkbox'
+  match 'images/like' 	        => 'images#like'
+  match 'images/unlike'         => 'images#unlike'
+  match 'images/analyze'        => 'images#analyze'
 
   # artists
   match 'artists/search' 		       => 'artists#search' # the artist search page

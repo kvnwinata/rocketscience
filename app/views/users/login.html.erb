@@ -9,6 +9,13 @@
 		if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
 			else $(this).find('span').html('&#x25BC;')
 		})
+     $('.comment').keydown(function() {
+        if (event.keyCode == 13) {
+            this.form.submit();
+            return false;
+         }
+    });
+    
     });
 </script>
 
@@ -78,7 +85,7 @@
                         <form id="login-form">
                             <fieldset id="inputs">
                                 <input id="username" type="email" name="Email" placeholder="Your Email" required>   
-                                <input id="password" type="password" name="Password" placeholder="Password" required>
+                                <input id="password" type="password" name="Password" class="comment" placeholder="Password" required>
                             </fieldset>
                             <fieldset id="actions">
                                 <input type="submit" id="submit" value="    LOG-IN" style="width:92px;"><br>

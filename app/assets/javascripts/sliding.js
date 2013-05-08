@@ -34,10 +34,12 @@ var slidingThing = function(){
 		$("#closeAnalysis").hide(00);
 		$("#sliding").hide(500);
 		$("#modal-screen").css('visibility','hidden');
+		$(".undo-display").css('display','none');
 	})
 	$("#modal-screen").click(function(){
 		$("#closeAnalysis").hide(0);
 		$("#sliding").hide(500);
 		$("#modal-screen").css('visibility','hidden');
+		$(".undo-display").css('display','none');
 	})	
 }

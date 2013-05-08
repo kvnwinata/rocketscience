@@ -81,15 +81,10 @@ window.onresize = function() {
     </div>
 
 <div style="padding-top: 50px;">
-<table id="container" >
-<!--<tr id="filterPanel"></tr>-->
-<tr>
-
-&nbsp;
-
-<td id = "aaa" width = "296px" style="vertical-align:top" >
+<br>
 <div id="artist-filter-bar">
-<label>Artist Type:</label>
+<b><font face="Arial" size="2" color="#808080">&nbsp; Artist Type: &nbsp; </font></b>
+
         <select id="artist-filter" onchange="pull_artist(this.value)">
             <option value="All">All</option>
             <option value="American Traditional">American Traditional</option>
@@ -101,6 +96,16 @@ window.onresize = function() {
             <option value="Tribal">Tribal</option>
         </select>
 </div>
+
+
+<table id="container" >
+<!--<tr id="filterPanel"></tr>-->
+<tr>
+
+&nbsp;
+
+<td id = "aaa" width = "296px" style="vertical-align:top" >
+
 <div id="infoPanel" style="height: 508px;
     overflow:scroll;
     overflow-x: hidden;

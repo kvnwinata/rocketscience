@@ -1,0 +1,131 @@
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: right;
+  border: 0px;
+  right: 40px;
+}
+
+nav li {
+  float: left;          
+}
+
+
+
+nav #login-trigger,
+nav #signup a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 0px;
+  text-decoration: none;
+}
+
+
+
+nav #login-trigger:hover,
+nav #login .active,
+nav #signup a:hover {
+
+  border: 0px;
+}
+
+nav #login-content {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 0;
+  z-index: 999;    
+  background: #eaeaea;
+    border: 0px;
+  padding: 15px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px  25px #222;
+-webkit-box-shadow: 0px 0px 25px #222;
+box-shadow: 0px 0px 25px #222;
+}
+
+nav li #login-content {
+  right: 0;
+  width: 240px;  
+}
+
+/*--------------------*/
+
+#inputs input {
+border: 0px;
+  padding: 5px 5px;
+  margin: 0 0 5px 0;
+  width: 210px;
+  outline: none;
+  filter: alpha(opacity=50);
+    opacity: 0.4;
+
+}
+
+#inputs input:focus {
+  outline: none;
+
+}
+
+/*--------------------*/
+
+#login #actions {
+  
+      width: 222px;
+}
+
+#login #submit {		
+  background-color: #479c87;
+border: 0px;
+  float: right;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  font: bold 15px Arial, Helvetica;
+  color: #fff;
+  filter: alpha(opacity=100);
+opacity: 1;
+}
+
+fieldset {
+    border: 0;
+}
+
+
+
+
+#login #submit:hover,
+#login #submit:focus {		
+  background-color: #fff;
+  color: #479c87;
+
+
+}	
+
+#login #submit:active {		
+  outline: none;
+	
+}
+
+#login #submit::-moz-focus-inner {
+  border: none;
+}
+
+#login label {
+  float: right;
+  font-size: 10px;
+  color: black;
+}
+
+#login label input {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+

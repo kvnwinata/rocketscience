@@ -167,6 +167,7 @@ var addImageToInkBox = function(id,source,type,gen,ajaxCall){
 		ajaxCall = (typeof ajaxCall !== 'undefined' )? ajaxCall : true;
 		var img = createImageWithContainer(id,source,false);
 		$(img).addClass('in-inkbox');
+		$(img).children().each(function(){ $(this).addClass('in-inkbox')})
 		$(img).appendTo($("#inkBox-image"))
 		$("#"+id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
 		numImgInInkbox++;

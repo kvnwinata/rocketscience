@@ -188,29 +188,7 @@ var attach_listeners_for_add_buttons = function(){
 			}
 		});
 	}
-	var render_images = function(data, status){
-		// data = {id: path}
-		// clear content
-		current_images = [];
-		current_images_type = [];
-		current_images_status = [];
-		$(".artwork-container").html("");
-		for(var id in data){
-			if (data.hasOwnProperty(id)){
-				if (images_in_inkbox.indexOf(id) < 0) {// if the image isn't already in the inkBox
-					
-					var img = createImageWithContainer(id,data[id].path,true);
-
-					$(img).appendTo($('.artwork-container'))
-					current_images.push(id);
-					current_images_status.push(false);
-					current_images_type.push(data[id].category_name);
-				}
-			}
-		}
-		
-		$(".selectable-img").attr("draggable","false");
-	};
+	
 	var populate_inkBox_backend = function(data,status){
 		images_in_inkbox = [];
 		tattoo_generation = {};
@@ -242,7 +220,30 @@ var attach_listeners_for_add_buttons = function(){
 		});
 
 	};
+	var render_images = function(data, status){
+		// data = {id: path}
+		// clear content
+		current_images = [];
+		current_images_type = [];
+		current_images_status = [];
+		$(".artwork-container").html("");
+		for(var id in data){
+			if (data.hasOwnProperty(id)){
+				if (images_in_inkbox.indexOf(id) < 0) {// if the image isn't already in the inkBox
+					
+					var img = createImageWithContainer(id,data[id].path,true);
 
+					$(img).appendTo($('.artwork-container'))
+					current_images.push(id);
+					current_images_status.push(false);
+					current_images_type.push(data[id].category_name);
+				}
+			}
+		}
+		
+		$(".selectable-img").attr("draggable","false");
+		$(".in-inkbox").attr("draggable","true")
+	};
 	var pull_images = function(category){
 
 		$.ajax({

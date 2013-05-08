@@ -17,22 +17,22 @@
 Category.create(
     :id => 1,
     :name => "American Traditional",
-    :description => "xxx"
+    :description => "From Old School military tattoos made popular from artists like Norman Keith Collins , to eagles and pinup girls, American Traditional tattoos are very basic in design and simplistic."
     )
 Category.create(
     :id => 2,
     :name => "Black and Grey",
-    :description => "xxx"
+    :description => "Black and grey portrait tattoos got their start on the streets of Los Angeles in the Hispanic areas, often from previous prison mates who learned how to tattoo behind bars. Relying solely on shading for variation in tone and color, black and grey tattoos never go out of style. Today, many Catholic and religious tattoos in addition to portrait pieces of loved ones are the bread and butter of traditional black and grey designs."
     )
 Category.create(
     :id => 3,
     :name => "Horror and Gore",
-    :description => "xxx"
+    :description => "Just as some people are prone to flower tattoos, others love the blood and gore of it all and opt for horror scene and blood shed tattoos. Many artists specialize in this art form, so do your homework to make sure this type of tattoo looks as realistic as possible. Many ideas include stitched skin, open wounds, gashes, organs and even brains. If you're a fan of horror films, you may find an interest in these types of designs."
     )
 Category.create(
     :id => 4,
     :name => "Japanese Traditional",
-    :description => "xxx"
+    :description => "From Japanese Koi fish to the ever-popular Cherry Blossom branches which often symbolize the fragility of life, Japanese tattoos are always a beloved tattoo style. Japanese and watercolor inspired artwork tattoos as well as word and phrase tattoos inked in the native language, Asian tattoos are especially significant if they are part of your own culture."
     )
 Category.create(
     :id => 5,
@@ -42,12 +42,12 @@ Category.create(
 Category.create(
     :id => 6,
     :name => "New School",
-    :description => "xxx"
+    :description => "As times have changed in the tattooing industry, technology and advancements have made techniques and bright colors limitless to artists. These advancements have changed the look of tattoos, as artists have gone wild with the selection of pigments. Saturated inks with bold strokes and crazy, almost cartoon-like pops of color create what is now called &quot;New School&quot;."
     )
 Category.create(
     :id => 7,
     :name => "Tribal",
-    :description => "xxx"
+    :description => "Long before the Tribal armband trend, indigenous tribes were hand-poking themselves in ancient practices to create authentic tribal tattoos. Tribal designs today are often no more than a mass-selection of flash art tribal designs. True and traditional tribal tattoos are cultural and many consider it disrespectful to tattoo them on anyone but native members."
     )
 
 Artist.create(

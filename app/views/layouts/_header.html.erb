@@ -28,8 +28,11 @@
             	<% else %>
             	    <% @username = "Guest" %>
             	<% end %>
+                
 
                 <li id="login"><font size="2pt">Hello <B><%= @username %>!</font>
+                	<% if session[:user_id] > 0 %>
+
                     <a id="login-trigger" href="#"><font size="2pt">&nbsp;&nbsp;
  
                          Log-out <span>&#x25BC;</span></font>
@@ -40,6 +43,10 @@
                                 <input type="submit" id="submit" value="    Confirm Log-out" style="width:150px; float:left; margin-right:10px">&nbsp;
                             </fieldset>
                         </form>
+            		<% else %>
+            	   		<span>Signup</span>
+            		<% end %>
+
                     </div>                     
                 </li>
                

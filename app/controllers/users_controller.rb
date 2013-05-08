@@ -4,6 +4,7 @@ skip_before_filter :require_login, :except => :profile
 
 def login
 	gon.page_type = "login"
+	@current_page = "login"
 	@user = User.new
 end
 
@@ -53,6 +54,7 @@ def new
         redirect_to root_path
 	else
 		gon.page_type = "login"
+		@current_page = "login"
 		render 'login'
 	end
 end

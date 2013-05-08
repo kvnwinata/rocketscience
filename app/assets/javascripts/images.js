@@ -113,13 +113,15 @@ var constructSlideShow = function(ID,SRC){
 				inkBox_slideshow = $('#'+ID+'.medium').hasClass('in-inkbox');
 				if(inkBox_slideshow){
 					current_slideshow = images_in_inkbox.indexOf(ID);
-					$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length)
-					$(button).html('remove ')
+                    $('#sliding').css('background','#111111');
+					$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length);
+					$(button).html('remove ');
 					$(button).addClass('smbuttonr');
 				} else {
 					current_slideshow = current_images.indexOf(ID);
 					$(progress).html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
 					$(button).html('+ add ')
+                    $('#sliding').css('background','#ffffff');
 					$(button).attr('class','smbutton');
 				}
                 

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"page_type"
+			],
+			[
+				"cate",
+				"category_id"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"catego",
+				"category_counts"
+			],
+			[
+				"category",
+				"category_name"
+			],
+			[
+				"find",
+				"find_by_name"
+			],
+			[
+				"images",
+				"images_id"
+			],
+			[
+				"image",
+				"image_id"
+			],
+			[
+				"new",
+				"new_like"
+			],
+			[
 				"artist",
 				"artist_categories"
 			],
@@ -60,10 +100,6 @@
 				"height"
 			],
 			[
-				"image",
-				"image_tag"
-			],
-			[
 				"Email",
 				"Email"
 			],
@@ -90,10 +126,6 @@
 			[
 				"color",
 				"color"
-			],
-			[
-				"new",
-				"new_checker"
 			],
 			[
 				"is",
@@ -464,10 +496,6 @@
 				"a"
 			],
 			[
-				"user",
-				"user_id"
-			],
-			[
 				"pending",
 				"pending_membership"
 			],
@@ -486,124 +514,24 @@
 			[
 				"redi",
 				"redirect_to"
-			],
-			[
-				"find",
-				"find_by_group_id"
-			],
-			[
-				"me",
-				"memberships"
-			],
-			[
-				"membership",
-				"membership"
-			],
-			[
-				"post",
-				"posts"
-			],
-			[
-				"content",
-				"content"
-			],
-			[
-				"sor",
-				"sort_by"
-			],
-			[
-				"current_user",
-				"current_user"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/models/user.rb",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 703,
+				"buffer_size": 1782,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/images_controller.rb",
+			"file": "app/views/users/login.html.erb",
 			"settings":
 			{
-				"buffer_size": 805,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/artists_controller.rb",
-			"settings":
-			{
-				"buffer_size": 699,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/category.rb",
-			"settings":
-			{
-				"buffer_size": 390,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/home/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 2839,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 83,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/images.js",
-			"settings":
-			{
-				"buffer_size": 1967,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/javascripts/search.js",
-			"settings":
-			{
-				"buffer_size": 2999,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "db/seeds.rb",
-			"settings":
-			{
-				"buffer_size": 39449,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/artist_category.rb",
-			"settings":
-			{
-				"buffer_size": 134,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/artist.rb",
-			"settings":
-			{
-				"buffer_size": 916,
+				"buffer_size": 7249,
 				"line_ending": "Unix"
 			}
 		},
@@ -611,15 +539,39 @@
 			"file": "app/views/users/profile.html.erb",
 			"settings":
 			{
-				"buffer_size": 1828,
+				"buffer_size": 3760,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/users_controller.rb",
+			"file": "app/views/images/analyze.html.erb",
 			"settings":
 			{
-				"buffer_size": 342,
+				"buffer_size": 1972,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/artists/info.html.erb",
+			"settings":
+			{
+				"buffer_size": 1633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 6569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/javascripts/images.js",
+			"settings":
+			{
+				"buffer_size": 11353,
 				"line_ending": "Unix"
 			}
 		}
@@ -664,38 +616,42 @@
 	},
 	"file_history":
 	[
-		"/Users/KW/Documents/git/rocketscience/config/routes.rb",
-		"/Users/KW/Documents/git/rocketscience/app/views/home/index.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/models/user.rb",
+		"/Users/KW/Documents/git/rocketscience/app/controllers/application_controller.rb",
+		"/Users/KW/Documents/git/rocketscience/app/views/layouts/_header.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/controllers/images_controller.rb",
+		"/Users/KW/Documents/git/rocketscience/app/controllers/users_controller.rb",
+		"/Users/KW/Documents/git/rocketscience/app/controllers/artists_controller.rb",
+		"/Users/KW/Documents/git/rocketscience/app/views/artists/info.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/models/artist.rb",
+		"/Users/KW/Documents/git/rocketscience/app/views/images/analyze.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/home.css.scss",
+		"/Users/KW/Documents/git/rocketscience/app/controllers/home_controller.rb",
+		"/Users/KW/Documents/git/rocketscience/app/views/artists/search.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/models/category.rb",
+		"/Users/KW/Documents/git/rocketscience/app/views/layouts/application.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/artist-filter.js",
 		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/images.js",
 		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/application.js",
-		"/Users/KW/Documents/git/rocketscience/app/views/artists/search.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/dustbin.js",
 		"/Users/KW/Documents/git/rocketscience/db/seeds.rb",
-		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/home.css.scss",
+		"/Users/KW/Documents/git/rocketscience/app/models/image_like.rb",
+		"/Users/KW/Documents/git/rocketscience/app/models/image.rb",
+		"/Users/KW/Documents/git/rocketscience/app/models/artist_category.rb",
+		"/Users/KW/Documents/git/rocketscience/app/views/home/index.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/views/users/profile.html.erb",
+		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/search.js",
+		"/Users/KW/Documents/git/rocketscience/config/routes.rb",
 		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/sliding.js",
 		"/Users/KW/Documents/git/rocketscience/app/models/artist_image.rb",
 		"/Users/KW/Documents/git/rocketscience/app/models/artist_like.rb",
-		"/Users/KW/Documents/git/rocketscience/app/models/image_like.rb",
-		"/Users/KW/Documents/git/rocketscience/app/views/artists/info.html.erb",
-		"/Users/KW/Documents/git/rocketscience/app/controllers/artists_controller.rb",
-		"/Users/KW/Documents/git/rocketscience/app/controllers/images_controller.rb",
-		"/Users/KW/Documents/git/rocketscience/app/models/category.rb",
-		"/Users/KW/Documents/git/rocketscience/app/models/image.rb",
-		"/Users/KW/Documents/git/rocketscience/app/models/artist.rb",
-		"/Users/KW/Documents/git/rocketscience/app/views/images/analyze.html.erb",
 		"/Users/KW/Documents/git/rocketscience/app/views/users/login.html.erb",
-		"/Users/KW/Documents/git/rocketscience/app/views/users/profile.html.erb",
-		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/search.js",
 		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/search.css",
 		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/image.css",
-		"/Users/KW/Documents/git/rocketscience/app/views/layouts/_header.html.erb",
-		"/Users/KW/Documents/git/rocketscience/app/assets/javascripts/dustbin.js",
 		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/application.css",
-		"/Users/KW/Documents/git/rocketscience/app/controllers/home_controller.rb",
 		"/Users/KW/Documents/git/rocketscience/app/assets/stylesheets/mainLayout2.css",
-		"/Users/KW/Documents/git/rocketscience/app/controllers/users_controller.rb",
 		"/Users/KW/Documents/git/rocketscience/app/views/home/example.html.erb",
 		"/Users/KW/Documents/git/rocketscience/app/views/users/prompt.html.erb",
-		"/Users/KW/Documents/git/rocketscience/app/views/layouts/application.html.erb",
 		"/Users/KW/Documents/git/rocketscience/config/environment.rb",
 		"/Users/KW/Documents/git/rocketscience/app/views/analysis/analyze.html.erb",
 		"/Users/KW/Documents/git/rocketscience/app/controllers/analysis_controller.rb",
@@ -787,11 +743,7 @@
 		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/new.html.erb",
 		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/edit.html.erb",
 		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/index.html.erb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/show.html.erb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/_form.html.erb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/profile.html.erb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/users/_subjects_form.html.erb",
-		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/subjects/_form.html.erb"
+		"/Users/KW/Documents/6170/final project/KAPTCHA/app/views/meetings/show.html.erb"
 	],
 	"find":
 	{
@@ -810,6 +762,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"image",
+			"assets",
+			"image.find",
+			"browse",
+			"for",
 			"load_info",
 			"+",
 			"scss",
@@ -931,28 +888,30 @@
 	"groups":
 	[
 		{
-			"selected": 11,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/user.rb",
+					"file": "config/routes.rb",
 					"settings":
 					{
-						"buffer_size": 703,
+						"buffer_size": 1782,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								698,
-								698
+								362,
+								362
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -962,98 +921,46 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/images_controller.rb",
+					"file": "app/views/users/login.html.erb",
 					"settings":
 					{
-						"buffer_size": 805,
+						"buffer_size": 7249,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								795,
-								795
+								3420,
+								3420
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 87.0,
+						"translation.y": 1018.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/controllers/artists_controller.rb",
+					"file": "app/views/users/profile.html.erb",
 					"settings":
 					{
-						"buffer_size": 699,
+						"buffer_size": 3760,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								313,
-								313
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/models/category.rb",
-					"settings":
-					{
-						"buffer_size": 390,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								249,
-								249
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/home/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 2839,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1171,
-								1171
+								1629,
+								1629
 							]
 						],
 						"settings":
@@ -1063,33 +970,89 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 555.0,
+						"translation.y": 1039.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "app/controllers/application_controller.rb",
+					"buffer": 3,
+					"file": "app/views/images/analyze.html.erb",
 					"settings":
 					{
-						"buffer_size": 83,
+						"buffer_size": 1972,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								76,
-								76
+								1402,
+								1402
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 491.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/artists/info.html.erb",
+					"settings":
+					{
+						"buffer_size": 1633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								962,
+								962
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/javascripts/application.js",
+					"settings":
+					{
+						"buffer_size": 6569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4639,
+								4639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1645.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1099,183 +1062,21 @@
 					"file": "app/assets/javascripts/images.js",
 					"settings":
 					{
-						"buffer_size": 1967,
+						"buffer_size": 11353,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1684,
-								1684
+								285,
+								285
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 563.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/assets/javascripts/search.js",
-					"settings":
-					{
-						"buffer_size": 2999,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2458,
-								2458
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 535.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "db/seeds.rb",
-					"settings":
-					{
-						"buffer_size": 39449,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								39286,
-								39286
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/models/artist_category.rb",
-					"settings":
-					{
-						"buffer_size": 134,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								129,
-								129
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/models/artist.rb",
-					"settings":
-					{
-						"buffer_size": 916,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								915,
-								915
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "app/views/users/profile.html.erb",
-					"settings":
-					{
-						"buffer_size": 1828,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								776,
-								776
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 392.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "app/controllers/users_controller.rb",
-					"settings":
-					{
-						"buffer_size": 342,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								200,
-								200
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1358,6 +1159,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 159.0,
+	"side_bar_width": 303.0,
 	"status_bar_visible": true
 }

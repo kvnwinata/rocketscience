@@ -35,10 +35,10 @@
 		<%= image_tag(artist.profile_picture, {class: "",style:"width:200px"})%>
 		<br>
             <% if session[:user_id] > 0 %>
-                <% if @artist.users.exists?(session[:user_id]) %>
-                    <span class="liked" id="<%= @artist.id %>"></span>
+                <% if artist.users.exists?(session[:user_id]) %>
+                    <span class="liked" id="<%= artist.id %>"></span>
                 <% else %>
-                    <span class="like"  id="<%= @artist.id %>"></span>
+                    <span class="like"  id="<%= artist.id %>"></span>
                 <% end%>
             <% else %>
                 <span class="signup-link">signup to like</span>

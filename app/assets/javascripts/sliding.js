@@ -20,6 +20,7 @@ var slidingThing = function(){
                         success: function(data,status){
         					$("#sliding").html(data);
         					resizeMediumImages();
+                            $('.like-button').click(like_button_func)
         				}
                     });
 			} else {

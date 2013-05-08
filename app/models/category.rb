@@ -12,7 +12,8 @@
 class Category < ActiveRecord::Base
   attr_accessible :description, :name
 
-  has_many :artists
+  has_many :artist_categories
+  has_many :artists, :through => :artist_categories
   has_many :users
   has_many :images
   

@@ -67,17 +67,15 @@
   
   <tr height = "10px" align="right"><td colspan="2">
   
-  
-
-  
-          <nav>
+            <nav>
             <ul>
                 <li id="login">
                     <a id="login-trigger" href="#">
                         &nbsp;&nbsp;&nbsp;Log in <span>▼</span>&nbsp;
                     </a>
                     <div id="login-content">
-                        <form>
+                        <div id="login-error"></div>
+                        <form id="login-form">
                             <fieldset id="inputs">
                                 <input id="username" type="email" name="Email" placeholder="Your email address" required>   
                                 <input id="password" type="password" name="Password" placeholder="Password" required>
@@ -149,10 +147,7 @@
           </td>
           <td width="*" height="120">
             <div class="signup-form">
-
-              <!---<div class='error_message'><%= f.error_messages %></div>-->
-              <!---<div class='error_message'><%= f.error_messages %></div>-->
-          <div class=error_message><%= f.error_messages %></div>
+            <div class=error_message><%= f.error_messages %></div>
 
               <div class='signup-fields'>
 

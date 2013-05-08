@@ -49,6 +49,31 @@ if(!Array.prototype.indexOf) {
         setContent();
     	
         if (gon.page_type === "login"){
+
+            var check_login = function(data, status){
+                if (data === "fail"){
+                    $("#login-error").html("Invalid login. Please try again.");
+                } else {
+                    window.location = '/';
+                }
+            };
+
+            $("#submit").click(function(){
+                $.ajax({
+                    url: "/login/submit",
+                    type: "GET",
+                    headers: {
+                        'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+                    },
+                    dataType:'html',
+                    data:{
+                        'email': $("#username").val(),
+                        'password': $("#password").val()
+                    },
+                    success: check_login
+                });
+            });
+
             setMiddle();
             setBottom();
             

@@ -11,10 +11,10 @@ class ApplicationController < ActionController::Base
       redirect_to login_path
     end
 
-    if session[:user_id] == -1
+    if session[:user_id] > 0
     	gon.user_status = "logged in"
     else
-    	gon.user_status = "browsing as guest"
+      gon.user_status = "browsing as guest"
     end
   end
 

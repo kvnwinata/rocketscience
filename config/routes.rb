@@ -27,6 +27,8 @@ Rocketscience::Application.routes.draw do
   match 'artists/like/:artist_id'  => 'artists#like'   # liking an artist, update db
   match 'artists/unlike/:artist_id'=> 'artists#unlike' # disliking an artist, update db
 
+  match 'artists/get_category'     => 'artists#get_category'
+
   # random example pages and main
   match 'home' 			=> 'home#index'   # the main page/home: redirect to login when not signed in or not 'as guest'
   match 'example' 	=> 'home#example' # an example for testing/debugging only

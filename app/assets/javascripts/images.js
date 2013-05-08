@@ -56,7 +56,7 @@ var attach_listeners_for_add_buttons = function(){
 		}
 		);
 	}
-*/
+	*/
 
 	var createImageWithContainer = function(id,src,withAddButton){
 		var im_container= document.createElement('span');
@@ -77,7 +77,7 @@ var attach_listeners_for_add_buttons = function(){
 			$(im_container).mouseenter(function(){
 				$("#"+$(this).attr('id')+".addbutton").css('visibility', "visible");
 			});
-		
+
 			// mouse leave
 			$(im_container).mouseleave(function(){
 				var id = $(this).attr('id');
@@ -87,7 +87,7 @@ var attach_listeners_for_add_buttons = function(){
 			$(addButton).click(function(){
 				// code for add.
 				// don't forget to remove the add button
-			$(".undo-display").css('display','none');
+				$(".undo-display").css('display','none');
 				var source = $("#"+this.id+'.medium').attr('src');
 				$("#"+this.id+'.tattoo-image-container').remove();
 				addImageToInkBox(this.id,source);
@@ -152,41 +152,44 @@ var attach_listeners_for_add_buttons = function(){
 		}
 		);
 
-		return im_container;
-	}
-	var nextSlideshow = function(){
-		console.log('next clicked')
-	}
-	var prevSlideshow = function(){
-		console.log('prev clicked')
-	}
-	var addImageToInkBox = function(id,source,type,gen){
+return im_container;
+}
+var nextSlideshow = function(){
+	console.log('next clicked')
+}
+var prevSlideshow = function(){
+	console.log('prev clicked')
+}
+var addImageToInkBox = function(id,source,type,gen,ajaxCall){
 		// the last two parameters are not required if the image has been added by the user
-			type = (typeof type !== 'undefined' )? type : current_images_type[current_images.indexOf(id)];
-			gen = (typeof gen !== 'undefined' )? gen : browsing_number;
-			var img = createImageWithContainer(id,source,false);
-			$(img).addClass('in-inkbox');
-			$(img).appendTo($("#inkBox-image"))
-			$("#"+id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
-			numImgInInkbox++;
-			fixInkBoxSize();
-			images_in_inkbox.push(id);
-			tattoo_type[id] = type;
-			tattoo_generation[id] = gen;
+		type = (typeof type !== 'undefined' )? type : current_images_type[current_images.indexOf(id)];
+		gen = (typeof gen !== 'undefined' )? gen : browsing_number;
+		ajaxCall = (typeof ajaxCall !== 'undefined' )? ajaxCall : true;
+		var img = createImageWithContainer(id,source,false);
+		$(img).addClass('in-inkbox');
+		$(img).appendTo($("#inkBox-image"))
+		$("#"+id+'.tattoo-image-container').attr("draggable","true").attr("ondragstart","drag(event)");
+		numImgInInkbox++;
+		fixInkBoxSize();
+		images_in_inkbox.push(id);
+		tattoo_type[id] = type;
+		tattoo_generation[id] = gen;
 			// set the status of the image
 			current_images_status[current_images.indexOf(id)] = true;
+			if(ajaxCall){
 			// ajax call to update server-side database
 			$.ajax({
-			url: "/images/like",
-			type: "GET",
-			headers: {
-				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
-			},
-			dataType:'json',
-			data:{
-				'image_id': id
-			}
-		});
+				url: "/images/like",
+				type: "GET",
+				headers: {
+					'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+				},
+				dataType:'json',
+				data:{
+					'image_id': id
+				}
+			});
+		}
 	}
 	
 	var populate_inkBox_backend = function(data,status){
@@ -195,8 +198,8 @@ var attach_listeners_for_add_buttons = function(){
 		tattoo_type = {};
 		numImgInInkbox = 0;
 		for(var id in data){
-			addImageToInkBox(id,data[id].path,data[id].category_name,-1);
-		
+			addImageToInkBox(id,data[id].path,data[id].category_name,-1,false);
+
 		}
 		if(images_in_inkbox.length === 0){
 			$("#inkBox-image").html('<p class="inkBox-message">No images yet.</p> ')
@@ -233,31 +236,33 @@ var attach_listeners_for_add_buttons = function(){
 					
 					var img = createImageWithContainer(id,data[id].path,true);
 
-					$(img).appendTo($('.artwork-container'))
-					current_images.push(id);
-					current_images_status.push(false);
-					current_images_type.push(data[id].category_name);
-				}
+				$(img).appendTo($('.artwork-container'))
+				current_images.push(id);
+				current_images_status.push(false);
+				current_images_type.push(data[id].category_name);
 			}
 		}
-		
-		$(".selectable-img").attr("draggable","false");
-		$(".in-inkbox").attr("draggable","true")
-	};
-	var pull_images = function(category){
+	}
 
-		$.ajax({
-			url: "/images/get_category",
-			type: "GET",
-			headers: {
-				'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
-			},
-			dataType:'json',
-			data:{
-				'category': category
-			},
-			success: render_images
-		});
-		current_tattoo_type = category;
-		browsing_number++;
-	};
+	$(".selectable-img").attr("draggable","false");
+	$(".in-inkbox").removeAttr("draggable")
+	$(".in-inkbox.tattoo-image-container").attr("draggable","true");
+
+};
+var pull_images = function(category){
+
+	$.ajax({
+		url: "/images/get_category",
+		type: "GET",
+		headers: {
+			'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+		},
+		dataType:'json',
+		data:{
+			'category': category
+		},
+		success: render_images
+	});
+	current_tattoo_type = category;
+	browsing_number++;
+};

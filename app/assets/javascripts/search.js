@@ -21,7 +21,7 @@
         })
         // wire up the like button
         $(".like-button").click(like_button_func);
-            }
+            
 
             $(this).toggleClass('liked');
             $(this).toggleClass('like');
@@ -53,6 +53,7 @@ var like_button_func = function(){
                             'artist_id': $(this).attr("id")
                         }
                     }
+                }
 var tab_setup = function(){
     var containerID = "#container";
     var infoPanel = document.getElementById('infoPanel');

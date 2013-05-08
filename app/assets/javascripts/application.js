@@ -45,6 +45,22 @@ if(!Array.prototype.indexOf) {
         if (gon.page_type === "login"){
             setMiddle();
             setBottom();
+            
+                $("a#single_image").fancybox();
+
+                $("a#inline").fancybox({
+                  'hideOnContentClick': true
+                });
+
+                $("a.group").fancybox({
+                  'transitionIn'	:	'elastic',
+                  'transitionOut'	:	'elastic',
+                  'speedIn'		:	600, 
+                  'speedOut'		:	200, 
+                  'overlayShow'	:	false
+                });
+            
+            
         }
 
         if (gon.page_type === "search"){

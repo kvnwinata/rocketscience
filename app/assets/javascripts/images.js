@@ -99,7 +99,7 @@ var constructSlideShow = function(ID,SRC){
                 
 				var button = document.createElement('button')
 				$(button).attr('id','add').appendTo($(control)).click(slideshowButton)
-                $(button).attr('class','smbutton');
+                
 				var progress = document.createElement('span')
                 $(progress).attr('class','smlabel')
 				$(progress).attr('id','prog').appendTo($(control))
@@ -115,10 +115,12 @@ var constructSlideShow = function(ID,SRC){
 					current_slideshow = images_in_inkbox.indexOf(ID);
 					$(progress).html((current_slideshow + 1)+' of '+images_in_inkbox.length)
 					$(button).html('remove ')
+					$(button).addClass('smbuttonr');
 				} else {
 					current_slideshow = current_images.indexOf(ID);
 					$(progress).html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
 					$(button).html('+ add ')
+					$(button).attr('class','smbutton');
 				}
                 
                 

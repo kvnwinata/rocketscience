@@ -47,14 +47,13 @@ h2{
 }
 .h5{	
     font-family: sans-serif;
-	font-size: 18pt;
-	color: #FFFFFF;
-    font-variant:small-caps;
+	font-size: 14pt;
+	color: #555555;
 	font-style: normal;
-	font-weight: bold;
 	line-height: normal;
 	text-align: left;
 }
+
 h3 {
 	font-family: sans-serif;
 	font-size: 24px;
@@ -231,6 +230,12 @@ box-shadow: 0px 0px 8px #b7b7b7;
     background: url('shared/liked.png');
 }
 
+.liked:hover{
+    cursor:pointer;
+    height: 30px;
+    width: 85px;
+    background: url('shared/uliked.png');
+}
 
 a:link { 
 	font-weight: normal; 
@@ -457,6 +462,32 @@ cursor:pointer;
 	line-height: normal;
 }
 
+
+.smbuttonr {
+border:0px;
+padding: 2px;
+align: right;
+position: relative;
+width:70px;
+background:#a3556b;
+color:#fff;
+height:26px;
+margin: 4px;
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+opacity: 1;
+cursor:pointer;
+    font-family: sans-serif;
+	font-size: 10pt;
+    font-weight: bold;
+	color: #fff;
+	line-height: normal;
+}
+
+
+
+
 .smbuttond {
 border:0px;
 padding: 2px;
@@ -506,6 +537,16 @@ background:#f6a100;
 color:#fff;
 }
 
+.smbuttonr:active {
+background:#dadada;
+color:#55a390;
+filter: alpha(opacity=100);
+}
+
+.smbuttonr:hover {
+background:#f6a100;
+color:#fff;
+}
 
 
 input.button {

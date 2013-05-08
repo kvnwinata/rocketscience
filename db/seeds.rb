@@ -70,7 +70,7 @@ Artist.create(
     :address2 => "500 Memorial Drive",
     :city => "Cambridge",
     :state => "MA",
-    :phone => "61712346658",
+    :phone => "617-123-4658",
     :email => "johnsmith@tattoo.ink",
     :profile_picture => "profile/sam.png"
     )
@@ -82,7 +82,7 @@ Artist.create(
     :address2 => "500 Memorial Drive",
     :city => "Cambridge",
     :state => "MA",
-    :phone => "61712346658",
+    :phone => "617-123-6658",
     :email => "ken@tattoo.ink",
     :profile_picture => "profile/kwatanabe.jpg"
     )
@@ -94,7 +94,7 @@ Artist.create(
     :address2 => "500 Memorial Drive",
     :city => "Cambridge",
     :state => "MA",
-    :phone => "61712346658",
+    :phone => "617-123-4665",
     :email => "harry@tattoo.ink",
     :profile_picture => "profile/harry.jpg"
     )
@@ -106,7 +106,7 @@ Artist.create(
     :address2 => "500 Memorial Drive",
     :city => "Cambridge",
     :state => "MA",
-    :phone => "61712346658",
+    :phone => "617-123-4658",
     :email => "will@tattoo.ink",
     :profile_picture => "profile/wgates.jpg"
     )

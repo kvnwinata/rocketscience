@@ -33,7 +33,15 @@
 		<%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
 		<% end %>
 
-		Add like button!
+            <% if session[:user_id] > 0 %>
+                <% if @artist.users.exists?(session[:user_id]) %>
+                    <div class="like"  id="<%= @artist.id %>">liked</div>
+                <% else %>
+                    <div class="liked" id="<%= @artist.id %>">like</div>
+                <% end%>
+            <% else %>
+                <div class="signup-link">signup to like</div>
+            <% end %>
 	</div>
 
 	<% end %>

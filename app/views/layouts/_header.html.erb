@@ -1,15 +1,51 @@
+  <script>
+  $(document).ready(function(){
+	$('#login-trigger').click(function(){
+		$(this).next('#login-content').slideToggle();
+		$(this).toggleClass('active');					
+		
+		if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+			else $(this).find('span').html('&#x25BC;')
+		})
+    });
+</script>
+
+
+
 <div class = "topbar">
 <div class = "content-container2"> 
 <table height = "70px" width="100%"><tr><td>
-<a href = "">
+<a href = "../login">
 <div class = "logoclick"> </div></a></td>
 
 <td style="vertical-align:bottom" align="right" width ="*" > 
 
 
-<font size="2pt"><b>
-Hello <a href="/users/profile">Tim Beaver</a>! 
-</font></td>
+
+
+
+          <nav>
+            <ul>
+                <li id="login"><font size="2pt">Hello <B>Tim Beaver!</font>
+                    <a id="login-trigger" href="#"><font size="2pt">&nbsp;&nbsp;
+ 
+                         Log-out <span>&#x25BC;</span></font>
+                    </a>
+                    <div id="login-content" style="width:170px">
+                        <form>
+                            <fieldset id="actions">
+                                <input type="submit" id="submit" value="    Confirm Log-out" style="width:150px; float:left; margin-right:10px">&nbsp;
+                            </fieldset>
+                        </form>
+                    </div>                     
+                </li>
+               
+            </ul>
+        </nav> 
+
+</b>
+
+</td>
 </tr></table>
 </div>
 </div>

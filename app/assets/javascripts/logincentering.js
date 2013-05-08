@@ -16,6 +16,29 @@ function getWindowHeight() {
 	}
 	return windowHeight;
 }
+
+
+function setContent() {
+	if (document.getElementById) {
+		var windowHeight = getWindowHeight();
+		if (windowHeight > 0) {
+			var contentElement = document.getElementById('contz');
+            if (contentElement){
+                var contentHeight = contentElement.offsetHeight;
+                if (windowHeight - contentHeight > 0) {
+                    contentElement.style.minHeight = ((windowHeight) - 100) + 'px';
+                }
+            }
+			
+		}
+	}
+}
+
+
+
+
+
+
 function setMiddle() {
 	if (document.getElementById) {
 		var windowHeight = getWindowHeight();

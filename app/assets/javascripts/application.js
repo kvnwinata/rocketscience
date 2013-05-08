@@ -45,6 +45,8 @@ if(!Array.prototype.indexOf) {
     };
 }
     window.onload = function() {
+        
+        setContent();
     	
         if (gon.page_type === "login"){
             setMiddle();
@@ -112,6 +114,7 @@ if(!Array.prototype.indexOf) {
         if (gon.page_type === "search"){
             setsearch();
         }
+        setContent();
         // take care of the modal-screen
         resizeModalScreen();
     }

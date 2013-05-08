@@ -15,17 +15,17 @@
 
     <hr>
     
-	<h4 style="color: grey;"> Artists we think you'll like: </h4>
+	<p class = "titles" style="color: grey;"> Artists we think you'll like: </p>
 
 	<div style="display:table;">
 	<% @artists.all.each do |artist| %>
 	<span style="display:table;">
 	<table>
 	<tr class="artist-suggestion" id="<%= artist.id %>">
-		<td rowspan=2>
-		<h5><%= artist.name %></h5>
-		<h5><%= artist.address1 %></h5>
-		<h5><%= artist.email %></h5>
+		<td>
+		<p class="h5"><b><%= artist.name %></b><br>
+		<%= artist.address1 %><br>
+		<%= artist.email %></p><br>
 	</td>
 
 

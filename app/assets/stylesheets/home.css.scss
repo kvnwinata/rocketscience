@@ -515,6 +515,16 @@ background:#f6a100;
 color:#fff;
 }
 
+.smbuttonr:active {
+background:#dadada;
+color:#55a390;
+filter: alpha(opacity=100);
+}
+
+.smbuttonr:hover {
+background:#f6a100;
+color:#fff;
+}
 
 
 input.button {

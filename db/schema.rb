@@ -11,14 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506180324) do
-
-  create_table "artist_categories", :force => true do |t|
-    t.integer  "category_id"
-    t.integer  "artist_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130502041216) do
 
   create_table "artist_images", :force => true do |t|
     t.integer  "image_id"

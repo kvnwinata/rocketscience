@@ -23,4 +23,13 @@ class User < ActiveRecord::Base
 
   belongs_to :category
 
+  validates :email							 , :presence => true
+  validates :password, :password_confirmation, :presence => true, :length => {:minimum => 3}
+  validates :password, :confirmation => true
+  validates :email, :presence => true, :uniqueness => true
+
+def authenticate(password)
+	return password == self.password
+end
+
 end

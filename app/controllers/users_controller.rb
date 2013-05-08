@@ -3,8 +3,8 @@ class UsersController < ApplicationController
 skip_before_filter :require_login, :except => :profile
 
 def login
-	gon.page_type = "login";
-	@new_user = User.new
+	gon.page_type = "login"
+	@user = User.new
 end
 
 def logout
@@ -22,10 +22,6 @@ def guest
 	redirect_to root_path
 end
 
-def prompt
-
-end
-
 def profile
 	gon.page_type = "profile";
 	# only render static profile for John Smith for now
@@ -41,21 +37,14 @@ def login_submit
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       # Sign the user in and redirect to the user's show page.
-      session[:is_logged_in] = true
       session[:user_id] = user.id
-      flash[:notification] = "Welcome back, "+user.user_name+"!"
-      redirect_to root_path
+      render :text => "success"
     else
-      flash[:error] = 'Invalid email/password combination'
-      render 'signin_form'
+      render :text => "fail"
     end
 end
 
 def new
-	@user = User.new
-end
-
-def create
 	@user = User.new(params[:user])
 
 	if @user.save
@@ -63,6 +52,7 @@ def create
         session[:user_id] = @user.id 
         redirect_to root_path
 	else
+		gon.page_type = "login"
 		render 'login'
 	end
 end
@@ -72,5 +62,7 @@ def clear
 	redirect_to login_path
 end
 
+def prompt
+end
 
 end

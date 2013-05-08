@@ -24,7 +24,7 @@
             <span style="font-size:20px; font-weight:bold">Sample Arts</span><br>
             &nbsp;&nbsp;&nbsp;
             <% @images.each do |image| %>
-                <%= image_tag(image.path + image.name, {class: "medium", id: "id"}) %>
+                <%= image_tag(image.path + image.name, {class: "medium", id: image.id}) %>
             <% end %>
         </td>
     </tr>

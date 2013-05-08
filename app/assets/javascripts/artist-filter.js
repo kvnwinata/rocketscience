@@ -18,6 +18,7 @@ var artist_pop_IB = function(data,status){
 		console.log(id)
 	}
 	console.log(images_in_inkbox)
+	
 }
 
 var render_artist_tab = function(data,status){

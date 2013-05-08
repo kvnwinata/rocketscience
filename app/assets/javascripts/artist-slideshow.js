@@ -57,70 +57,102 @@ var constructSlideShowArtist = function(ID,SRC){
 var nextSlideshow_art = function(){
 	console.log('next clicked')
 
-		current_slideshow++;
-		if (current_slideshow > current_images.length - 1) current_slideshow = 0;
-		$('#prog').html((current_slideshow + 1)+' of '+current_images.length)
-		var id = current_images[current_slideshow]
+	current_slideshow++;
+	if (current_slideshow > current_images.length - 1) current_slideshow = 0;
+	$('#prog').html((current_slideshow + 1)+' of '+current_images.length)
+	var id = current_images[current_slideshow]
 	
 	$("#slideshow-image").attr('src',$('#'+id+'.medium').attr('src'));
 	if(images_in_inkbox.indexOf(id) < 0){ //
-		$(button).html('+ add ')
+		$('#add').html('+ add ')
+		$('#add').removeClass('smbuttond');
+		$('#add').addClass('smbutton');
+		$('#add').removeAttr('disabled');
 	} else {
-		$(button).html('added ')
-		$(button).attr('disabled','disabled');
+		$('#add').html('added ')
+		$('#add').removeClass('smbutton');
+		$('#add').addClass('smbuttond');
+		$('#add').attr('disabled','disabled');
 	}
 }
 var prevSlideshow_art = function(){
 	console.log('prev clicked')
-		current_slideshow--;
-		if (current_slideshow < 0) current_slideshow = current_images.length - 1;
-		$('#prog').html((current_slideshow + 1)+' of '+current_images.length)
-		var id = current_images[current_slideshow]
+	current_slideshow--;
+	if (current_slideshow < 0) current_slideshow = current_images.length - 1;
+	$('#prog').html((current_slideshow + 1)+' of '+current_images.length)
+	var id = current_images[current_slideshow]
 	
 	$("#slideshow-image").attr('src',$('#'+id+'.medium').attr('src'));
-if(images_in_inkbox.indexOf(id) < 0){ //
-		$(button).html('+ add ')
+	var id = current_images[current_slideshow]
+	if(images_in_inkbox.indexOf(id) < 0){ //
+		$('#add').html('+ add ')
+		$('#add').removeClass('smbuttond');
+		$('#add').addClass('smbutton');
+		$('#add').removeAttr('disabled');
 	} else {
-		$(button).html('added ')
-		$(button).attr('disabled','disabled');
+		$('#add').html('added ')
+		$('#add').removeClass('smbutton');
+		$('#add').addClass('smbuttond');
+		$('#add').attr('disabled','disabled');
 	}
 }
+
 var slideshowButton_art = function(){
 	console.log('add clicked')
-	if(inkBox_slideshow){
-		// need to remove image
-		removeImageFromInkBox(images_in_inkbox[current_slideshow]);
-		// need to update the image
-		if(images_in_inkbox.length === 0){
-			$('#sliding').html('<div style="color:black">There is no image in inkbox</div>')
-		} else {
-			var id = images_in_inkbox[current_slideshow]
-			$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
-			$('#prog').html((current_slideshow + 1)+' of '+images_in_inkbox.length)
+	$.ajax({
+		url: "/images/like",
+		type: "GET",
+		headers: {
+			'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+		},
+		dataType:'json',
+		data:{
+			'image_id': current_images[current_slideshow]
 		}
+	});
+	images_in_inkbox.push(current_images[current_slideshow]);
+	undo_data = {};
+	undo_data.ID = current_images[current_slideshow];
+	$(".undo-display").html('The tattoo has been added to your InkBox.&nbsp;<span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undo_artist()">Undo</span>');
+	$(".undo-display").fadeOut(0,function(){$(this).fadeIn(500)});
+	var id = current_images[current_slideshow]
+	if(images_in_inkbox.indexOf(id) < 0){ //
+		$('#add').html('+ add ')
+		$('#add').removeClass('smbuttond');
+		$('#add').addClass('smbutton');
+		$('#add').removeAttr('disabled');
 	} else {
-		var id = current_images[current_slideshow]
-		var source = $("#"+id+'.medium').attr('src');
-		console.log(id)
-		console.log(source)
-		$("#"+id+'.tattoo-image-container').remove();
-		addImageToInkBox(id,source);
-		// undo data
-		undo_data = {};
-		undo_data.remove_mode = false;
-		undo_data.ID = id;
-		undo_data.SRC = source;
-		$(".undo-display").html('The tattoo has been added to your InkBox.&nbsp;<span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undoTattoo()">Undo</span>');
-		$(".undo-display").fadeOut(0,function(){$(this).fadeIn(500)});
-	
-		$(".inkBox-message").remove();
-		if (numImgOnDisplay() === 0){
-			$('#sliding').html('<div style="color:black">There is no more tattoo to display. Please choose a different category or randomize again.</div>')
-		} else {
-			current_slideshow = incrementIndex(current_slideshow);
-			var id = current_images[current_slideshow]
-			$("#slideshow-image").attr('src',$('#'+id+'.selectable-img').attr('src'));
-			$('#prog').html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
+		$('#add').html('added ')
+		$('#add').removeClass('smbutton');
+		$('#add').addClass('smbuttond');
+		$('#add').attr('disabled','disabled');
+	}
+}
+
+var undo_artist = function(){
+	$(".undo-display").css('display','none')
+	$.ajax({
+		url: "/images/unlike",
+		type: "GET",
+		headers: {
+			'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+		},
+		dataType:'json',
+		data:{
+			'image_id': undo_data.ID
 		}
+	});
+	images_in_inkbox.splice(images_in_inkbox.indexOf(undo_data.ID),1);
+	var id = current_images[current_slideshow]
+	if(images_in_inkbox.indexOf(id) < 0){ //
+		$('#add').html('+ add ')
+		$('#add').removeClass('smbuttond');
+		$('#add').addClass('smbutton');
+		$('#add').removeAttr('disabled');
+	} else {
+		$('#add').html('added ')
+		$('#add').removeClass('smbutton');
+		$('#add').addClass('smbuttond');
+		$('#add').attr('disabled','disabled');
 	}
 }

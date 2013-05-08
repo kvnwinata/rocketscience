@@ -32,7 +32,7 @@ def unlike
 			unliked.destroy
 		end
 	else #guest
-		for session[:images_id].each_with_index do |val, index|
+		session[:images_id].each_with_index do |val, index|
 			if val == image.id
 				session[:images_id].delete_at(index)
 			end
@@ -42,8 +42,26 @@ def unlike
 end
 
 def get_inkbox
-	
+	require 'json'
 
+	user_id = session[:user_id]
+
+	inkbox = Hash.new
+
+	if user_id > 0
+		# get data from database
+		user = User.find(user_id)
+		user.images.each do |image|
+			inkbox[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
+		end
+	else
+		# get data from session[:images_id]
+		session[:images_id].each do |image_id|
+			image = image.find(image_id)
+			inkbox[image.id] = {'category_name' => image.category.name, 'path' => image.path+image.name } 
+		end
+	end
+	render :json => inkbox.to_json
 end
 
 def get_category

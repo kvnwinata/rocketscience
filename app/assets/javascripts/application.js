@@ -123,7 +123,7 @@ var resizeModalScreen = function(){
     $("#modal-screen").css('width',$(window).width());
     $("#modal-screen").css('height', $(document).height());
     $("#modal-screen").css('width',$(window).width());
-    $("#modal-screen").css('height', $(document).height());
+    $("#modal-screen").css('height', $(document).height()); 
     var theWidth, theHeight, screenW, screenH;
     if (modal_screen_mode){
         theWidth = Math.max($(window).width()*0.9,700)
@@ -136,11 +136,14 @@ var resizeModalScreen = function(){
     screenW = Math.max(1.1*theWidth,$(window).width());
     screenH = Math.max(1.1*theHeight,$(window).height());
     $("#sliding").css('width',theWidth)
+    
+    $("#sliding").css('border-radius',3+"px")
+    $("#sliding").css('box-shadow',"0px 0px 20px #444")
         $("#sliding").css('height',theHeight)
         $("#sliding").css('left',(screenW - theWidth)/2)
         $("#sliding").css('top',(screenH - theHeight)/2)
-        $("#closeAnalysis").css('left',(screenW - theWidth)/2)
-        $("#closeAnalysis").css('top',(screenH - theHeight)/2)
+        $("#closeAnalysis").css('left',(screenW + theWidth)/2 - 15)
+        $("#closeAnalysis").css('top',(screenH - theHeight)/2 - 15)
         // now for the undo bar
         theWidth = Math.max($(window).width()*0.9,700);
     $(".undo-display").css('width',theWidth*0.7)

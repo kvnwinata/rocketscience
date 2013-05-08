@@ -102,6 +102,7 @@ if(!Array.prototype.indexOf) {
             pull_artist("All");
 
         }
+
         
         if (gon.page_type === "index"){
             slidingThing();
@@ -120,6 +121,11 @@ if(!Array.prototype.indexOf) {
             pull_images('random');
             fixInkBoxSize();
 
+        }
+
+        if (gon.page_type === "profile"){
+            resizeMediumImages();
+            $(".like-button").click(like_button_func);
         }
         
     

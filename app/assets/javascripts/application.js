@@ -81,9 +81,11 @@ if(!Array.prototype.indexOf) {
             current_tattoo_type = "random";
             browsing_number = -1;
             undo_data = {};
+            populate_inkBox();
             // NEED TO POPULATE INKBOX BEFORE PULLING IMAGES
             pull_images('random');
             fixInkBoxSize();
+
         }
         
     

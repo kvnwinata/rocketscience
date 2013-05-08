@@ -32,7 +32,8 @@ def analyze
 	@samples  = @category.images 
 
 	if user_id > 0 
-		User.find(user_id).category_id = @category.id
+		user = User.find(user_id)
+		user.update_attribute(:category_id, @category.id)
   	end
 
 	render :layout => false

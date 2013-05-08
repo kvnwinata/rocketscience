@@ -70,6 +70,11 @@ var constructSlideShow = function(ID,SRC){
 				$("#closeAnalysis").css('visibility','visible');
 				// clear content & set up content for the slinding pane
 				$('#sliding').html('');
+                
+                
+                
+                
+                
 				var theWidth = 400;
 				var thisTattoo = document.createElement('img');
 				$(thisTattoo).attr('src',SRC);
@@ -87,14 +92,23 @@ var constructSlideShow = function(ID,SRC){
 				$(control).css('bottom',0.05* theWidth)
 				$(control).css('z-index',100)
 				$(control).css('color','black')
+                $(control).css('left','55px')
+                $(control).css('top','391px')
+                
+                
+                
 				var button = document.createElement('button')
 				$(button).attr('id','add').appendTo($(control)).click(slideshowButton)
+                $(button).attr('class','smbutton');
 				var progress = document.createElement('span')
+                $(progress).attr('class','smlabel')
 				$(progress).attr('id','prog').appendTo($(control))
 				var prev = document.createElement('button')
 				$(prev).attr('id','prev').appendTo($(control)).click(prevSlideshow).html(' < prev ');
+                $(prev).attr('class','smbutton');
 				var next = document.createElement('button')
 				$(next).attr('id','next').appendTo($(control)).click(nextSlideshow).html(' next > ');
+                $(next).attr('class','smbutton');
 				
 				inkBox_slideshow = $('#'+ID+'.medium').hasClass('in-inkbox');
 				if(inkBox_slideshow){
@@ -104,8 +118,11 @@ var constructSlideShow = function(ID,SRC){
 				} else {
 					current_slideshow = current_images.indexOf(ID);
 					$(progress).html(indexForSlideShow(current_slideshow)+' of ' + numImgOnDisplay())
-					$(button).html('add ')
+					$(button).html('+ add ')
 				}
+                
+                
+                
 
 }
 var slideshowButton = function(){

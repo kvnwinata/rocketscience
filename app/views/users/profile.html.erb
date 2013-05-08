@@ -68,11 +68,26 @@
 </table>
 
 <% else %>
+    <center>
+    <p class="titles">
+    Hi Guest!
+    <br><br>
+    
+     <%= image_tag("profile/tim.jpg", ) %>
+    <br>
+    
+    
+    Looks like you're not signed in! <br>
+    
+    This is the profile page where you can view your artist selections <br>
+    and your preferred style based on the analysis (if you sign up!)<br>
+    <br><strong>
+        <a href="../login">Sign up</a></strong> for free today! 
+    
+    </p></center>
 
     <div class="message">
-        This is the profile page where you can view your artist selections and your preferred style based on the analysis.
-        (If you sign up).
-        Sign up now.
+        
     </div>
 
 <% end %>

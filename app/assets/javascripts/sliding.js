@@ -20,12 +20,6 @@ var slidingThing = function(){
         					resizeMediumImages();
         				}
                     });
-
-				//
-				//$(pane).hide({direction:'right',easing:'swing',duration:1000,done:function(){
-				//	isopen = false;
-				//}})
-				//$(pane).hide("slide", { direction: "right" }, 1000);
 			} else {
 				//$(pane).show(1000);
 				//isopen = true;

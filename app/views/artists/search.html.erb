@@ -27,7 +27,7 @@ window.onresize = function() {
 
 
 <div class = "main-container">
-<div class = "content-container" id="contz"> 
+<div class = "content-container" id="contz" style="display:table;"> 
 
     <div class = "lemenubar">
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
@@ -61,22 +61,22 @@ window.onresize = function() {
 
 &nbsp;
 
-<td width = "296px" >
+<td id = "aaa" width = "296px" style="vertical-align:top" >
 
 <div id="infoPanel" style="height: 508px;
-    max-height:100%;
-    z-index: -999;
     overflow:scroll;
     overflow-x: hidden;
     width: 100%">
+    
+
 
 <% Artist.all.each do |artist| %>
 
 <div class="artist-tab inactiveTab" id="<%= artist.id %>">
-	
-	<span class="artist-name"><%= artist.name %></span>
+    
+    <span class="artist-name"><%= artist.name %></span>
     <span class="artist-email">(<%= artist.email %>)</span><br>
-	<span class="artist-address"><%= artist.address1 %></span><br>
+    <span class="artist-address"><%= artist.address1 %></span><br>
     <span class="artist-email"><%= artist.address2 %></span>
 
     

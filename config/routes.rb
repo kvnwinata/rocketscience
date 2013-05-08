@@ -4,6 +4,7 @@ Rocketscience::Application.routes.draw do
 
   # users
   match 'login' 		    => 'users#login' # login page
+  match 'logout'        => 'users#logout' 
   match 'users/prompt' 	=> 'users#prompt' # prompting user to signup: return form?
   match 'users/profile' => 'users#profile' # user's profile page: currently John Smith's
   match 'guest'         => 'users#guest' # browse as guest.
@@ -30,5 +31,7 @@ Rocketscience::Application.routes.draw do
   # random example pages and main
   match 'home' 			=> 'home#index'   # the main page/home: redirect to login when not signed in or not 'as guest'
   match 'example' 	=> 'home#example' # an example for testing/debugging only
+
+  match 'clear'     => 'users#clear'
 
 end

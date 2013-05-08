@@ -254,7 +254,7 @@ a:hover, a:active {
 	text-align: center;
     margin-left: auto ;
     margin-right: auto ;
-    z-index: 999;
+    z-index: 9999;
     background: #000000;
     
 }
@@ -304,12 +304,15 @@ a:hover, a:active {
     margin-left: auto ;
     margin-right: auto ;
     min-height:500px; 
+    height: 500px;
+   
 }
 
 .content-container2{
     width: 90%;
     margin-left: auto ;
     margin-right: auto ; 
+
 }
 
 .artwork-container{

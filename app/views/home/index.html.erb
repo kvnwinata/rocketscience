@@ -3,7 +3,7 @@
 
 
 <div class = "undo-display" 
-    style = "font-size:12px; display:none; position:fixed; top:0;background-color:#f6cc80;color:white;z-index:999;text-align:center;
+    style = "font-size:12px; display:none; position:fixed; top:0;background-color:#f6cc80;color:#111111;z-index:999;text-align:center;
             width:400px; float:left; padding: 5px 5px 5px 5px;">
     The tattoo has been removed from your InkBox.&nbsp;
     <span class="undo-button" style="cursor: hand; cursor: pointer;text-decoration:underline" onclick="undoTattoo()">Undo</span>   
@@ -11,13 +11,13 @@
 
 
 
-<div class = "main-container">
-<div class = "content-container"> 
+<div class = "main-container" id="contz">
+<div class = "content-container" > 
 <!-- 5% margins on either side -->
 
 
     
-    <div class = "lemenubar">
+    <div class = "lemenubar">   
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
     
     <tr height="50px">
@@ -105,7 +105,7 @@
     
     <div class = "boxnotice">
     Click on tattoos you like or <br>
-    trash bad ones in the bin (drag & drop).
+    drag those you don't like in the bin!
     </div>
     <br /><br />
     <div id="inkBox-image">

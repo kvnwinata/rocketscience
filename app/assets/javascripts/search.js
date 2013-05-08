@@ -2,10 +2,10 @@
     var load_info = function(data,status){
         current_images = [];
         $("#artistPanel").html(data);
-    var allimg = $(".medium").parent().children('img')
-    for(var i = 0; i < allimg.length;i++){
-        current_images.push(allimg[i].id);
-    }
+        var allimg = $(".medium").parent().children('img')
+        for(var i = 0; i < allimg.length;i++){
+            current_images.push(allimg[i].id);
+        }
 
         resizeMediumImages();
         $(".medium").css('cursor','pointer');
@@ -19,6 +19,37 @@
                 constructSlideShowArtist(this.id,$(this).attr('src'));
             }
         })
+        // wire up the like button
+        $(".like-button").click(function(){
+            if ($(this).hasClass('liked')){
+                $.ajax({
+                        url: "/artists/unlike",
+                        type: "GET",
+                        headers: {
+                            'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+                        },
+                        dataType:'html',
+                        data:{
+                            'artist_id': $(this).attr("id")
+                        }
+                    });
+            } else {
+                $.ajax({
+                        url: "/artists/like",
+                        type: "GET",
+                        headers: {
+                            'X-CSRF-Token':$('meta[name="csrf-token"]').attr('content')
+                        },
+                        dataType:'html',
+                        data:{
+                            'artist_id': $(this).attr("id")
+                        }
+                    });
+            }
+
+            $(this).toggleClass('liked');
+            $(this).toggleClass('like');
+        });
     };
 
 

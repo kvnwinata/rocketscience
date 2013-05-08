@@ -6,7 +6,9 @@
             <%= image_tag(@artist.profile_picture, {class: ""})%>
         </td>
         <td width="*" style="vertical-align:bottom;" height="300px">
-            <span class='h4'> <%= @artist.name %> </span>
+        
+            <table width = "100%"><tr><td>
+            <span class='h4'> <%= @artist.name %> </span></td><td width="*" align = "right">
 
             <% if session[:user_id] > 0 %>
                 <% if @artist.users.exists?(session[:user_id]) %>
@@ -16,9 +18,9 @@
                 <% end%>
             <% else %>
                 <span class="signup-link">signup to like</span>
-            <% end %>
-
-            <hr color="#555555" height="1px">
+            <% end %> &nbsp;&nbsp;&nbsp;
+            </td></tr></table>
+            
             <p class="titles">
             <b>
             <%= @artist.address1 %><br /></b>
@@ -32,7 +34,8 @@
     </tr>
     <tr>
         <td colspan="2">    
-            <span style="font-size:20px; font-weight:bold">Sample Arts</span><br>
+        <hr color="#555555" height="1px">
+            <p class="titles" style="font-size:20px; font-weight:bold">Artist Portfolio</p><br>
             <% @images.each do |image| %>
                 <%= image_tag(image.path + image.name, {class: "medium", id: image.id}) %>
             <% end %>

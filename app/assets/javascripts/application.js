@@ -13,7 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.fancybox.pack
-//= require_tree .
+//= require artist-filter
+//= require artist-slideshow
+//= require dustbin
+//= require fancy
+//= require images
+//= require logincentering
+//= require search
+//= require searchcenter
+//= require sliding
+//= require undo
 
 
 
